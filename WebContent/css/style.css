@@ -1,0 +1,397 @@
+@font-face {
+  font-family: "icon-left-menu";
+  src: url("/flow-renewal/assets/icon-font/fonts/icon-left-menu.eot?c0jjjo");
+  src: url("/flow-renewal/assets/icon-font/fonts/icon-left-menu.eot?c0jjjo#iefix") format("embedded-opentype"),
+  url("/flow-renewal/assets/icon-font/fonts/icon-left-menu.ttf?c0jjjo") format("truetype"),
+  url("/flow-renewal/assets/icon-font/fonts/icon-left-menu.woff?c0jjjo") format("woff"),
+  url("/flow-renewal/assets/icon-font/fonts/icon-left-menu.svg?c0jjjo#icon-left-menu") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ico-"],
+[class*=" ico-"] {
+  position: relative;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: icon-left-menu, Noto Sans KR, Malgun Gothic, "맑은 고딕", Apple SD Gothic Neo, "돋움", "굴림", Arial, sans-serif !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icons-public:before {
+  content: "\e9e2";
+  color: #b4b4b4;
+}
+
+.icons-question:before {
+  content: "\e937";
+  color: #555;
+}
+.ico-admin:before {
+  content: "\e905";
+  color: #999;
+}
+.ico-my-write:before {
+  content: "\e919";
+  color: #999;
+}
+.ico-temp-write {
+  background: url('/flow-renewal/assets/images/icons/icon_refresh_on.svg') center no-repeat;
+  color: #999;
+}
+.ico-invite:before {
+  content: "\e918";
+  color: #999;
+}
+.ico-search:before {
+  content: "\e904";
+  color: #999;
+}
+.c:before {
+  content: "\e901";
+  color: #999;
+}
+.ico-hide:before {
+  content: "\e900";
+  color: #999;
+}
+.ico-end:before {
+  content: "\e900";
+  color: #999;
+}
+.ico-not-kept:before {
+  content: "\e902";
+  color: #999;
+}
+.ico-arrow:before {
+  content: "\e903";
+  color: #999;
+}
+.light .ico-arrow:before {
+  color: #333;
+}
+.ico-ganttchart:before {
+  content: "\e906";
+  color: #999;
+}
+.ico-work-home:before,
+.ico-work-btn-home:before{
+  content: "\e91b";
+  color: #999;
+}
+.ico-collabo-evaluation:before {
+  font-family: 'icon-contents' !important;
+  content: "\e918";
+  color: #999;
+}
+.ico-plus:before {
+  content: "\e907";
+  color: #ff6b6b;
+  font-size: 10px;
+}
+.left-task .ico-plus:before {
+  margin-left: 10px;
+}
+.ico-more:before {
+  content: "\e908";
+  color: #999;
+}
+.ico-mention:before {
+  content: "\e909";
+  color: #999;
+}
+.ico-bookmark:before {
+  content: "\e90a";
+  color: #999;
+}
+.ico-filebox:before {
+  content: "\e90b";
+  color: #999;
+}
+.ico-schedule:before {
+  content: "\e90c";
+  color: #999;
+}
+.ico-task:before {
+  content: "\e90d";
+  color: #999;
+}
+.ico-home:before {
+  content: "\e90e";
+  color: #999;
+}
+.ico-flow .path1:before {
+  content: "\e90f";
+  color: rgb(153, 153, 153);
+}
+.ico-flow .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+  opacity: 0.6;
+}
+.ico-flow .path3:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+  opacity: 0.6;
+}
+.ico-flow .path4:before,
+.ico-flow .path5:before,
+.ico-flow .path6:before,
+.ico-flow .path7:before,
+.ico-flow .path8:before{
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+.ico-flow .path4:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+  opacity: 0.6;
+}
+.ico-flow .path5:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+}
+.ico-flow .path6:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+}
+.ico-flow .path7:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+}
+.ico-flow .path8:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(153, 153, 153);
+}
+.ico-label:before {
+  content: "\e917";
+  color: #999;
+}
+.ico-favorite:before {
+  content: "\e901";
+  color: #999;
+}
+.ico-letter:before {
+  display: block;
+  content: "\e91a";
+  color: #999;
+  font-size: 11px;
+}
+/* 좌픅메뉴 */
+.menu-group [class^="ico-"],
+.menu-accordion-list [class^="ico-"],
+.menu-accordion-list [class^="icon-"]{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 14px 0 0;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: top;
+}
+.menu-group > .flow-active > a [class^="ico-"]::before,
+.menu-group > .flow-active > a [class^="icon-"]::before,
+.menu-group > li a:hover [class^="ico-"]::before,
+.menu-accordion-list > li.flow-active > a [class^="ico-"]::before,
+.menu-accordion-list > li:hover > a [class^="ico-"]::before,
+.menu-accordion-list > li.flow-active > a [class^="icon-"]::before,
+.menu-accordion-list > li:hover > a [class^="icon-"]::before{
+  color: #36CFBD;
+}
+.light .left-task [class^="ico-"]::before,
+.light .left-task [class^="icon-"]::before,
+.light .menu-group > .flow-active > a [class^="ico-"]::before,
+.light .menu-group > li a:hover [class^="ico-"]::before,
+.light .menu-accordion-list > li.flow-active > a [class^="ico-"]::before,
+.light .menu-accordion-list > li:hover > a [class^="ico-"]::before,
+.light .menu-accordion-list > li.flow-active > a [class^="icon-"]::before,
+.light .menu-accordion-list > li:hover > a [class^="icon-"]::before,
+.light .menu-group > .flow-active > a .icon-left-home::before{
+  color: #6449FC;
+}
+.light .ico-plus:before {
+  color: #ff6b6b !important;
+}
+.light .ico-arrow:before {
+  color: #333 !important;
+}
+.light .icon-free-ver-experience button i.ico-arrow:before {
+  color: #fff !important;
+}
+.light .ico-label:before {
+  color: #E029B8 !important;
+}
+.light .menu-accordion-button:hover .ico-plus:before,
+.light .menu-accordion-button:hover .ico-arrow:before,
+.light .project-more-button:hover.ico-arrow::before,
+.light .menu-accordion-list li:hover .ico-label:before {
+  color: #6449FC !important;
+}
+.left-more-menu > li [class^="ico-"]::before {
+  color: #555;
+}
+.left-more-menu > li:hover [class^="ico-"]::before {
+  color: #6449FC;
+}
+.menu-group a:hover .ico-flow [class^="path"]::before {
+  color: #36CFBD;
+}
+.light .menu-group a:hover .ico-flow [class^="path"]::before {
+  color: #6449FC;
+}
+
+/*  메인 헤더영역 아이콘  */
+
+@font-face {
+  font-family: 'icon-main-header';
+  src:  url('/flow-renewal/assets/icon-font/icon-main-header-v1.0/fonts/icon-main-header.eot?wj83u5');
+  src:  url('/flow-renewal/assets/icon-font/icon-main-header-v1.0/fonts/icon-main-header.eot?wj83u5#iefix') format('embedded-opentype'),
+  url('/flow-renewal/assets/icon-font/icon-main-header-v1.0/fonts/icon-main-header.ttf?wj83u5') format('truetype'),
+  url('/flow-renewal/assets/icon-font/icon-main-header-v1.0/fonts/icon-main-header.woff?wj83u5') format('woff'),
+  url('/flow-renewal/assets/icon-font/icon-main-header-v1.0/fonts/icon-main-header.svg?wj83u5#icon-main-header') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-main-header';
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main-top [class^="icon-"],
+.main-top [class*=" icon-"] {
+  font-size: 22px;
+}
+.icon-chatting:before {
+  content: "\e900";
+  color: #ccc;
+}
+.icon-organization:before {
+  content: "\e901";
+  color: #ccc;
+}
+.icon-btn-home:before {
+  content: "\e902";
+  color: #ccc;
+}
+.icon-post-temp:before {
+  content: "\e90c";
+  color: #999;
+}
+.icon-btn-next:before {
+  content: "\e90d";
+  color: #ccc;
+}
+.icon-btn-back:before {
+  content: "\e90e";
+  color: #ccc;
+}
+.icon-btn-refresh:before {
+  content: "\e90f";
+  color: #ccc;
+}
+.icon-btn-home,
+.icon-btn-next,
+.icon-btn-back,
+.icon-btn-refresh {
+  font-size: 18px;
+}
+.icon-post-temp {
+  font-size: 15px;
+}
+.icon-alarm:before {
+  content: "\e910";
+  color: #ccc;
+}
+
+.icon-chatting:hover:before,
+.icon-organization:hover:before,
+.icon-btn-home:hover:before,
+.icon-post-temp:hover:before,
+.icon-btn-next:hover:before,
+.icon-btn-back:hover:before,
+.icon-btn-refresh:hover:before,
+.icon-alarm:hover:before {
+  color: #36CFBD;
+}
+.light .icon-chatting:before,
+.light .icon-organization:before,
+.light .icon-btn-home:before,
+.light .icon-post-temp:before,
+.light .icon-btn-next:before,
+.light .icon-btn-back:before,
+.light .icon-btn-refresh:before,
+.light .icon-alarm:before {
+  color: #555555;
+}
+.light .icon-chatting:hover:before,
+.light .icon-organization:hover:before,
+.light .icon-btn-home:hover:before,
+.light .icon-post-temp:hover:before,
+.light .icon-btn-next:hover:before,
+.light .icon-btn-back:hover:before,
+.light .icon-btn-refresh:hover:before,
+.light .icon-alarm:hover:before {
+  color: #6449FC;
+}
+
+
+@font-face {
+  font-family: 'left-icon';
+  src:  url('/flow-renewal/assets/icon-font/left-icon-v1.0/fonts/left-icon.eot?gw1svf');
+  src:  url('/flow-renewal/assets/icon-font/left-icon-v1.0/fonts/left-icon.eot?gw1svf#iefix') format('embedded-opentype'),
+  url('/flow-renewal/assets/icon-font/left-icon-v1.0/fonts/left-icon.ttf?gw1svf') format('truetype'),
+  url('/flow-renewal/assets/icon-font/left-icon-v1.0/fonts/left-icon.woff?gw1svf') format('woff'),
+  url('/flow-renewal/assets/icon-font/left-icon-v1.0/fonts/left-icon.svg?gw1svf#left-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-left-"]{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'left-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left-home:before {
+  content: "\e90f";
+  margin: 0 14px 0 0;
+  color: #999;
+  font-size: 16px;
+}

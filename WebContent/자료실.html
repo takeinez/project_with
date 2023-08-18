@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리포트</title>
+<script src="https://kit.fontawesome.com/42669b0565.js"
+	crossorigin="anonymous"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+	rel="stylesheet">
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700  rel='
+	stylesheet' type='text/css'>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+	rel="stylesheet">
+<style>
+.innerSection {
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1204px;
+}
+
+.fl {
+	float: left;
+}
+
+abbr, address, article, aside, audio, b, blockquote, body, canvas,
+	caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset,
+	figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+	hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu,
+	nav, object, ol, p, pre, q, samp, section, small, span, strong, sub,
+	summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var,
+	video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: 0 0;
+}
+
+.textWrap h2.textTitle {
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 89px;
+}
+
+h2.textTitle {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 60px;
+	line-height: 1.2;
+}
+
+.textWrap p.textSubTitle {
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.subSection .textSubTitle, .subSection .visualWrap .textSubTitle {
+	margin: 16px 0 0;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+	padding-right: 10px;
+}
+
+::-webkit-scrollbar-button {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-corner {
+	background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #999;
+	border: 1px solid #999;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+	background: 0 0;
+	border: 0 none transparent;
+	-webkit-border-radius: 53px;
+	border-radius: 53px;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: "Noto Sans KR", Roboto, "Malgun Gothic", "맑은 고딕", helvetica,
+		"Apple SD Gothic Neo", sans-serif, "Apple Color Emoji",
+		"Twemoji Country Flags";
+	color: #333;
+	line-height: 1;
+	letter-spacing: -.02em;
+	background: #fff;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.with-header {
+	display: block;
+	position : fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: 0 0;
+	z-index: 9;
+	display: sticky;
+	position: fixed;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	text-decoration: none;
+	vertical-align: baseline;
+	color: inherit;
+	background: 0 0;
+	cursor: pointer;
+}
+
+.top-thin-banner {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	border-radius: 0;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	min-width: 204px;
+	justify-content: center;
+	font-size: 14px;
+	line-height: 21px;
+	box-shadow: none;
+	bottom: 30px;
+	padding: 10px 0;
+	font-weight: 700;
+	text-align: center;
+	transition: background 2s;
+	z-index: 10;
+	animation: loadSlow 1s linear forwards;
+}
+
+.top-thin-banner.voucher {
+	background: #00a3ff;
+	color: #fff;
+}
+
+.top-thin-banner.voucher img {
+	height: 30px;
+	margin-right: 26px;
+}
+
+.top-thin-banner.voucher>p {
+	margin-right: 6px;
+}
+
+.top-thin-banner>p {
+	display: inline-block;
+	position: relative;
+}
+
+.top-thin-banner.voucher span {
+	color: #ffe814;
+}
+
+.top-thin-banner.voucher .arrow-w {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:
+		url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/circle-arrow-w.svg)
+		center right/20px;
+}
+
+.with-header .renewal-section.headerSection {
+	background-color: transparent;
+}
+
+.with-header.headerSection {
+	margin-top: 50px;
+	padding: 0 50px;
+	max-width: 100%;
+	height: 80px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.headerSection {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 0 50px;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	max-width: 1920px;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	line-height: normal;
+}
+
+.with-header .logo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	margin: 0;
+	font-size: 0;
+}
+
+.with-header .logo img {
+	width: 100%;
+}
+
+.with-header .logo>a {
+	display: block;
+	min-width: 128px;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+.with-header nav.gnb {
+	display: flex;
+	width: 100%;
+	height: inherit;
+}
+
+.with-header nav.gnb>ul {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.with-header nav.gnb>ul li.gnbList {
+	position: relative;
+	margin-left: 35px;
+	cursor: pointer;
+}
+
+.with-header nav.gnb>ul li.gnbList a {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	border: 1px solid transparent;
+}
+
+li, ul {
+	list-style: none;
+}
+
+.with-header nav.gnb>ul li.gnbList .icons-arrow-textgo {
+	margin: -3px 0 0 6px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	font-size: 10px;
+	transform: rotate(90deg);
+}
+
+.with-header ul.gnbDepth {
+	color: #333;
+	font-weight: 600;
+	display: none;
+	position: absolute;
+	top: 36px;
+	left: -26px;
+	width: auto;
+	padding: 10px 20px 20px 15px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #fff;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.with-header ul.gnbDepth>li>a {
+	padding: 6px 10px;
+	font-size: 14px !important;
+	line-height: 21px;
+}
+
+.with-header .loginList {
+	position: relative;
+	margin-left: auto;
+}
+
+.with-header .loginList li {
+	margin-left: 8px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	font-weight: 700;
+}
+
+.with-header .loginList li a {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.btn-common {
+	font-weight: 700;
+	line-height: 50px;
+	text-align: left;
+}
+
+.with-header .loginList .btn-login {
+	padding: 6px 18px;
+	color: #fff;
+	background: #00BFFF;
+	border: 1px solid #00BFFF;
+	border-radius: 25px;
+}
+
+.with-header .loginList .btn-login:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	background: #00A3FF;
+}
+
+.gnb li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: #00BFFF;
+}
+
+.gnb li:hover .gnbDepth {
+	margin-top: -15px;
+	border: 1px solid #9C9C9C;
+	display: block;
+}
+
+.gnb li ul li:hover a {
+	border-bottom: 3px solid black;
+}
+
+.with-header .loginList .login-tooltip {
+	z-index: 1;
+	display: block;
+	position: absolute;
+	top: 65px;
+	right: 0;
+	padding: 5px 7px 5px 7px;
+	background: #fff;
+	border: 1px solid #555;
+	border-radius: 3px;
+	color: #623ad6;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+	filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, .1));
+	margin-right: 0px;
+}
+
+.with-header .loginList .login-tooltip:before {
+	position: absolute;
+	top: -6px;
+	left: 62%;
+	display: block;
+	content: "";
+	width: 11px;
+	height: 6px;
+	background:
+		url(https://flow.team/flow-renewal/assets/images/sprite-project-detail.png)
+		no-repeat -720px -175px;
+	background-size: 844px auto;
+	-ms-transform: translateX(-49.9%);
+}
+
+.with-header nav.gnb ul li.gnbList .consult-click {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 2px;
+	background: url(Images/docu.png) center no-repeat;
+	background-size: contain;
+}
+
+h2 {
+	display: block;
+	font-size: 1.5em;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.btn-contents:hover {
+	background: #008BDA;
+	text-decoration: underline;
+}
+
+.btn-common {
+	border-radius: 900px;
+	color: #fff;
+}
+
+.btn {
+	display: inline;
+	width: 225px;
+	height: 63px;
+	padding: 16px 37px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.with-header nav.gnb>ul li.gnbList:last-of-type .consult-click+span {
+	position: relative;
+	top: -5px;
+	color: #00A3FF;
+}
+.aa {
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	display:block;
+}
+
+#Gnb {
+	padding-inline-start: 40px;
+	height: 50px;
+	margin: 16px 0;
+}
+
+.loginList {
+	padding-left: 40px
+}
+.gnbDepth li:hover .deepdeepth {
+		display:block;
+		text-decoration:underline;
+ 		text-decoration-color:white;
+		color:#333;
+		}
+		.deepdeepth{
+		display:none;
+ 		margin-bottom:15px;
+		}
+		.deepdeepth li{
+		margin-bottom:15px;
+		text-decoration : none;
+		}
+}
+
+.loginList {
+	padding-left: 40px
+}
+
+.blogmenu {
+	padding: 160px 0px 40px 0px;
+	text-align: center;
+	word-spacing: 5px;
+}
+
+.menulink {
+	font-weight: bold;
+	display: inline-block;
+	background: #f4f4f5;
+	padding: 9px 15px;
+	font-size: 14px;
+	color: #333;
+	border-radius: 50em;
+	margin: 0 3px 10px;
+	transition: all ease .2s;
+	text-decoration: none;
+	border: #D8D8D8 solid 1px;
+}
+
+.blogmenu ul {
+	height: 52px;
+}
+
+.blogmenu ul li {
+	display: inline-block;
+}
+
+.menulink:hover {
+	background: #a44cf7;
+	color: #fff;
+}
+
+.search-form .field {
+	max-width: 250px;
+	font-size: 14px;
+	border-radius: 15px;
+}
+
+.search-form .submit {
+	font-size: 14px;
+	border-radius: 15px;
+	background-color: #8224e3;
+	padding: 0 30px;
+	line-height: 1;
+	border: 1px solid #1F5DEA;
+	color: #ffffff;
+	text-shadow: none;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	filter: none;
+	box-shadow: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: color 0.25s ease, background 0.25s ease, border-color 0.25s
+		ease;
+	height: 42px;
+	width: 92px;
+}
+
+.search-form .submit:hover {
+	color: #ffffff;
+	background-color: #FF00FF;
+	border: 1px solid #FF00FF;
+}
+
+.search-form {
+	text-align: center;
+	padding-bottom: 35px;
+}
+
+input, input.input-text, select, textarea {
+	border: 1px solid #E2E3E7;
+	background-color: #ffffff;
+	padding: 6px 13px;
+	color: #000000;
+	vertical-align: middle;
+	box-shadow: none;
+	line-height: 26px;
+	border-radius: 0;
+}
+
+.page-item-title-single .page-title {
+	font-size: 40px;
+	color: #000000;
+	max-width: 1204px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	line-height: 1.25;
+	margin-bottom: 60px;
+}
+
+.fl a{
+	max-width: 360px;
+}
+
+.post-title {
+    font-size: 24px;
+    display: block;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+.post-content {
+    font-family: Arial, sans-serif;
+    margin-top: 0 !important;
+    background: #ffffff;
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.75;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:5;
+	overflow:hidden;
+	height: 1
+}
+
+@keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+ 
+    .test_obj {
+        position: relative;
+        animation: fadeInUp 1s;
+    }
+
+</style>
+</head>
+<body>
+	<div class="aa">
+	<header class="with-header main">
+		<a class="top-thin-banner voucher border"
+			href="https://sites.google.com/flow.team/2023goodchance?utm_source=service&utm_medium=homepage&utm_campaign=voucher2023"
+			target="_blank"> <img
+			src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/logo_gov.svg"
+			alt="정부 로고">
+			<p>
+				정부 지원금 <span>최대 200만원</span> 받기
+			</p> <i class="arrow-w"></i>
+		</a>
+		<div class="headerSection renewal-section">
+			<h1 class="logo">
+				<a title="With" href="메인.html"> <img src="Images/with_logo.png"
+					alt="with">
+				</a>
+			</h1>
+			<nav class="gnb menu">
+				<ul id="Gnb">
+					<li class="gnbList"><a title="회사소개"> 회사소개 <i
+							class="fa-solid fa-chevron-down"></i>
+					</a>
+						<ul class="gnbDepth productMenu">
+							<li><a title="회사소개" href="회사소개.html"></a> 회사소개</li>
+							<li>
+									<a title="제품" href=""></a>
+									제품
+									<i class="fa-solid fa-chevron-down"></i>
+									<ul class="deepdeepth">
+										<li><br/>
+											<i class="fa-solid fa-people-group" style="color:green"></i>
+											<a title="프로젝트 협업" href="프로젝트협업.html" style="display:inline;"></a>
+											프로젝트 협업
+										</li>
+										<li>
+											<i class="fa-regular fa-paste" style="color:purple"></i>
+											<a title="업무관리" href="업무관리.html" style="display:inline;"></a>
+											업무관리
+										</li>
+										<li>
+											<i class="fa-regular fa-comment-dots" style="color:orange;"></i>
+											<a title="메신저" href="메신저.html" style="display:inline;"></a>
+											메신저
+										</li>
+										<li>
+											<i class="fa-solid fa-flag-checkered" style="color:yellow;"></i>
+											<a title="OKR" href="OKR.html" style="display:inline;"></a>
+											OKR
+										</li>
+										<li>
+											<i class="fa-solid fa-video" style="color:skyblue;"></i>
+											<a title="화상회의" href="화상회의.html" style="display:inline;"></a>
+											화상회의
+										</li>
+										<li>
+											<i class="fa-solid fa-shield-halved" style="color:orange;"></i>
+											<a title="보안기능" href="보안기능.html" style="display:inline;"></a>
+											보안기능
+										</li>
+									</ul>
+								</li>
+						</ul></li>
+					<li class="gnbList">
+						<a title="요금" href="요금제.html"> 요금  </a>
+					</li>
+					<li class="gnbList"><a title="고객사례" href="고객.html"> 고객사례 </a></li>
+					<li class="gnbList"><a title="자료실" href=""> 자료실 </a></li>
+					<li class="gnbList"><a title="소개서 받기" href=""
+						class="product-intro-link"> <i class="consult-click"></i> <span>소개서
+								받기</span>
+					</a></li>
+				</ul>
+				<ul class="loginList">
+					<li><a title="로그인" href="로그인.jsp"> 로그인 </a></li>
+					<li><a title="회원가입" href="회원가입.html"
+						class="js-signup-btn btn-login btn-common"> 무료 회원가입 </a></li>
+					<span class="login-tooltip"> join with WITH! </span>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	</div>
+	<nav class="blogmenu">
+		<ul>
+<!-- 			<li><a href="/category/reference" class="menulink">VOD</a></li> -->
+<!-- 			<li><a href="/category/video" class="menulink">리포트</a></li> -->
+			<li><a href="사용자매뉴얼.html" class="menulink" >사용 매뉴얼</a></li>
+		</ul>
+	</nav>
+	<div class="search-form">
+		<form method="get" role="search" id="searchform" class="searchform"
+			action="">
+			<input type="search" aria-label="검색" class="field" name="s" value=""
+				id="s" placeholder="검색어를 입력하세요"> <input type="submit"
+				class="submit btn" id="searchsubmit" value="검색" onclick="alert('미구현');">
+		</form>
+	</div>
+	<div class="col-md-12 col-overlay test_obj">
+		<div class="page-item-title-archive page-item-title-single">
+			<h1 class="page-title">리포트</h1>
+		</div>
+	</div>
+	<div class="innerSection test_obj">
+	
+		<div class="fl" style="width: 390px; padding: 0 15px; margin-left: 17px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-1.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/11778">협업툴 정착을 위한 조직문화 노하우 5가지</a></div>
+			<div class="post-content">💡 협업툴 정착을 위한 조직문화 노하우 자료집을 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 자료를 발송해드려요 😊 협업툴 도입 담당자를 대상으로 설문조사를 해본 결과, 도입 전 고민 1순위는 ‘직원 활용성’이라고 대답했는데요. 기업에서 협업툴을 정착시키기 위해서는 조직 문화가 가장 중요한데요. 이번 자료집에서는 협업툴 정착을 위한 컬처 트랜스포메이선 전략 5가지 노하우를 담았습니다.
+			</div>
+		</div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-2.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/11698">일 잘하는 영업사원의 필수 협업툴 스킬 7가지</a></div>
+			<div class="post-content">📕 일 잘하는 영업사원의 필수 협업툴 스킬 7가지를 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 리포트를 발송해드려요 😊 영업팀은 외부 일정이 잦기 때문에 업무를 효율적으로 관리할 수 있는 협업툴이 꼭 필요한 부서 중 하나입니다. 이번 자료집에서는 영업팀이 효율적으로 업무를 진행하고, 협업 문화를 구현해 효과적으로 성장할 수 있는 정보를 담고 있어요. 
+			</div>
+		</div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px; margin-right: 17px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-2.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/9274">협업툴 플로우 재택근무 안내서</a></div>
+			<div class="post-content">📙 재택근무 안내서를 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 안내서 전문을 발송해드려요 😊 코로나19가 국내에 지속적으로 확산되면서 이제는 규모와 상관없이 많은 기업들이 비대면 근무를 시행하고 있습니다. 어디서 일하는지 보다 ‘어떻게’ 일하는지가 더 중요한 시대. 장기적인 관점에서 재택근무를 바라봐야하는 이유에 대한 정보를 담고 있어요.
+			</div>
+		</div>
+		<div style="clear: both"></div>
+		<div style="margin-bottom: 60px"></div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px; margin-left: 17px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-1.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/11778">협업툴 정착을 위한 조직문화 노하우 5가지</a></div>
+			<div class="post-content">💡 협업툴 정착을 위한 조직문화 노하우 자료집을 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 자료를 발송해드려요 😊 협업툴 도입 담당자를 대상으로 설문조사를 해본 결과, 도입 전 고민 1순위는 ‘직원 활용성’이라고 대답했는데요. 기업에서 협업툴을 정착시키기 위해서는 조직 문화가 가장 중요한데요. 이번 자료집에서는 협업툴 정착을 위한 컬처 트랜스포메이선 전략 5가지 노하우를 담았습니다.
+			</div>
+		</div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-2.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/11698">일 잘하는 영업사원의 필수 협업툴 스킬 7가지</a></div>
+			<div class="post-content">📕 일 잘하는 영업사원의 필수 협업툴 스킬 7가지를 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 리포트를 발송해드려요 😊 영업팀은 외부 일정이 잦기 때문에 업무를 효율적으로 관리할 수 있는 협업툴이 꼭 필요한 부서 중 하나입니다. 이번 자료집에서는 영업팀이 효율적으로 업무를 진행하고, 협업 문화를 구현해 효과적으로 성장할 수 있는 정보를 담고 있어요. 
+			</div>
+		</div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px; margin-right: 17px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-2.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/9274">협업툴 플로우 재택근무 안내서</a></div>
+			<div class="post-content">📙 재택근무 안내서를 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 안내서 전문을 발송해드려요 😊 코로나19가 국내에 지속적으로 확산되면서 이제는 규모와 상관없이 많은 기업들이 비대면 근무를 시행하고 있습니다. 어디서 일하는지 보다 ‘어떻게’ 일하는지가 더 중요한 시대. 장기적인 관점에서 재택근무를 바라봐야하는 이유에 대한 정보를 담고 있어요.
+			</div>
+		</div>
+		<div style="clear: both"></div>
+		<div style="margin-bottom: 60px"></div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px; margin-left: 17px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-1.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/11778">협업툴 정착을 위한 조직문화 노하우 5가지</a></div>
+			<div class="post-content">💡 협업툴 정착을 위한 조직문화 노하우 자료집을 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 자료를 발송해드려요 😊 협업툴 도입 담당자를 대상으로 설문조사를 해본 결과, 도입 전 고민 1순위는 ‘직원 활용성’이라고 대답했는데요. 기업에서 협업툴을 정착시키기 위해서는 조직 문화가 가장 중요한데요. 이번 자료집에서는 협업툴 정착을 위한 컬처 트랜스포메이선 전략 5가지 노하우를 담았습니다.
+			</div>
+		</div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-2.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/11698">일 잘하는 영업사원의 필수 협업툴 스킬 7가지</a></div>
+			<div class="post-content">📕 일 잘하는 영업사원의 필수 협업툴 스킬 7가지를 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 리포트를 발송해드려요 😊 영업팀은 외부 일정이 잦기 때문에 업무를 효율적으로 관리할 수 있는 협업툴이 꼭 필요한 부서 중 하나입니다. 이번 자료집에서는 영업팀이 효율적으로 업무를 진행하고, 협업 문화를 구현해 효과적으로 성장할 수 있는 정보를 담고 있어요. 
+			</div>
+		</div>
+		
+		<div class="fl" style="width: 390px; padding: 0 15px; margin-right: 17px;">
+			<a href="상세자료.html"><img src="Images/자료실 썸네일-2.png" style="width: 360px; margin-bottom: 20px; border-radius: 15px;"/></a> <br/>
+			<div style="margin-bottom: 20px;" class="post-title"><a href="https://post.flow.team/reference/9274">협업툴 플로우 재택근무 안내서</a></div>
+			<div class="post-content">📙 재택근무 안내서를 받아보세요! 신청양식을 제출하신 후 24시간 안에 이메일로 안내서 전문을 발송해드려요 😊 코로나19가 국내에 지속적으로 확산되면서 이제는 규모와 상관없이 많은 기업들이 비대면 근무를 시행하고 있습니다. 어디서 일하는지 보다 ‘어떻게’ 일하는지가 더 중요한 시대. 장기적인 관점에서 재택근무를 바라봐야하는 이유에 대한 정보를 담고 있어요.
+			</div>
+		</div>
+		<div style="clear: both"></div>
+		<div style="margin-bottom: 60px"></div>
+		
+	</div>
+	
+</body>
+</html>

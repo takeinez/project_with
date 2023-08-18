@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery-3.7.0.min.js"></script>
+<script>
+	$(function() {
+		
+		function addCommas(number) {
+		    // 숫자를 문자열로 변환 후 쉼표를 추가합니다
+		    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+		
+		function basicyear() {
+			let count = Number($("#calUserCnt").val());
+			count = count * 72000;
+			$("#calPrice").val(addCommas(count));
+			count = count/3;
+			$("#calSavings").val(addCommas(count));
+		}
+		
+		function basicmonth() {
+			let count = Number($("#calUserCnt").val());
+			count = count * 8000;
+			$("#calPrice").val(addCommas(count));
+			count = count/3;
+			$("#calSavings").val(0);
+		}
+		
+		function proyear() {
+			let count = Number($("#calUserCnt").val());
+			count = count * 96000;
+			$("#calPrice").val(addCommas(count));
+			count = count/4;
+			$("#calSavings").val(addCommas(count));
+		}
+		
+		function promonth() {
+			let count = Number($("#calUserCnt").val());
+			count = count * 10000;
+			$("#calPrice").val(addCommas(count));
+			count = count/4;
+			$("#calSavings").val(0);
+		}
+		
+	  $('#a연간결제').click(function() {
+	    $("#a연간결제").addClass('active');
+	    $("#a월간결제").removeClass('active');
+
+	    var priceBasic = $("#price_basic");
+	    var pricePro = $("#price_pro");
+	    var targetPriceBasic = 6000;
+	    var targetPricePro = 8000;
+
+	    priceBasic.animate({ count: targetPriceBasic }, {
+	      duration: 1000, // 애니메이션의 지속시간 (1초)
+	      step: function(now) {
+	        $(this).text(Math.floor(now));
+	      }
+	    });
+
+	    pricePro.animate({ count: targetPricePro }, {
+	      duration: 1000, // 애니메이션의 지속시간 (1초)
+	      step: function(now) {
+	        $(this).text(Math.floor(now));
+	      }
+	    });
+	  });
+	  
+	  
+	  $('#a월간결제').click(function() {
+		    $("#a월간결제").addClass('active');
+		    $("#a연간결제").removeClass('active');
+
+		    var priceBasic = $("#price_basic");
+		    var pricePro = $("#price_pro");
+		    var targetPriceBasic = 8000;
+		    var targetPricePro = 10000;
+
+		    priceBasic.animate({ count: targetPriceBasic }, {
+		      duration: 1000, // 애니메이션의 지속시간 (1초)
+		      step: function(now) {
+		        $(this).text(Math.floor(now));
+		      }
+		    });
+
+		    pricePro.animate({ count: targetPricePro }, {
+		      duration: 1000, // 애니메이션의 지속시간 (1초)
+		      step: function(now) {
+		        $(this).text(Math.floor(now));
+		      }
+		    });
+		  });
+	  
+	  $(window).scroll(function() {
+			let height = $(this).scrollTop();
+			if(height==0) {
+				$(".subNavigation.price.on").removeClass('on');
+				$(".headerSection.renewal-section").removeClass('disappear');
+			}
+			else {
+				$(".subNavigation.price").addClass('on');
+				$(".headerSection.renewal-section").addClass('disappear');
+			}
+		});
+	  
+	  $(".js-calculator.calculator").click(function() {
+		 $("#paymentPopupLayer").removeClass("disappear");
+		 $("#paymentPopup").addClass("paymentPopup");
+		 $("#background").addClass("paymentPopup2");
+	  });
+	  
+	  $("#paymentPopup").click(function() {
+			$("#paymentPopup").removeClass("paymentPopup");
+			$("#paymentPopupLayer").addClass("disappear");
+			$("#background").removeClass("paymentPopup2");
+	  });
+	  
+	  
+// 	  $("#calPayOption").click(function() {
+// 			if($("#calOptionSelect").css("display")=="block") {
+// 		  		$("#calOptionSelect").css("display", "none");
+// 		  	} else {
+// 		  		$("#calOptionSelect").css("display", "block");
+// 		  	}
+// 	  });
+	  
+
+	  $(document).click(function(e) {
+		if($("#calOptionSelect").css("display") == "block") {
+ 			  if(!(e.target.id=="calOptionSelect")) {
+ 			    	$("#calOptionSelect").css("display", "none");
+ 			    	return false;
+ 			    }
+		}
+ 			  
+ 		if($("#calOptionSelect").css("display") == "none") {
+ 			  if(e.target.id=="calPayOption") {
+ 				  $("#calOptionSelect").css("display", "block");
+ 				 return false;
+ 			  }
+ 		}
+ 		
+	  });
+	  
+	  $("#yearSelect").click(function() {
+		  $("#calPayOption").html('연간 정기 결제<span class="js-payment-sale payment-sale" style="display: inline-block;">25% 할인</span>');
+		  $("#calPayOption").addClass("years");
+		  $(".js-cal-gubun").text("/ 연");
+		  basicyear();
+	  });
+	  
+	  $("#monthSelect").click(function() {
+		  $("#calPayOption").text("월간 정기 결제");
+		  $("#calPayOption").removeClass("years");
+		  $(".js-cal-gubun").text("/ 월");
+		  basicmonth();
+	  });
+	  
+	  $("#calUserCnt").keyup(function() {
+		  if($("#calPayOption").hasClass("years")) {
+		 	 basicyear();
+		  }
+		  else {
+			  basicmonth();
+		  }
+	  });
+	  
+});
+	
+	
+</script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+	rel="stylesheet">
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700  rel='
+	stylesheet' type='text/css'> 
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+	rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>요금제</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-family: "Noto Sans KR",Roboto,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif,"Apple Color Emoji","Twemoji Country Flags";
+			color: #333;
+    		line-height: 1;
+		    min-width: 320px;
+		    overflow-x: hidden;
+		    letter-spacing: -.02em;
+		}
+		abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+		    margin: 0;
+		    padding: 0;
+		    border: 0;
+		    outline: 0;
+		    font-size: 100%;
+		    vertical-align: baseline;
+		    background: 0 0;
+		}
+		li, ul {
+			list-style: none;
+			margin: 0;
+    		padding: 0;
+		}
+		
+		em, i {
+		    font-style: normal;
+		}
+		
+		a {
+			margin: 0;
+		    padding: 0;
+		    font-size: inherit;
+		    text-decoration: none;
+		    vertical-align: baseline;
+		    color: inherit;
+		    background: 0 0;
+		    cursor: pointer;
+		}
+
+		.fl { float:left }
+		.fr { float:right }
+		.정렬 {
+			max-width: 1204px;
+			margin: 0 auto;
+		}
+		.tabList {
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -moz-box;
+		    display: flex;
+		    max-width: 280px;
+		    -webkit-border-radius: 6px;
+		    border-radius: 6px;
+		    border: 1px solid #623ad6;
+		}
+		
+		#a연간결제.active,
+		#a월간결제.active {
+			background: #623ad6;
+   			color: #fff;
+		}
+		
+		#a연간결제,
+		#a월간결제  {
+		    padding: 16px 10px;
+		    display: block;
+		    color: #623ad6;
+		    font-size: 14px;
+		    font-weight: 500;
+		    text-align: center;
+    		cursor: pointer;
+    		text-decoration: none;
+		}
+		#요금제 {
+			font-size: 60px;
+	    	font-weight: 700;
+	    	line-height: 89px;
+	    	width: 100%;
+	    	margin-bottom: 20px;
+	    	margin-top: 0px;
+	    	color: #333;
+		}
+		#요금제2 {
+			font-size: 18px;
+	    	line-height: 26px;
+	    	margin: 16px 0 0;
+	    	color: #333;
+	    	font-weight: 550;
+		}
+		#견적서 {
+			display: inline-block;
+    		right: 0;
+    		bottom: 0;
+  		  	color: #777;
+    		font-size: 15px;
+    		line-height: 22px;
+    		padding-bottom:0px;
+		}
+		#견적서오른쪽화살표 {
+    		width: 7px;
+    		height: 12px;
+   		 	margin-left: 7px;
+		}
+		
+		.btn-common {
+		    height: 52px;
+		    padding: 0 28px;
+		    border: 1px solid #fff;
+		    -webkit-border-radius: 900px;
+		    border-radius: 900px;
+		    color: #fff;
+		    font-size: 16px;
+		    font-weight: 700;
+		    line-height: 50px;
+		    text-align: left;
+		}
+		
+		table {
+		    width: 100%;
+		    table-layout: fixed;
+		    border-collapse: collapse;
+		    border-spacing: 0;
+		}
+		
+		table.paymentList {
+		    margin: 30px auto;
+		    border-left: 1px solid #d0d0d0;
+		    border-right: 1px solid #d0d0d0;
+		    border-bottom: 1px solid #d0d0d0;
+		}
+		
+		table.paymentList tr th {
+		    padding: 40px 30px 25px 30px;
+		    text-align: center;
+		}
+		
+		table.paymentList tr th strong {
+		    margin-bottom: 8px;
+		    display: block;
+		    color: #333;
+		    font-size: 20px;
+		    line-height: 30px;
+		}
+		
+		table.paymentList tr th p {
+		    color: #333;
+		    font-size: 14px;
+		    font-weight: 400;
+		    line-height: 21px;
+		}
+		
+		table.paymentList tr th i.iconWrap {
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -moz-box;
+		    display: flex;
+		    -webkit-box-pack: center;
+		    -webkit-justify-content: center;
+		    -moz-box-pack: center;
+		    justify-content: center;
+		    height: 138px;
+		    margin: 20px 0;
+		}
+		
+		table.paymentList tr th .price {
+		    display: block;
+		    min-height: 126px;
+		}
+		
+		table.paymentList tr th .price em {
+		    font-size: 32px;
+		    font-weight: 400;
+		    line-height: 48px;
+		}
+		
+		table.paymentList tr th .price .calculator {
+		    margin-top: 20px;
+		    display: block;
+		    font-size: 15px;
+		    line-height: 22px;
+		}
+		
+		table.paymentList tr th.businessBasic .calculator {
+		    color: #623ad6;
+		}
+		
+		table.paymentList tr th.businessPro .calculator {
+    		color: #f96464;
+		}
+		
+		
+		table.paymentList tr th .price p>em {
+		    color: #555!important;
+		    font-family: roboto;
+		    font-size: 15px;
+		    line-height: inherit;
+		}
+		
+		table.paymentList tr th .btn-contents {
+		    padding: 0 50px!important;
+		    display: block!important;
+		    width: 100%;
+		    text-align: center;
+		    
+		    margin-top: 20px;
+		    padding: 0 50px 0 28px;
+		    display: inline-block;
+		    width: auto;
+		}
+		
+		table.paymentList tr th.businessBasic .price .icon-calculator {
+    		background: url(Images/icon-calculator-basic.png) center no-repeat;
+    		background-size: contain;
+		}
+		
+		table.paymentList tr th.businessPro .price .icon-calculator {
+		    background: url(Images/icon-calculator-pro.png) center no-repeat;
+		    background-size: contain;
+		}
+		
+		table.paymentList tr th .price .icon-calculator {
+		    margin-right: 6px;
+		    display: inline-block;
+		    vertical-align: sub;
+		    width: 18px;
+		    height: 20px;
+		}
+		
+		table.paymentList tr th.guest .btn-contents {
+		    background: #fff;
+		    color: #333;
+		    border: 1px solid #333;
+		}
+		
+		table.paymentList tr th.businessBasic .btn-contents {
+		    background: #623ad6;
+		    color: #fff;
+		}
+		
+		table.paymentList tr th.businessPro .btn-contents {
+		   background: #f96464;
+		   color: #fff;
+		}
+		
+		table.paymentList tr th.guest .price em {
+		    color: #777;
+		    font-weight: 550;
+		}
+		
+		table.paymentList tr th.businessBasic .price em {
+  		 	color: #623ad6;
+		}
+		
+		table.paymentList tr th.businessPro .price em {
+		    color: #f96464;
+		}
+		
+		table.paymentList tr th.paymentInfo {
+		    border-top: 6px solid #ddd;
+		    border-right: 1px solid #d0d0d0;
+		    background: #faf9f9;
+		    text-align: left;
+		}
+		
+		table.paymentList tr th.businessBasic {
+		    border-top: 6px solid #623ad6;
+		    border-left: 1px solid #623ad6;
+		    border-right: 1px solid #623ad6;
+		    background: #f8f6ff;
+		}
+		
+		table.paymentList tr th.businessPro {
+		    border-top: 6px solid #f96464;
+		}
+		
+		table.paymentList tr th.guest {
+		    border-top: 6px solid #777;
+		}
+		
+		tbody {
+		    display: table-row-group;
+		    vertical-align: middle;
+		    border-color: inherit;
+		}
+		
+		table.paymentList tbody tr.m1 th {
+		    padding: 16px 30px;
+		    vertical-align: middle;
+		    font-size: 14px;
+		    font-weight: 600;
+		    background: #faf9f9;
+		    border-right: 1px solid #d0d0d0;
+		    text-align: left;
+		}
+		
+		table.paymentList tbody tr.none th {
+		    background: #e2e2e2;
+		    padding: 18px 30px;
+		    font-size: 16px;
+		    font-weight: 700;
+		    text-align: left;
+		}
+		
+		table.paymentList tbody tr.none td, table.paymentList tbody tr.none th {
+		    background: #e2e2e2!important;
+		}
+		
+		table.paymentList tbody tr.m1 td {
+		    padding: 16px 30px;
+		    vertical-align: middle;
+		    font-size: 14px;
+		    font-weight: 500;
+		    line-height: 20px;
+		    text-align: center;
+		    
+		}
+		
+		table.paymentList tbody tr td:nth-child(3) {
+		    background: #f8f6ff;
+		    border-left: 1px solid #623ad6;
+		    border-right: 1px solid #623ad6;
+		}
+		
+		i.icon-check {
+		    display: inline-block;
+		    width: 12px;
+		    height: 12px;
+		    background: url(Images/icon-circle.svg) center no-repeat;
+		    background-size: contain;
+		}
+		
+		i.icon-null {
+		    display: inline-block;
+		    width: 12px;
+		    height: 12px;
+		    background: url(Images/icon-x.svg) center no-repeat;
+		    background-size: contain;
+		}
+		
+		tr.none td {
+			border-left: 1px solid #d0d0d0;
+		}
+		
+		ul.noticeTextList li {
+		    padding-left: 15px;
+		    color: #555;
+		    font-size: 14px;
+		    line-height: 26px;
+		}
+		
+		::-webkit-scrollbar {
+		    width: 7px;
+		    height: 7px;
+		    padding-right: 10px;
+		}
+		
+		ul.noticeTextList li:before {
+		    content: "ㆍ";
+		    display: inline-block;
+		    margin-left: -15px;
+		    margin-right: 5px;
+		}
+		
+		::-webkit-scrollbar-button {
+		    width: 7px;
+		    height: 7px;
+		}
+		
+		::-webkit-scrollbar-corner {
+		    background: 0 0;
+		}
+		
+		::-webkit-scrollbar-thumb {
+		    background: #999;
+		    border: 1px solid #999;
+		    -webkit-border-radius: 50px;
+		    border-radius: 50px;
+		}
+		::-webkit-scrollbar-track {
+		    background: 0 0;
+		    border: 0 none transparent;
+		    -webkit-border-radius: 53px;
+		    border-radius: 53px;
+		}
+		
+		.subNavigation {
+		    display: none;
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    background: #fff;
+		    -webkit-transition: all .2s ease-in-out;
+		    transition: all .2s ease-in-out;
+		    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.15);
+		    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+		    z-index: 11;
+		}
+		
+		.subNavigation.on {
+		    display: block;
+		}
+		
+		.subNavigation ul li {
+		    width: 33.3%;
+		}
+		
+		.subNavigation ul li a {
+		    display: block;
+		    color: #ccc;
+		    font-size: 16px;
+		    font-weight: 700;
+		    line-height: 24px;
+		    text-align: center;
+		    cursor: default;
+		}
+		.subNavigation ul {
+		    padding-left: 270px;
+		    width: auto;
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -moz-box;
+		    display: flex;
+		    -webkit-box-pack: justify;
+		    -webkit-justify-content: space-between;
+		    -moz-box-pack: justify;
+		    justify-content: space-between;
+		    -webkit-box-align: center;
+		    -webkit-align-items: center;
+		    -moz-box-align: center;
+		    align-items: center;
+		}
+		.price.subNavigation ul li a.guest {
+		    color: #555;
+		}
+		.price.subNavigation ul li a.businessBasic {
+ 		   color: #623ad6;
+		}
+		.price.subNavigation ul li a.businessPro {
+		    color: #f96464;
+		}
+		
+		.price.subNavigation ul {
+		    height: 80px;
+		}
+		.innerSection {
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1204px;
+}
+
+abbr, address, article, aside, audio, b, blockquote, body, canvas,
+	caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset,
+	figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+	hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu,
+	nav, object, ol, p, pre, q, samp, section, small, span, strong, sub,
+	summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var,
+	video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: 0 0;
+}
+
+.textWrap h2.textTitle {
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 89px;
+}
+
+h2.textTitle {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 60px;
+	line-height: 1.2;
+}
+
+.textWrap p.textSubTitle {
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.subSection .textSubTitle, .subSection .visualWrap .textSubTitle {
+	margin: 16px 0 0;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+	padding-right: 10px;
+}
+
+::-webkit-scrollbar-button {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-corner {
+	background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #999;
+	border: 1px solid #999;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+	background: 0 0;
+	border: 0 none transparent;
+	-webkit-border-radius: 53px;
+	border-radius: 53px;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: "Noto Sans KR", Roboto, "Malgun Gothic", "맑은 고딕", helvetica,
+		"Apple SD Gothic Neo", sans-serif, "Apple Color Emoji",
+		"Twemoji Country Flags";
+	color: #333;
+	line-height: 1;
+	letter-spacing: -.02em;
+	background: #fff;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+article, aside, figcaption, figure, footer, header, nav, section {
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.with-header {
+	display: block;
+	position : fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: 0 0;
+	z-index: 9;
+	display: sticky;
+	position: fixed;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: inherit;
+	text-decoration: none;
+	vertical-align: baseline;
+	color: inherit;
+	background: 0 0;
+	cursor: pointer;
+}
+
+.top-thin-banner {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	border-radius: 0;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	min-width: 204px;
+	justify-content: center;
+	font-size: 14px;
+	line-height: 21px;
+	box-shadow: none;
+	bottom: 30px;
+	padding: 10px 0;
+	font-weight: 700;
+	text-align: center;
+	transition: background 2s;
+	z-index: 10;
+	animation: loadSlow 1s linear forwards;
+}
+
+.top-thin-banner.voucher {
+	background: #00a3ff;
+	color: #fff;
+}
+
+.top-thin-banner.voucher img {
+	height: 30px;
+	margin-right: 26px;
+}
+
+.top-thin-banner.voucher>p {
+	margin-right: 6px;
+}
+
+.top-thin-banner>p {
+	display: inline-block;
+	position: relative;
+}
+
+.top-thin-banner.voucher span {
+	color: #ffe814;
+}
+
+.top-thin-banner.voucher .arrow-w {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:
+		url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/circle-arrow-w.svg)
+		center right/20px;
+}
+
+.with-header .renewal-section.headerSection {
+	background-color: transparent;
+}
+
+.with-header.headerSection {
+	margin-top: 50px;
+	padding: 0 50px;
+	max-width: 100%;
+	height: 80px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.headerSection {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 0 50px;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	max-width: 1920px;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	line-height: normal;
+}
+
+.with-header .logo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	margin: 0;
+	font-size: 0;
+}
+
+.with-header .logo img {
+	width: 100%;
+}
+
+.with-header .logo>a {
+	display: block;
+	min-width: 128px;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+.with-header nav.gnb {
+	display: flex;
+	width: 100%;
+	height: inherit;
+}
+
+.with-header nav.gnb>ul {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.with-header nav.gnb>ul li.gnbList {
+	position: relative;
+	margin-left: 35px;
+	cursor: pointer;
+}
+
+.with-header nav.gnb>ul li.gnbList a {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	border: 1px solid transparent;
+}
+
+li, ul {
+	list-style: none;
+}
+
+.with-header nav.gnb>ul li.gnbList .icons-arrow-textgo {
+	margin: -3px 0 0 6px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	font-size: 10px;
+	transform: rotate(90deg);
+}
+
+.with-header ul.gnbDepth {
+	color: #333;
+	font-weight: 600;
+	display: none;
+	position: absolute;
+	top: 36px;
+	left: -26px;
+	width: auto;
+	padding: 10px 20px 20px 15px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #fff;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.with-header ul.gnbDepth>li>a {
+	padding: 6px 10px;
+	font-size: 14px !important;
+	line-height: 21px;
+}
+
+.with-header .loginList {
+	position: relative;
+	margin-left: auto;
+}
+
+.with-header .loginList li {
+	margin-left: 8px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #333;
+	font-weight: 700;
+}
+
+.with-header .loginList li a {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.btn-common {
+	font-weight: 700;
+	line-height: 50px;
+	text-align: left;
+}
+
+.with-header .loginList .btn-login {
+	padding: 6px 18px;
+	color: #fff;
+	background: #00BFFF;
+	border: 1px solid #00BFFF;
+	border-radius: 25px;
+}
+
+.with-header .loginList .btn-login:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	background: #00A3FF;
+}
+
+.gnb li:hover {
+	text-decoration: underline;
+	cursor: pointer;
+	color: #00BFFF;
+}
+
+.gnb li:hover .gnbDepth {
+	margin-top: -15px;
+	border: 1px solid #9C9C9C;
+	display: block;
+}
+
+.gnb li ul li:hover a {
+	border-bottom: 3px solid black;
+}
+
+.with-header .loginList .login-tooltip {
+	z-index: 1;
+	display: block;
+	position: absolute;
+	top: 65px;
+	right: 0;
+	padding: 5px 7px 5px 7px;
+	background: #fff;
+	border: 1px solid #555;
+	border-radius: 3px;
+	color: #623ad6;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+	filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, .1));
+	margin-right: 0px;
+}
+
+.with-header .loginList .login-tooltip:before {
+	position: absolute;
+	top: -6px;
+	left: 62%;
+	display: block;
+	content: "";
+	width: 11px;
+	height: 6px;
+	background:
+		url(https://flow.team/flow-renewal/assets/images/sprite-project-detail.png)
+		no-repeat -720px -175px;
+	background-size: 844px auto;
+	-ms-transform: translateX(-49.9%);
+}
+
+.with-header nav.gnb ul li.gnbList .consult-click {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 2px;
+	background: url(Images/docu.png) center no-repeat;
+	background-size: contain;
+}
+
+h2 {
+	display: block;
+	font-size: 1.5em;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.btn-contents:hover {
+	background: #008BDA;
+	text-decoration: underline;
+}
+
+.btn-common {
+	border-radius: 900px;
+	color: #fff;
+}
+
+.btn {
+	display: inline;
+	width: 225px;
+	height: 63px;
+	padding: 16px 37px;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.with-header nav.gnb>ul li.gnbList:last-of-type .consult-click+span {
+	position: relative;
+	top: -5px;
+	color: #00A3FF;
+}
+.aa {
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	display:block;
+}
+
+#Gnb {
+	padding-inline-start: 40px;
+	height: 50px;
+	margin: 16px 0;
+}
+
+.loginList {
+	padding-left: 40px
+}
+.gnbDepth li:hover .deepdeepth {
+		display:block;
+		text-decoration:underline;
+ 		text-decoration-color:white;
+		color:#333;
+		}
+		.deepdeepth{
+		display:none;
+ 		margin-bottom:15px;
+		}
+		.deepdeepth li{
+		margin-bottom:15px;
+		text-decoration : none;
+		}
+.intro-mail-send-pop .pop-cont {
+    width: 590px;
+    max-width: 90%;
+    padding: 30px 20px;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#popDimmed {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.7);
+}
+.article-input-form>h3 {
+    margin: 12px 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44px;
+    color: #333;
+    text-align: center;
+}
+.article-input-form>p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #666;
+    text-align: center;
+}
+.warn {
+    margin-bottom: 10px;
+    color: #f96464;
+    font-size: 15px;
+    line-height: 22px;
+}
+.warn.bullet:before {
+    content: "*";
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #f96464;
+}
+ul.formList input[type=text] {
+    padding: 0 20px;
+    width: 100%;
+    height: 52px;
+    color: #623ad6;
+    font-family: inherit;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul.formList select {
+    padding: 0 20px;
+    width: 100%;
+    height: 52px;
+    color: #333;
+    font-family: inherit;
+    font-size: 16px;
+    background: #fff url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/icon_select_down.svg) right 20px center no-repeat;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    outline: 0;
+}
+ul.agreeList li label>p {
+    /* color: #333; */
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+ul.agreeList li label>p {
+    display: inline-block;
+    font-weight: 500;
+}
+ul.agreeList li label {
+    align-items: center;
+}
+#popDimmed .article-input-form li {
+    margin-top: 10px;
+}
+.agree-txt-red {
+    color: #f96464!important;
+}
+.checkBox label>p>a, ul.agreeList li label>p>a {
+    color: #623ad6;
+    text-decoration: underline;
+}
+.marketing-agree-badge {
+    margin-left: 10px;
+    padding: 4px 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    background: #03c3cf;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: initial;
+}
+.product-intro-mail {
+    display: flex;
+    align-items: center;
+    max-width: 251px;
+    margin: 30px auto 0;
+    padding: 14px 30px;
+    background: linear-gradient(276.77deg,#009785 -4.66%,#7c00f8 56.6%,#cd00a0 113.25%),#623ad6;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 29px;
+}
+.product-intro-mail i {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/render-product-intro.png) no-repeat center;
+    background-size: contain;
+}
+.intro-mail-send-pop .result-img-wrap i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #6919e6;
+    border-radius: 35px;
+    border: 1px solid #6919e6;
+    margin-left: 240px;
+}
+.intro-mail-send-pop .result-wrap h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+}
+.intro-mail-send-pop .result-wrap {
+    padding-top: 20px;
+    text-align: center;
+}
+.intro-mail-send-pop .result-img-wrap i img {
+    width: 30px;
+    height: 22px;
+}
+.intro-mail-send-pop button {
+    max-width: 204px;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    background: #623ad6;
+    border-radius: 30px;
+}
+
+.disappear {
+	display: none;
+}
+
+.payment-popup .popup-wr {
+    max-width: 600px;
+    width: 90%;
+    
+}
+
+.payment-bill {
+    width: 100%;
+    padding: 12px 0;
+    table-layout: fixed;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.popup-wr {
+    width: 600px;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0 auto;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #999999;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 20px 20px 30px rgb(0 0 0 / 20%);
+    box-shadow: 20px 20px 30px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    top: 230px;
+}
+
+.popup-wr .popup-tit {
+    height: 24px;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.payment-sale {
+    display: inline-block;
+    padding: 1px 10px;
+    margin-left: 10px;
+    border: 1px solid #fa6c3f;
+    box-sizing: border-box;
+    border-radius: 12px;
+    color: #fa6c3f;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.payment-section .section-tit {
+    height: 43px;
+    line-height: 43px;
+    display: block;
+    color: #555;
+}
+
+#paymentPopupLayer .payment-cycle {
+    padding: 12px 20px;
+    height: 52px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background: #fff url(/flow-renewal/assets/images/icons/icon_select_arrow.png) no-repeat 95% center;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.payment-bill td input {
+    width: 139px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.payment-section input {
+    background: 0 0;
+    border: 0 none transparent;
+    -webkit-border-radius: 53px;
+    border-radius: 53px;
+}
+
+.payment-bill td:nth-child(1) {
+    width: 40%;
+    padding: 13px 0 13px 30px;
+    font-size: 15px;
+}
+
+.payment-bill tr:nth-child(1) input {
+    width: 120px;
+    height: 30px;
+    padding: 5px 14px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.payment-bill td:nth-child(2) {
+    padding: 13px 30px 13px 0;
+    text-align: right;
+}
+
+.payment-bill tr:nth-child(3) {
+    color: #fa6c3f;
+}
+
+.vat-text {
+    margin-left: 3px;
+}
+
+.popup-wr .alert-txt {
+    margin: 20px 0 45px 0;
+    color: #999;
+    font-size: 13px;
+}
+
+.btn-qna {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 13px;
+    color: #555;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-qna:hover, .btn-qna:focus {
+    color: #6449fc;
+}
+
+.paymentPopup{
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+/*     z-index: 12; */
+    position: fixed;
+    display: block;
+    -ms-overflow-y: hidden;
+}
+
+.paymentPopup2 {
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: rgba(0,0,0,.6); */
+    z-index: 12; 
+    position: fixed;
+    display: block;
+    -ms-overflow-y: hidden;
+}
+
+.payment-cycle-group {
+    display: none;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    z-index: 1;
+    width: 210px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid #777;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    color: #555;
+    margin-top: 77px;
+    margin-left: 30px;
+}
+
+#calOptionSelect > li:hover {
+	cursor: pointer;
+	color: rgb(100, 73, 252);
+}
+
+
+
+	</style>
+</head>
+<body>
+<div class="aa">
+<header class="with-header main">
+		<a class="top-thin-banner voucher border"
+			href="https://sites.google.com/flow.team/2023goodchance?utm_source=service&utm_medium=homepage&utm_campaign=voucher2023"
+			target="_blank"> <img
+			src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/logo_gov.svg"
+			alt="정부 로고">
+			<p>
+				정부 지원금 <span>최대 200만원</span> 받기
+			</p> <i class="arrow-w"></i>
+		</a>
+		<div class="headerSection renewal-section">
+			<h1 class="logo">
+				<a title="With" href="메인.html"> <img src="Images/with_logo.png"
+					alt="with">
+				</a>
+			</h1>
+			<div id="popDimmed" class="intro-mail-send-pop" style="display: none;">
+            <div class="pop-cont">
+                <article class="article-input-form">
+                    <a href="javascript:void(0);" class="btnPopClose" onclick="closePopup()">닫기</a>
+                    <h3>제품 소개서 확인하기</h3>
+                    <p>협업툴 도입 시 꼭 필요한 제품 소개서와 비교자료를<br class="for-desktop"> 지금 바로 확인할 수 있어요.</p>
+                    <div id="popConsultForm"><form id="consultForm">
+                <p class="warn bullet">필수입력 항목입니다.</p>
+                <ul class="formList agreeList"style="padding-left:0px;">
+                    <li>
+                        <label class="bullet js-input" style="display: none;">이름</label>
+                        <input id="USER_NM" type="text" placeholder="이름*" autocomplete="off" data-required-yn="Y" maxlength="100" data-empty-msg="이름을 입력해주세요!" data-over-msg="이름이 100자가 넘으셨습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">전화번호</label>
+                        <input id="CLPH_NO" type="text" placeholder="전화번호(숫자와 +, -만 입력 가능합니다)*" autocomplete="off" data-required-yn="Y" data-valid="phoneNumber" maxlength="20" data-empty-msg="전화번호를 입력해주세요!" data-over-msg="전화번호가 20자가 넘으셨습니다!" data-un-valid-msg="전화번호 형식이 맞지 않습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">이메일</label>
+                        <input id="EML" type="text" placeholder="이메일*" autocomplete="off" data-valid="email" maxlength="50" data-required-yn="Y" data-empty-msg="이메일을 작성해주세요!" data-over-msg="이메일이 50자가 넘으셨습니다!" data-un-valid-msg="올바른 이메일을 작성해주세요!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">회사명</label>
+                        <input id="CMNM" type="text" placeholder="회사명*" autocomplete="off" data-required-yn="Y" maxlength="100" data-empty-msg="회사명을 입력해주세요!" data-over-msg="회사명이 100자가 넘으셨습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">직급/직책</label>
+                        <input id="POSITION" type="text" placeholder="직급/직책*" autocomplete="off" data-required-yn="Y" maxlength="100" data-empty-msg="직급/직책을 입력해주세요!" data-over-msg="직급/직책이 100자가 넘으셨습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-select" style="display: none;">업종</label>
+                        <select id="SECTORS" data-required-yn="Y">
+                            <option value="">업종을 선택하세요*</option>
+                            <option value="Produce">제조업</option>
+                            <option value="IT">정보통신업(IT)</option>
+                            <option value="Franchise">F&B, 프랜차이즈</option>
+                            <option value="Logistics">도·소매 유통 판매</option>
+                            <option value="Entertain">엔터테인먼트, 여행, 예술</option>
+                            <option value="Public">공공 행정</option>
+                            <option value="Construct">건설 및 기간 산업</option>
+                            <option value="Tax">세무, 법무, 노무</option>
+                            <option value="Transportation">운수 및 물류</option>
+                            <option value="Medical">의료 보건, 사회 복지</option>
+                            <option value="Finance">금융, 보험, 부동산</option>
+                            <option value="Association">협회 및 단체</option>
+                            <option value="Research">교육 및 연구</option>
+                            <option value="agriculture">1차 산업(농·임·수산업)</option>
+                            <option value="etc">기타</option>
+                        </select>
+                        <i class="icons-arrow-textgo"></i>
+                    </li>
+                    <li>
+                        <label class="bullet js-select" style="display: none;">예상 사용 인원</label>
+                        <select id="HOPE_CNT" data-required-yn="Y">
+                            <option value="">예상 사용 인원을 선택하세요*</option>
+                            <option value="10">10인 이하</option>
+                            <option value="11">10인 이상 ~ 30인 이하</option>
+                            <option value="31">31인 이상 ~ 50인 이하</option>
+                            <option value="51">51인 이상 ~ 100인 미만</option>
+                            <option value="100">100인 이상</option>
+                            <option value="500">500인 이상</option>
+                            <option value="1000">1000인 이상</option>
+                        </select>
+                        <i class="icons-arrow-textgo"></i>
+                    </li>
+                </ul>
+                <ul class="agreeList" style="width: 500px; padding-left:0px;">
+                    <li class="privacy-agree">
+                        <input id="privacyAgree" type="checkbox">
+                        <label for="privacyAgree">
+                            <p style="margin:0px;">
+                                <span class="agree-txt-red">[필수]</span> 
+                                <a class="btnAgree js-privacy-agree-btn">개인정보 수집 및 이용</a>에 동의합니다.
+                            </p>
+                        </label>
+                    </li>
+                    <li class="marketing-agree" style="width:auto;">
+                        <input id="marketingAgree" type="checkbox">
+                        <label for="marketingAgree" class="clearFix">
+                            <p style="margin-top: 0px;margin-bottom: 15px;">
+                                <span id="marketingRequired" class="agree-txt-red" data-required-yn="Y">[필수]</span> 
+                                <a class="btnAgree js-marketing-agree-btn">홍보 및 마케팅 수집・이용</a>에 동의합니다.
+                            </p>
+                        </label>
+                         </br>
+                        <em class="marketing-agree-badge"><span>✓</span> 체크시 플로우 무료 교육 / 리포트 제공</em>
+                    </li>
+                </ul>
+            </form></div>
+                    <a href="javascript:void(0);" class="product-intro-mail" display:"none;" onclick="SendMenu()"><i></i>제품 소개서 메일 발송</a>
+                </article>
+
+
+                <article id ="result" class="result-wrap" style="display: none;">
+                    <div class="result-img-wrap" style="text-align: center;">
+                        <i class="circle">
+                            <img src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/render-product-intro.png" alt="">
+                        </i>
+                    </div>
+                    <h3>지금 메일함을 열어보세요!</h3>
+                    <p class="mail-txt">taesamyung@naver.com</p>
+                    <p class="intro-txt">
+                        이메일로 제품 소개서를 보내드렸어요.
+
+                        5분이 지나도 도착하지 않는다면 그건 바로 니 잘못!
+                    </p>
+                    <button type="button" onclick= "closePopup()"">30일 무료체험하기</button>
+                </article>
+            </div>
+        </div>
+			<nav class="gnb menu">
+				<ul id="Gnb">
+					<li class="gnbList">
+							<a title="회사소개" href="">
+								회사소개
+								<i class="fa-solid fa-chevron-down"></i>
+							</a>
+							<ul class="gnbDepth productMenu">
+								<li>
+									<a title="회사소개" href="회사소개.html"></a>
+									회사소개
+								</li>
+								<li>
+									<a title="제품" href=""></a>
+									제품
+									<i class="fa-solid fa-chevron-down"></i>
+									<ul class="deepdeepth">
+										<li><br/>
+											<i class="fa-solid fa-people-group" style="color:green;"></i>
+											<a href="프로젝트협업.html" style="display:inline;">프로젝트 협업</a>
+											
+										</li>
+										<li>
+											<i class="fa-regular fa-paste" style="color:purple"></i>
+											<a title="업무관리" href="업무관리.html" style="display:inline;">업무관리</a>
+											
+										</li>
+										<li>
+											<i class="fa-regular fa-comment-dots" style="color:orange;"></i>
+											<a title="메신저" href="메신저.html" style="display:inline;">메신저</a>
+										</li>
+										<li>
+											<i class="fa-solid fa-flag-checkered" style="color:yellow;"></i>
+											<a title="OKR" href="OKR.html" style="display:inline;">OKR</a>
+										</li>
+										<li>
+											<i class="fa-solid fa-video" style="color:skyblue;"></i>
+											<a title="화상회의" href="화상회의.html" style="display:inline;">화상회의</a>
+										</li>
+										<li>
+											<i class="fa-solid fa-shield-halved" style="color:orange;"></i>
+											<a title="보안기능" href="보안기능.html" style="display:inline;">보안기능</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					<li class="gnbList">
+						<a title="요금" href="">
+						 요금 <i class="fa-solid fa-chevron-down"></i>
+						</a>
+					</li>
+					<li class="gnbList"><a title="고객사례" href="고객.html"> 고객사례 </a></li>
+					<li class="gnbList"><a title="자료실" href="자료실.html"> 자료실 </a></li>
+					<li class="gnbList" id="gnbList">
+  						<a title="소개서 받기" href="javascript:void(0);" class="product-intro-link" onclick="openPopup()">
+   						 <i class="consult-click"></i>
+   							 <span>소개서 받기</span>
+ 						 </a></li>
+				</ul>
+				<ul class="loginList">
+					<li><a title="로그인" href="로그인.jsp"> 로그인 </a></li>
+					<li><a title="회원가입" href="회원가입.html"
+						class="js-signup-btn btn-login btn-common"> 무료 회원가입 </a></li>
+					<span class="login-tooltip"> join with WITH! </span>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</div>
+	<div class="subNavigation price">
+        <div class="innerSection 정렬">
+            <ul>
+                <li class="js-scroll-to" data-to="1"><a title="게스트" class="guest">게스트</a></li>
+				<li class="js-scroll-to" data-to="2"><a title="비즈니스 베이직" class="businessBasic">비즈니스 베이직</a></li>
+                <li class="js-scroll-to" data-to="3"><a title="비즈니스 프로" class="businessPro">비즈니스 프로</a></li>
+            </ul>
+        </div>
+    </div>
+	<div class="정렬" style="margin-top: 130px;">
+		<div class="fl" style = "padding: 60px 0 100px; margin: 0 auto;">
+			<h1 id="요금제">요금제</h1>
+			<p id="요금제2">가장 합리적 요금의 플로우로 업무 효율을 높여보세요.</p>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="정렬 ">
+		<ul class="tabList fl">
+			<li>
+				<a id="a연간결제" style="width:119px" class="active">연간 결제</a>
+			</li>
+			<li>
+				<a id="a월간결제" style="width:119px">월간 결제</a>
+			</li>
+		</ul>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="정렬">
+		<div>
+			<table class="paymentList">
+			<colgroup>
+				<col style="width: 23%;">
+				<col style="width: auto;">
+				<col style="width: auto;">
+				<col style="width: auto;">
+			</colgroup>
+				<tr>
+					<th class="paymentInfo">
+						<strong>이용요금 안내</strong>
+						<p>비영리 교육기관, 학생단체, 공익재단은 이용료 50% 할인을 적용합니다.<br>아카데미 할인을 적용받는 기관, 단체는 증명할 수 있는 증빙서류를 반드시 제출해야 합니다.</p>
+					</th>
+					<th class="guest">
+						<strong>게스트</strong>
+						<p>프로젝트에 초대받아 협업을 경험<br/>할 수 있는 무료 체험용 요금제</p>
+						<i class="iconWrap">
+							<img src="Images/guest.png" alt="게스트"/>
+						</i>
+						<span class="price">
+							<em>무료</em>
+						</span>
+						<a title="무료로 시작" href="https://flow.team/signup.act?guest" class="btn-common btn-contents">
+							무료로 시작
+						</a>
+					</th>
+					<th class="businessBasic">
+						<strong>비즈니스 베이직</strong>
+						<p>업무 효율 향상과 비대면 근무 환경<br/>구축을 위한 합리적인 요금제</p>
+						<i class="iconWrap">
+							<img src="Images/비즈니스베이직.png" alt="비즈니스 베이직"/>
+						</i>
+						<span class="price">
+							<em><b id="price_basic">6000</b>원</em>
+							<p>
+								최소 구매인원
+								<em>10</em>
+								명
+							</p>
+							<a title="요금 계산기" class="js-calculator calculator">
+								<i class="icon-calculator"></i>
+								요금 계산기
+							</a>
+						</span>
+						<a title="한달 무료 체험" href="https://flow.team/signup.act?business&plan=BUSINESS_BASIC_KR_E" class="btn-common btn-contents">
+							한달 무료 체험
+						</a>
+					</th>
+					<th class="businessPro">
+						<strong>비즈니스 프로</strong>
+						<p>데이터 통제 및 연동을 필요로 하는<br/>기업을 위한 요금제</p>
+						<i class="iconWrap">
+							<img src="Images/비즈니스프로.png" alt="비즈니스 프로"/>
+						</i>
+						<span class="price">
+							<em><b b id="price_pro">8000</b>원</em>
+							<p>
+								최소 구매인원
+								<em>10</em>
+								명
+							</p>
+							<a title="요금 계산기" class="js-calculator calculator">
+								<i class="icon-calculator"></i>
+								요금 계산기
+							</a>
+						</span>
+						<a title="한달 무료 체험" href="https://flow.team/signup.act?business&plan=BUSINESS_BASIC_KR_E" class="btn-common btn-contents">
+							한달 무료 체험
+						</a>
+					</th>
+				</tr>
+				<tbody>
+					<tr class="none">
+						<th>프로젝트 협업</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>프로젝트 개설</th>
+						<td>3개</td>
+						<td>무제한</td>
+						<td>무제한</td>
+					</tr>
+					<tr class="m1">
+						<th>계정당 용량</th>
+						<td>500MB</td>
+						<td>인당 20GB</td>
+						<td>인당 50GB</td>
+					</tr>
+					<tr class="m1">
+						<th>파일 폴더링 기능</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>파일 1회 업로드 용량</th>
+						<td>10MB</i></td>
+						<td>500MB</td>
+						<td>1GB</td>
+					</tr>
+					<tr class="m1">
+						<th>검색 기간</th>
+						<td>1달 내 자료</td>
+						<td>무기한</td>
+						<td>무기한</td>
+					</tr>
+					<tr class="m1">
+						<th>업무관리</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>일정공유</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>할일관리</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="none">
+						<th>메신저</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>1:1/그룹 메시징</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>메세지 검색</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>자동 폭파 메세지</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>파일/이미지 모아보기</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>이모티콘</th>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="none">
+						<th>화상회의</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>Zoom 연동</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="none">
+						<th>리포트</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>전체업무 모아보기</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>전체일정 모아보기</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>전체파일 모아보기</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>간트 차트</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="none">
+						<th>보안</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>중복 로그인 방지</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>화면캡쳐 및 모니터링</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>파일다운로드 모니터링</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>2Factor 인증</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>문서 워터마크</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>접속 IP 화이트리스트 관리</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="none">
+						<th>관리자 기능</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>사용자 계정관리</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>조직도 관리</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>사용 통계</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="none">
+						<th>Open API</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="m1">
+						<th>AD/SSO 연동</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>조직도 연동</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+					<tr class="m1">
+						<th>메세지 봇 연동</th>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-null"></i></td>
+						<td><i class="icon-check"></i></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<ul class="noticeTextList">
+            <li>위 금액은 1인 기준의 월간 사용 요금으로, VAT(부가세)가 포함되지 않은 금액입니다.</li>
+            <li>10인 미만의 인원이 사용할 경우, 용량은 10인 기준으로 제공됩니다. (베이직: 200GB, 프로: 500GB) </li>
+            <li>저장 공간은 1TB 단위로 추가 구매 가능합니다. <a href="https://flow.team/kr/consult" class="redirect-btn">[문의하기]</a></li>
+            <li>아카데미 할인 정책 : 비영리 교육기관, 학생단체 및 공익재단은 플로우 이용료 50% 할인을 적용합니다.</li>
+            <li>아카데미 할인을 적용받는 기관 및 단체는 증명할 수 있는 증빙서류를 반드시 제출해야 합니다.</li>
+        </ul>
+	</div>
+	
+	<div id="background">
+	<div id=paymentPopup>
+	</div>
+		<div id="paymentPopupLayer" class="popup-wr disappear">
+                <div class="popup-tit">
+                    <strong id="popupTitle" class="section-tit">요금 계산기</strong>
+                </div>
+                <div id="content">
+        <div class="payment-section">
+            <strong class="section-tit">결제주기</strong>
+            <div class="payment-cycle" id="calPayOption" data-option="Y">연간 정기 결제<span class="js-payment-sale payment-sale" style="display: inline-block;">25% 할인</span></div>
+            <ul id="calOptionSelect" class="payment-cycle-group">
+                
+                <li id="yearSelect">
+                    <div>연간 정기 결제<span class="js-payment-sale payment-sale" style="display: inline-block;">25% 할인</span></div>
+                </li><li id="monthSelect">
+                    <div>월간 정기 결제</div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="payment-section">
+            <strong class="section-tit">예상금액</strong>
+            <table class="payment-bill">
+                <tbody>
+                <tr>
+                    <td>
+                        현재 사용인원
+                    </td>
+                    <td>
+                        <input id="calUserCnt" type="text" maxlength="4" value="10">
+                        <span>명</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        예상 결제금액
+                    </td>
+                    <td>
+                        <input id="calPrice" type="text" value="₩720,000" readonly="readonly">
+                        <span class="js-cal-gubun"> / 연</span><span class="vat-text">(VAT 별도)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="icon-idea"></i>
+                        절약금액
+                    </td>
+                    <td>
+                        <input id="calSavings" type="text" value="₩240,000" readonly="readonly" style="color: #fa6c3f;">
+                        <span class="js-cal-gubun"> / 연</span><span class="vat-text">(VAT 별도)</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p class="alert-txt">매월 사용 인원수에 따라 이용 금액이 변경 될 수 있습니다.</p>
+        </div>
+        <button class="btn-qna js-question-btn">
+            <i></i>
+            자주묻는 질문 보기
+        </button>
+        
+        
+    </div>
+            </div>
+            </div>
+        
+</body>
+</html>

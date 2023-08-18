@@ -1,0 +1,117 @@
+/* tailwindcss.com 를 근간으로 네이밍함 */
+.ml-5 {
+    margin-left: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-15 {
+    margin-left: 10px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.my-10 {
+    margin: 10px 0;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.z-0 {
+    z-index: 0;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-20 {
+    z-index: 20;
+}
+
+.z-30 {
+    z-index: 30;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.list-item {
+    display: list-item;
+}
+
+.float-right {
+    float: right;
+}
+
+.w-24 {
+    width: 6rem /* 96px*/
+}
+
+.w-48 {
+    width: 12rem /* 192px*/
+}
+
+.text-red-600 {
+    color: rgb(220 38 38);
+}
+
+.break-all {
+    word-break: break-all;
+}
+

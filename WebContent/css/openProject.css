@@ -1,0 +1,321 @@
+@charset "UTF-8";
+
+.main-container .small-style-wrap#openProjectLayer {
+    max-width: 100%;
+}
+.main-container .small-style-wrap {
+    position: relative;
+}
+.open-search-area {
+    padding: 0 0 20px 0;
+}
+#openProjectLayer .project-search-area {
+    margin-left: 30px;
+}
+.project-search-area {
+    margin: 0;
+    width: 100%;
+    max-width: 355px;
+    text-align: right;
+}
+.project-search {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+}
+.project-search-input {
+    width: 100%;
+    height: 34px;
+    padding: 0 74px 0 38px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    color: #00A3FF;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.project-search-input+.btn-search-delete.absolute-r {
+    margin: 0 10px;
+}
+.btn-search-delete.absolute-r {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0 0 0 10px;
+}
+.btn-search-delete {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+    background: #333;
+    border-radius: 50%;
+}
+.btn-search-delete i {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(https://flow.team/flow-renewal/assets/images/icons/icon-x.svg?v=a7bb98227e9ba5b975c94a2861ff8cacd1f00dc7) no-repeat center center;
+}
+.project-search-input:focus, .project-search-input:hover {
+    border: 1px solid #777;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.15);
+}
+.project-search-input:focus{
+	outline:none;
+}
+input::placeholder{
+	font-weight:300;
+}
+.public-project-header {
+    width: calc(100% - 60px);
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+}
+.public-list-area {
+    position: relative;
+    overflow: hidden;
+    height: 35px;
+}
+.public-list-group {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    height: 35px;
+    padding:0;
+}
+.public-list-group li {
+    float: left;
+    margin-right: 5px;
+}
+.public-project-item.active {
+    color: #fff;
+    border-color: #00A3FF;
+    background: #00A3FF;
+}
+.public-project-item {
+    padding: 0 18px;
+    height: 35px;
+    background: #fff;
+    color: #777;
+    font-size: 13px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 600px;
+    text-align: center;
+}
+.public-project-item:hover {
+   
+    color: #00A3FF;
+    
+    border: 1px solid #00A3FF;
+   
+}
+.public-project-item.active:hover {
+   
+    color: #fff;
+    
+    border: 1px solid #00A3FF;
+   
+}
+.main-container .small-style-wrap#openProjectLayer .section-wrap {
+    position: relative;
+    max-width: 1151px;
+    margin: 0 auto;
+    width: calc(100% - 60px);
+}
+.section-2 {
+    overflow: hidden;
+}
+.public-title-area {
+    max-width: 1170px;
+    margin: 36px 0 15px;
+}
+.public-project-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+.public-count {
+    margin-left: 6px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ff3532;
+}
+.section-list-1 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+#openProjectList .project-item {
+    width: 100%;
+    margin: 0;
+}
+.project-item {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+#openProjectLayer li a {
+    min-height: 62px;
+    padding: 9px 20px;
+    margin: 5px 0;
+    position: relative;
+    display: -moz-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    border-bottom: 0;
+}
+.section-list-1 li a {
+    min-height: 52px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+#openProjectList .project-wr {
+    width: 100%;
+    margin: 0;
+}
+.project-wr {
+    margin: 0 0 0 20px;
+}
+.project-wr .project-wr-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px
+}
+.project-ttl-sub {
+    font-size: 12px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    margin-top: 2px;
+}
+#openProjectList .project-wr .icon-locked {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(https://flow.team/flow-renewal/assets/images/icons/icon-lock-rd.svg?v=07caae82e6a94820ab96d66a5b8feb037dc352df) no-repeat center center/cover;
+    margin-right: 5px;
+}
+.d-none-important {
+    display: none!important;
+}
+.section-list-1 li span {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 490px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.project-ttl {
+    font-weight: 700;
+    vertical-align: middle;
+}
+.section-list-1 .with-content-hm-txt {
+    margin: 0 3px 0 6px;
+}
+.project-list-setion .with-content-hm-txt {
+    font-size: 14px;
+    color: #999;
+}
+.with-content-hm-txt {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.with-content-hm-txt i::before {
+    font-size: 11px;
+    font-weight: 700;
+    color: #999;
+}
+.project-wr-top .participant-count {
+    margin-right: 6px;
+}
+.project-list-setion li em {
+    color: #999;
+    vertical-align: middle;
+    line-height: 1em;
+}
+.participant-count {
+    display: inline-block;
+}
+address, em {
+    font-style: normal;
+}
+.project-list-setion .manager {
+    font-weight: 700;
+    font-size: 12px;
+    color: #777;
+}
+.manager-name {
+    font-size: 12px;
+    color: #777;
+}
+.project-list-setion li em.badge-join {
+    height: 24px;
+    padding: 0 8px;
+    margin: 0 0 0 5px;
+    display: inline-block;
+    background: #ff6b6b;
+    border-radius: 200px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.section-list-1 li a:hover .project-ttl {
+    color: #00A3FF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2823 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/42669b0565.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+    $(function(){
+        $('.slider').bxSlider({
+        	auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true,
+        });
+      });
+    </script>
+<style class="vjs-styles-defaults">
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.clientStory-slide-wrap .slideFunc .slide-func-item .slide-func-item-box>.slide-func-item-box-ment:before {
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/icon_first_quotes2.png) center no-repeat;
+}
+.slideFunc .slide-func-item .slide-func-item-box>.slide-func-item-box-ment>span.slide-func-txt {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    opacity: 0;
+    line-height: 40px;
+}
+.clientStory-client-interview-wrap>ul li a:hover dt:before {
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-story-play-btn-hover.png);
+    background-size: 45px;
+}
+.clientStory-client-interview-wrap>ul li dt:before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-story-play-btn.png);
+    background-size: 45px;
+    }
+body {
+	font-family: "Noto Sans KR", Roboto, "Malgun Gothic", "맑은 고딕", helvetica,
+		"Apple SD Gothic Neo", sans-serif, "Apple Color Emoji",
+		"Twemoji Country Flags";
+	color: #333;
+	line-height: 1;
+	letter-spacing: -.02em;
+}
+	::-webkit-scrollbar {
+	    width: 7px;
+	    height: 7px;
+	    padding-right: 10px;
+		}
+		::-webkit-scrollbar-button {
+	    width: 7px;
+	    height: 7px;
+		}
+		::-webkit-scrollbar-corner {
+	    background: 0 0;
+		}
+		::-webkit-scrollbar-thumb {
+	    background: #999;
+	    border: 1px solid #999;
+	    -webkit-border-radius: 50px;
+	    border-radius: 50px;
+		}
+		::-webkit-scrollbar-track {
+	    background: 0 0;
+	    border: 0 none transparent;
+	    -webkit-border-radius: 53px;
+	    border-radius: 53px;
+		}
+		html {
+	    -webkit-text-size-adjust: 100%;
+		}
+		body {
+		font-family: "Noto Sans KR",Roboto,"Malgun Gothic","맑은 고딕",helvetica,
+		"Apple SD Gothic Neo",sans-serif,"Apple Color Emoji","Twemoji Country Flags";
+		color: #333;
+    	line-height: 1;
+    	letter-spacing: -.02em;
+    	background:#fff; 
+    	margin-top: 0;
+	    margin-right: 0;
+	    margin-bottom: 0;
+	    margin-left: 0;
+		}
+		article, aside, figcaption, figure, footer, header, nav, section {
+    	display: block;
+		}
+		
+		* {
+		box-sizing: border-box;
+		}
+		.with-header{
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    background: 0 0;
+	    z-index: 9;
+	    display:sticky;
+		}		
+		.top-thin-banner.voucher{
+		background: #00a3ff;
+    	color: #fff;
+		}
+		.top-thin-banner.voucher>p {
+	    margin-right: 6px;
+		}
+		.top-thin-banner>p {
+	    display: inline-block;
+	    position: relative;
+		}
+		.top-thin-banner.voucher span {
+	    color: #ffe814;
+		}
+		.top-thin-banner.voucher .arrow-w {
+	    display: inline-block;
+	    width: 20px;
+	    height: 20px;
+	    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/circle-arrow-w.svg) center right/20px;
+		}
+		.with-header .renewal-section.headerSection {
+	    background-color: white;
+		}
+		.with-header.headerSection {
+		margin-top: 50px;
+	    padding: 0 50px;
+	    max-width: 100%;
+	    height: 80px;
+	    display: flex;
+	    -webkit-box-align: center;
+        align-items: center;
+		}
+		.headerSection{
+		position: relative;
+		margin: 0 auto;
+	    padding: 0 50px;
+	    display: flex;
+	    -webkit-box-pack: justify;
+	    justify-content: space-between;
+	    -webkit-box-align: center;
+	    align-items: center;
+	    max-width: 1920px;
+	    height: 100%;
+			}
+		h1, h2, h3, h4, h5, h6 {
+	    font-size: inherit;
+	    line-height: normal;
+		}
+		.with-header .logo {
+	    display: -webkit-box;
+	    display: -webkit-flex;
+	    display: -moz-box;
+	    display: flex;
+	    margin: 0;
+	    font-size: 0;
+		}
+		.with-header .logo img {
+	    width: 100%;
+		}
+		.with-header .logo>a {
+	    display: block;
+	    min-width: 128px;
+		}
+		img {
+	    max-width: 100%;
+	    vertical-align: top;
+		}
+		.with-header nav.gnb {
+	    display: flex;
+	    width: 100%;
+	    height: inherit;
+		}
+		.with-header nav.gnb>ul {
+	    display: flex;
+	    -webkit-box-align: center;
+	    align-items: center;
+		}
+		.with-header nav.gnb>ul li.gnbList {
+		    position: relative;
+		    margin-left: 35px;
+		    cursor: pointer;
+		}
+		.gnbDepth li:hover .deepdeepth {
+		    display: block;
+		    text-decoration: underline;
+		    text-decoration-color: white;
+		    color: #333;
+		}
+		.deepdeepth {
+		    display: none;
+		    margin-bottom: 15px;
+		}
+		.deepdeepth li {
+		    margin-bottom: 15px;
+		    margin-left: -40px;
+		    text-decoration: none;
+		}
+		.with-header nav.gnb>ul li.gnbList a {
+	    display: block;
+	    font-size: 16px;
+	    font-weight: 700;
+	    border: 1px solid transparent;
+		}
+		.with-header nav.gnb>ul li.gnbList .icons-arrow-textgo {
+	    margin: -3px 0 0 6px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    color: #333;
+	    font-size: 10px;
+	    transform: rotate(90deg);
+		}
+		.with-header ul.gnbDepth {
+		color:#333;
+		font-weight:600;
+	    display: none;
+	    position: absolute;
+	    top: 36px;
+	    left: -26px;
+	    width: auto;
+	    padding: 10px 20px 20px 15px;
+	    border: 1px solid #ccc;
+	    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.15);
+	    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	    background: #fff;
+	    text-align: left;
+	    white-space: nowrap;
+	    }
+	    .clientStory-partner-wrap {
+    padding: 130px 0;
+}
+	    .with-header ul.gnbDepth>li>a {
+	    padding: 6px 10px;
+	    font-size: 14px!important;
+	    line-height: 21px;
+	    }
+		.with-header .loginList {
+		position: relative;
+    	margin-left: auto;
+		}
+		.with-header .loginList li {
+	    margin-left: 8px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    color: #333;
+	    font-weight: 700;
+		}
+		.with-header .loginList li a {
+	    font-size: 14px;
+	    margin-left:10px;
+		}
+		.btn-common{
+		font-weight: 700;
+	    line-height: 50px;
+	    text-align: left;
+		}
+		.with-header .loginList .btn-login {
+	    padding: 6px 18px;
+	    color: #fff;
+	    background: #00BFFF;
+	    border: 1px solid #00BFFF;
+	    border-radius: 25px;
+		}
+		.with-header .loginList .btn-login:hover {
+	    text-decoration: underline;
+	    cursor: pointer;
+		background: #00A3FF;
+		}
+		.gnb li:hover {
+		text-decoration: underline;
+		cursor: pointer;
+		color: #00BFFF;
+		}
+		.gnb li:hover .gnbDepth{
+		margin-top:-15px;
+		border:1px solid #9C9C9C;
+		display:block;
+		}
+		.gnb li ul li:hover a{
+		border-bottom:3px solid black;
+		}
+		.with-header .loginList .login-tooltip {
+		z-index:1;
+	    display: block;
+	    position: absolute;
+	    top: 48px;
+	    right: 0;
+	    padding: 5px 7px 5px 7px;
+	    background: #fff;
+	    border: 1px solid #555;
+	    border-radius: 3px;
+	    color: #623ad6;
+	    font-size: 12px;
+	    font-weight: 500;
+	    line-height: 18px;
+	    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, .1));
+	    margin-right: 0px;
+		}
+		.with-header .loginList .login-tooltip:before {
+	    position: absolute;
+	    top: -6px;
+	    left: 62%;
+	    display: block;
+	    content: "";
+	    width: 11px;
+	    height: 6px;
+	    background: url(https://flow.team/flow-renewal/assets/images/sprite-project-detail.png) no-repeat -720px -175px;
+	    background-size: 844px auto;
+	    -ms-transform: translateX(-49.9%);
+		}
+		.with-header nav.gnb ul li.gnbList .consult-click {
+	    display: inline-block;
+	    width: 24px;
+	    height: 24px;
+	    margin-right: 2px;
+	    background: url(Images/docu.png) center no-repeat;
+	    background-size: contain;
+		}
+		
+		h2 {
+	    display: block;
+	    font-size: 1.5em;
+	    margin-block-start: 0.83em;
+	    margin-block-end: 0.83em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	    font-weight: bold;
+		}
+		p {
+	    display: block;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+		}
+		
+		.btn-contents:hover {
+	    background: #008BDA;
+		text-decoration: underline;
+		}
+		.btn-common {
+		border-radius: 900px;
+	    color: #fff;
+		}
+		.btn{
+		display: inline;
+	    width: 225px;
+	    height: 63px;
+	    padding: 16px 37px;
+	    font-size: 20px;
+	    font-weight: 500;
+	    line-height: normal;
+		}
+		
+		.with-header nav.gnb>ul li.gnbList:last-of-type .consult-click+span {
+	    position: relative;
+	    top: -5px;
+	    color: #00A3FF;
+		}
+		
+* {
+    box-sizing: border-box;
+}
+.video-js {
+	width: 300px;
+	height: 150px;
+}
+
+.vjs-fluid {
+	padding-top: 56.25%
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    text-decoration: none;
+    vertical-align: baseline;
+    color: inherit;
+    background: 0 0;
+    cursor: pointer;
+}
+li, ul {
+	list-style: none;
+}
+.flow-header ul.gnbDepth {
+	display: none;
+	position: absolute;
+	top: 36px;
+	left: -26px;
+	width: auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #fff;
+	text-align: left;
+	white-space: nowrap;
+}
+.top-thin-banner.voucher img {
+	height: 30px;
+	margin-right: 26px;
+}
+.flow-header nav.gnb>ul {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+.top-thin-banner.voucher>p {
+	margin-right: 6px;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start:40px;
+}
+.flow-header nav.gnb>ul li.gnbList a {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	border: 1px solid transparent;
+	letter-spacing: -0.11em;
+}
+.innerSection {
+    position: relative;
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: 1304px;
+}
+.top-thin-banner.voucher {
+	background: #00a3ff;
+	color: #fff;
+}
+.top-thin-banner {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+	-webkit-box-align: center;
+	align-items: center;
+	border-radius: 0;
+	font-size: 14px;
+	line-height: 21px;
+	min-width: 204px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	bottom: 30px;
+	font-weight: 700;
+	text-align: center;
+	transition: background 2s;
+	z-index: 10;
+	animation: loadSlow 1s linear forwards;
+}
+.top-thin-banner.voucher span {
+	color: #ffe814;
+}
+.top-thin-banner.voucher .arrow-w {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background:
+		url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/circle-arrow-w.svg)
+		center right/20px;
+}
+.flow-header .logo img {
+	width: 100%;
+}
+.subSection .textTitle, .subSection .visualWrap h2.textTitle {
+    width: 100%;
+    margin-bottom: 21px;
+    font-size: 59px;
+    line-height: 1.2;
+    margin-top: -23px;
+    font-weight: 700;
+}
+.subSection .textSubTitle, .subSection .visualWrap .textSubTitle {
+    margin: 16px 0 0;
+    font-size: 18px;
+    line-height: 26px;
+}
+.clientStory-section .visualWrap .innerSection {
+    padding: 0px 50px;
+    margin: 0px 112px;
+}
+h2 {
+	display: block;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+.flow-header .renewal-section.innerSection nav.gnb {
+    margin-left: 70px;
+    padding: 0;
+}
+.flow-header nav.gnb {
+    display: flex;
+    width: 100%;
+    height: inherit;
+}
+.flow-header .loginList li a {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.08em;
+}
+.loginList{
+	margin-left:50px;
+}
+.flow-header .loginList .login-tooltip {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 1px;
+    padding: 3px 13px 4px 10px;
+    background: #fff;
+    border: 1px solid #555;
+    border-radius: 3px;
+    color: #623ad6;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 18px;
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, .1));
+    margin-right: 0px;
+    letter-spacing: -0.12em;
+}
+
+.flow-header .loginList .login-tooltip {
+    display: block;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    padding: 5px 7px 5px 7px;
+    background: #fff;
+    border: 1px solid #555;
+    border-radius: 3px;
+    color: #623ad6;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, .1));
+    margin-right: 0px;
+}
+.flow-header .loginList .login-tooltip:before {
+    position: absolute;
+    top: -6px;
+    left: 62%;
+    display: block;
+    content: "";
+    width: 11px;
+    height: 6px;
+    background: url(https://flow.team/flow-renewal/assets/images/sprite-project-detail.png) no-repeat -720px -175px;
+    background-size: 844px auto;
+}
+   .flow-header nav.gnb ul li.gnbList .consult-click {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 2px;
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/top-banner-images/consult-click.svg) center no-repeat;
+    background-size: contain;
+}
+   .flow-header nav.gnb>ul li.gnbList:last-of-type .consult-click+span {
+    position: relative;
+    top: -5px;
+    color: #623ad6;
+}
+em, i {
+    font-style: normal;
+}
+.flow-header .loginList .btn-login:focus, .flow-header .loginList .btn-login:hover {
+    color: #fff;
+    background: #623ad6;
+    border: 1px solid #623ad6;
+}
+.flow-header .loginList .btn-login {
+    padding-top: 7px;
+    padding-right: 19px;
+    padding-bottom: 7px;
+    padding-left: 14px;
+    color: #fff;
+    background: #514474;
+    border: 1px solid #514474;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+.flow-header .loginList {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    position: relative;
+    margin-left: 506px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    display: inline-block;
+    vertical-align: middle;
+    color: #514474;
+    font-weight: 700;
+}
+.btn-common {
+    height: 52px;
+    padding: 0 28px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 900px;
+    border-radius: 900px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: left;
+}
+.flow-header .loginList li {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #514474;
+    font-weight: 700;
+}
+.flow-header .innerSection {
+    margin-top: 3px;
+    padding: 0 50px;
+    max-width: 100%;
+    height: 80px;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.flow-header nav.gnb>ul li.gnbList .icons-arrow-textgo {
+    margin: -3px 0 0 6px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    font-size: 10px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}	
+article, aside, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+::-webkit-scrollbar-track {
+    background: 0 0;
+    border: 0 none transparent;
+    -webkit-border-radius: 53px;
+    border-radius: 53px;
+}
+.subSection .visualWrap {
+    background: #fff;
+    padding: 70px 0;
+    height: 100%;
+    margin-top: 135px;
+}
+.sideWrap {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    width: 70px;
+    height: 130px;
+    z-index: 5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+}
+.clientStory-section .slideFunc .slide-func-item .slide-func-item-box {
+    width: 100%;
+}
+.slideFunc .slide-func-item .slide-func-item-box {
+    width: 100%;
+    -webkit-animation: moSlideImgAni 1s linear forwards;
+    animation: moSlideImgAni 1s linear forwards;
+}
+.slideFunc .slide-func-item .slide-func-item-box>.slide-func-item-box-ment {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 80px;
+    padding: 0 40px;
+    line-height: 33px;
+    font-size: 22px;
+}
+.clientStory-section .slideFunc {
+    background-color: transparent;
+    color: #fff;
+}
+.slideFunc .slide-func-item .slide-func-item-box .slide-nav-box .slide-gauge-wrap {
+    margin-bottom: 25px;
+}
+.flow-header nav.gnb>ul li.gnbList:hover>a {
+    color: #623ad6;
+    text-decoration: underline;
+}
+.flow-header nav.gnb>ul li.gnbList.active .gnbDepth {
+    display: block;
+    opacity: 1;
+}
+.flow-header ul.gnbDepth {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: -26px;
+    width: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #fff;
+    text-align: left;
+    white-space: nowrap;
+}
+.linkMore {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    z-index: 0;
+}
+.clientStory-section .slideFunc .linkMore {
+    color: #fff;
+}
+.clientStory-partner-wrap .partner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0;
+    padding-inline-start: 0px;
+}
+img {
+	width:200px;
+    max-width: 100%;
+    vertical-align: top;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.clientStory-story-wrap {
+    padding: 120px 0 300px;
+    background-color: #f5f4f9;
+}
+.subSection h3.textTitle {
+    font-size: 30px;
+    line-height: 44px;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-img-wrap:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1);
+}
+.clientStory-section .innerSection {
+    max-width: 1304px;
+    padding: 0 50px;
+}
+.clientStory-story-wrap-top {
+    display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: flex!important;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 50px 0 100px;
+}
+.clientStory-client-interview-wrap>ul {
+    display: flex!important;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.contentsWrap {
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: all .5s linear;
+    padding-inline-start: 0px;
+}
+.clientStory-client-interview-wrap>ul li dl dt {
+    position: relative;
+    height: 200px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-img-wrap:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-story-play-btn.png);
+    background-size: 80px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(1) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-01.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(2) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-w.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(3) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-h.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(4) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-ci.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(5) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-b.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(6) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-g.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(7) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-02.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(8) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-co.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(9) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-s.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(10) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-weact.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(11) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-innople.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(12) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-ss.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(13) dt {
+    background: linear-gradient(202.16deg,rgba(0,0,0,.5) 4.8%,rgba(0,0,0,0) 45.73%),rgba(0,0,0,.1) url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-han.png) no-repeat;
+    background-size: contain;
+    width: 280px;
+}
+.clientStory-client-interview-wrap>ul li dl dd p {
+    width: 220px;
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 21px;
+    font-size: 16px;
+}
+.clientStory-client-interview-wrap>ul li dl dd .img-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: stretch;
+    height: 56px;
+}
+.clientStory-client-interview-wrap>ul li dl dt em {
+    position: absolute;
+    top: 20px;
+    right: 23px;
+    height: 33px;	
+    padding: 6px 17px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.clientStory-client-interview-wrap>ul li dl dd img {
+    width: 41%;
+    height: 48%;
+    margin-top: 13px;
+}
+.clientStory-client-interview-wrap>ul li dl dd em {
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+}
+.clientStory-client-interview-wrap>ul li dl dd span {
+    color: #777;
+    font-size: 14px;
+}
+dd{
+	margin-bottom:50px;
+}
+.clientStory-client-interview-wrap>ul li:hover dd * {
+    color: #623ad6!important;
+}
+.clientStory-client-interview-wrap>ul li:hover dl dd p {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.clientStory-client-interview-wrap>ul li:nth-child(11) .img-wrap img, .clientStory-client-interview-wrap>ul li:nth-child(13) .img-wrap img, .clientStory-client-interview-wrap>ul li:nth-child(3) .img-wrap img, .clientStory-client-interview-wrap>ul li:nth-child(5) .img-wrap img, .clientStory-client-interview-wrap>ul li:nth-child(7) .img-wrap img {
+    width: 30%;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-img-wrap em {
+    position: absolute;
+    top: 20px;
+    right: 23px;
+    z-index: 1;
+    height: 33px;
+    padding: 6px 17px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    color: #fff;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dt p {
+    margin: 45px 0 15px;
+    line-height: 33px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dt img {
+    width: 181px;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dd p {
+    margin-bottom: 10px;
+    line-height: 27px;
+    font-size: 18px;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dd em {
+    color: #777;
+    font-size: 16px;
+    font-weight: 700;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dd span {
+    color: #777;
+    font-size: 16px;
+}
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dd a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.3)),to(rgba(0,0,0,.3))),#623ad6;
+    background: linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.3)),#623ad6;
+}
+.clientStory-story-wrap-top-img-wrap img {
+        width: 602px !important;
+    }
+.clientStory-story-wrap-top .clientStory-story-wrap-top-cont-wrap dl dd a {
+    display: block;
+    position: relative;
+    width: 154px;
+    margin-top: 40px;
+    padding: 17px 28px;
+    -webkit-border-radius: 26px;
+    border-radius: 26px;
+    background-color: #623ad6;
+    color: #fff;
+    font-size: 15px;
+}
+.my-image {
+  width: 62.8px;
+}
+.clientStory-client-list-wrap ul {
+    -webkit-justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.clientStory-client-list-wrap ul li dl dt {
+    position: relative;
+    padding: 75px 0;
+    background: #44b149 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-bgf.png) no-repeat 30px 95px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.clientStory-client-list-wrap ul li dl dd {
+    min-height: 210px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    padding: 25px 22px 3px;
+    color: #333;
+    background: #fff;
+    -webkit-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 278.4px;
+}
+.innerSection h3.textTitle {
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 600;
+}
+.clientStory-client-list-wrap ul li {
+    margin-right: 21px!important;
+    width: 280px;
+    margin: 0 0 50px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 30px rgba(0,0,0,.04);
+    box-shadow: 4px 4px 30px rgba(0,0,0,.04);
+}
+.clientStory-client-list-wrap ul li a:hover dl dd, .clientStory-client-list-wrap ul li a:hover dl dd div span, .clientStory-client-list-wrap ul li a:hover dl dd>span:last-child {
+    color: #623ad6;
+}
+.clientStory-client-list-wrap ul li dl dt em {
+    position: absolute;
+    top: 20px;
+    right: 23px;
+    padding: 6px 17px;
+    height: 33px;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(2) li dl dt, .clientStory-client-list-wrap ul li:nth-child(2) dl dt {
+    background: #007bc4 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-wooriasset.svg) no-repeat 30px 95px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(3) li dl dt, .clientStory-client-list-wrap ul li:nth-child(3) dl dt {
+    background: #f47e3a url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-fastbox.png) no-repeat 30px 92px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(4) li dl dt, .clientStory-client-list-wrap ul li:nth-child(4) dl dt {
+    background: #7e479c url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-citylabs.png) no-repeat 30px 95px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(5) li dl dt, .clientStory-client-list-wrap ul li:nth-child(5) dl dt {
+    background: #00398f url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-bizplay.png) no-repeat 30px 82px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(6) li dl dt, .clientStory-client-list-wrap ul li:nth-child(6) dl dt {
+    background: #7f2418 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-gent-bakery.png) no-repeat 30px 95px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(7) li dl dt, .clientStory-client-list-wrap ul li:nth-child(7) dl dt {
+    background: #e60012 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-sanggack.png) no-repeat 30px 86px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(8) li dl dt, .clientStory-client-list-wrap ul li:nth-child(8) dl dt {
+    background: #1d4294 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-coocon.png) no-repeat 30px 94px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(9) li dl dt, .clientStory-client-list-wrap ul li:nth-child(9) dl dt {
+    background: #4d4d4d url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-dk.png) no-repeat 30px 86px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(10) li dl dt, .clientStory-client-list-wrap ul li:nth-child(10) dl dt {
+    background: #231f20 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-neotech.png) no-repeat 30px 94px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(11) li dl dt, .clientStory-client-list-wrap ul li:nth-child(11) dl dt {
+    background: #15345e url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-hyvision.png) no-repeat 30px 82px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(12) li dl dt, .clientStory-client-list-wrap ul li:nth-child(12) dl dt {
+    background: #df1f1c url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-artbox.svg) no-repeat 30px 94px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(13) li dl dt, .clientStory-client-list-wrap ul li:nth-child(13) dl dt {
+    background: #e9732d url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-skcar.svg) no-repeat 30px 82px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(14) li dl dt, .clientStory-client-list-wrap ul li:nth-child(14) dl dt {
+    background: #f15a22 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-tongin.png) no-repeat 30px 86px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(15) li dl dt, .clientStory-client-list-wrap ul li:nth-child(15) dl dt {
+    background: #d82665 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-etnews.svg) no-repeat 30px 86px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(16) li dl dt, .clientStory-client-list-wrap ul li:nth-child(16) dl dt {
+    background: #254d79 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-matplus.png) no-repeat 30px 82px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(17) li dl dt, .clientStory-client-list-wrap ul li:nth-child(17) dl dt {
+    background: #3a75b6 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-watax.png) no-repeat 30px 94px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(18) li dl dt, .clientStory-client-list-wrap ul li:nth-child(18) dl dt {
+    background: #8f3048 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-samak.png) no-repeat 30px 94px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(19) li dl dt, .clientStory-client-list-wrap ul li:nth-child(19) dl dt {
+    background: #005768 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-weact.png) no-repeat 30px 86px/63px 34px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(20) li dl dt, .clientStory-client-list-wrap ul li:nth-child(20) dl dt {
+    background: #00217e url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-elandinnople.png) no-repeat 30px 89px/119px 30px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(21) li dl dt, .clientStory-client-list-wrap ul li:nth-child(21) dl dt {
+    background: #e21d3e url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/white-welcomebank.png) no-repeat 30px 94px/135px 19.5px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(22) li dl dt, .clientStory-client-list-wrap ul li:nth-child(22) dl dt {
+    background: #333 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/ssangyong-white.png) no-repeat 30px 86px;
+}
+.clientStory-client-list-wrap ul .slick-slide:nth-child(23) li dl dt, .clientStory-client-list-wrap ul li:nth-child(23) dl dt {
+    background: #004483 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/hanyangUniv-white.png) no-repeat 30px 86px;
+}
+.clientStory-client-list-wrap ul li dl dd p {
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 24px;
+    min-height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.clientStory-client-list-wrap ul li dl dd span {
+    display: inline-block;
+    font-size: 14px;
+    color: #777;
+    line-height: 21px;
+}
+.clientStory-story-wrap-banner>div {
+    position: relative;
+    top: -150px;
+    max-width: 1204px;
+    padding: 92px 0 90px 140px;
+    background: #6e2da0 url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-banner.png) no-repeat right 70px top 50px;
+    background-size: 440px auto;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #fff;
+    -webkit-box-shadow: 50px 50px 80px rgba(0,0,0,.15);
+    box-shadow: 50px 50px 80px rgba(0,0,0,.15);
+}
+.clientStory-story-wrap-banner p {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 36px;
+}
+.clientStory-client-list-wrap ul li dl dd em {
+    margin-bottom: 7px;
+    line-height: 27px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.clientStory-client-list-wrap ul li dl dd>span:last-child {
+    padding: 8px 17px;
+    margin-top: 20px;
+    width: 100px;
+    background: #fff;
+    border: 1px solid #ddd;
+    line-height: 21px;
+    font-size: 14px;
+    color: #555;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+}
+.clientStory-story-wrap-banner a {
+    position: relative;
+    display: inline-block;
+    padding: 14px 60px 14px 28px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 26px;
+    border-radius: 26px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color:white;
+}
+.clientStory-story-wrap-banner a:hover {
+    background: rgba(255,255,255,.15);
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.clientStory-story-wrap-banner a .icons-download {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 28px;
+    width: 18px;
+    height: 18px;
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/icon-font/svg/download.svg) no-repeat;
+    background-size: 18px;
+}
+.sub {
+	width: 1204px;
+    vertical-align: top;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.businessBanner {
+    position: relative;
+    padding: 76px 0;
+    height: 400px!important;
+    background:linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/businessBanner.jpg) center no-repeat;
+    background-size: cover;
+}
+.businessBanner p {
+    margin: 30px 0!important;
+    color: #fff;
+    font-size: 24px!important;
+    line-height: 40px!important;
+}
+.businessBanner .textWrap {
+    width: 100%!important;
+}
+.businessBanner .btn-contents {
+    margin-top: 0!important;
+    padding: 0 50px 0 28px;
+    display: inline-block;
+    width: auto;
+    color: #fff;
+    background: 0 0;
+    border: 1px solid #fff!important;
+}
+
+
+.flow-footer .innerSection {
+    padding: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.flow-footer ul.brochure li a {
+    padding: 10px 20px;
+    display: block;
+    color: #555;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    -webkit-border-radius: 35px;
+    border-radius: 35px;
+    background: #eee;
+    cursor: pointer;
+}
+.flow-footer ul.siteMap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    margin: 0px;
+}
+.flow-footer ul.brochure {
+    display: flex;
+    padding-inline-start: 0px;
+}
+.flow-footer ul.brochure li {
+    margin-right: 10px;
+}
+.flow-footer ul.address {
+    margin: 30px auto;
+    padding-inline-start: 0px;
+}
+b {
+    font-weight: bold;
+}
+.flow-footer ul.address li p {
+    margin-right: 6px;
+    display: inline-block;
+}
+.flow-footer ul.address li {
+    margin-top: 0px;
+    color: #777;
+    font-size: 13px;
+    line-height: 0px;
+}
+.flow-footer ul.social {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: center;
+    align-content: center;
+}
+.flow-footer ul.social a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.flow-footer ul.social a.yt {
+    background-image: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/sns-yt.svg);
+    margin-right: 10px;
+}
+.flow-footer ul.social a.fb {
+    background-image: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/sns-fb.svg);
+    margin-right: 10px;
+}
+.flow-footer ul.social a.ins {
+    background-image: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/sns-ins.svg);
+    margin-right: 10px;
+}
+.flow-footer ul.social a.flw {
+    background-image: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/sns-flw.svg);
+}
+.flow-footer ul.terms {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+}
+.flow-footer ul.terms li {
+    margin-right: 10px;
+    color: #777;
+    font-size: 13px;
+    line-height: 20px;
+}
+.flow-footer ul.siteMap>li {
+    margin-left: 10px;
+    min-width: 130px;
+}
+.flow-footer ul.siteMap>li ol>li {
+    margin-top: 14px;
+    color: #555;
+    font-size: 14px;
+    line-height: 21px;
+}
+.intro-mail-send-pop .pop-cont {
+    width: 590px;
+    max-width: 90%;
+    padding: 30px 20px;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    max-height: 900px;
+    overflow: scroll;
+}
+#popDimmed {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.7);
+}
+.article-input-form>h3 {
+    margin: 12px 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 44px;
+    color: #333;
+    text-align: center;
+}
+.article-input-form>p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #666;
+    text-align: center;
+}
+.warn {
+    margin-bottom: 10px;
+    color: #f96464;
+    font-size: 15px;
+    line-height: 22px;
+}
+.warn.bullet:before {
+    content: "*";
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #f96464;
+}
+ul.formList input[type=text] {
+    padding: 0 20px;
+    width: 100%;
+    height: 52px;
+    color: #623ad6;
+    font-family: inherit;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul.formList select {
+    padding: 0 20px;
+    width: 100%;
+    height: 52px;
+    color: #333;
+    font-family: inherit;
+    font-size: 16px;
+    background: #fff url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/common/icon_select_down.svg) right 20px center no-repeat;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    outline: 0;
+}
+ul.agreeList li label>p {
+    /* color: #333; */
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+ul.agreeList li label>p {
+    display: inline-block;
+    font-weight: 500;
+}
+ul.agreeList li label {
+    align-items: center;
+}
+#popDimmed .article-input-form li {
+    margin-top: 10px;
+}
+.agree-txt-red {
+    color: #f96464!important;
+}
+.checkBox label>p>a, ul.agreeList li label>p>a {
+    color: #623ad6;
+    text-decoration: underline;
+}
+.marketing-agree-badge {
+    margin-left: 10px;
+    padding: 4px 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    background: #03c3cf;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: initial;
+}
+.product-intro-mail {
+    display: flex;
+    align-items: center;
+    max-width: 251px;
+    margin: 30px auto 0;
+    padding: 14px 30px;
+    background: linear-gradient(276.77deg,#009785 -4.66%,#7c00f8 56.6%,#cd00a0 113.25%),#623ad6;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 29px;
+}
+.product-intro-mail i {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/render-product-intro.png) no-repeat center;
+    background-size: contain;
+}
+.intro-mail-send-pop .result-img-wrap i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #6919e6;
+    border-radius: 35px;
+    border: 1px solid #6919e6;
+    margin-left: 240px;
+}
+.intro-mail-send-pop .result-wrap h3 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+}
+.intro-mail-send-pop .result-wrap {
+    padding-top: 20px;
+    text-align: center;
+}
+.intro-mail-send-pop .result-img-wrap i img {
+    width: 30px;
+    height: 22px;
+}
+.intro-mail-send-pop button {
+    max-width: 204px;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    background: #623ad6;
+    border-radius: 30px;
+}
+.slide{
+padding: 280px 0;
+}
+.slide h2{
+	display:inline-block;
+	padding-left: 400px;
+	font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.slide p{
+padding-left: 400px;
+font-size: 18px;
+    line-height: 24px;
+}
+.slide p span:first-child {
+    font-weight: 700;
+}
+.slide p span:last-child {
+    margin-left: 8px;
+    font-family: Roboto;
+}
+  .bx-wrapper {
+    border: none !important;
+    background:none !important;
+  }
+</style>
+<title>위드(WITH) - 대한민국 NO.9 업무용 협업툴</title>
+</head>
+<body>
+<header class="with-header main">
+		<a class="top-thin-banner voucher border"
+			href="https://sites.google.com/flow.team/2023goodchance?utm_source=service&utm_medium=homepage&utm_campaign=voucher2023"
+			target="_blank"> <img
+			src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/logo_gov.svg" style="width:62.81px;"
+			alt="정부 로고">
+			<p>
+				정부 지원금 <span>최대 200만원</span> 받기
+			</p> <i class="arrow-w"></i>
+		</a>
+		<div class="headerSection renewal-section">
+			<h1 class="logo">
+				<a title="With" href="메인.html"> <img src="Images/with_logo.png" alt="with">
+				</a>
+			</h1>
+			<div id="popDimmed" class="intro-mail-send-pop" style="display: none;">
+            <div class="pop-cont">
+                <article class="article-input-form">
+                    <a href="javascript:void(0);" class="btnPopClose" onclick="closePopup()">닫기</a>
+                    <h3>제품 소개서 확인하기</h3>
+                    <p>협업툴 도입 시 꼭 필요한 제품 소개서와 비교자료를<br class="for-desktop"> 지금 바로 확인할 수 있어요.</p>
+                    <div id="popConsultForm"><form id="consultForm">
+                <p class="warn bullet">필수입력 항목입니다.</p>
+                <ul class="formList agreeList"style="padding-left:0px;">
+                    <li>
+                        <label class="bullet js-input" style="display: none;">이름</label>
+                        <input id="USER_NM" type="text" placeholder="이름*" autocomplete="off" data-required-yn="Y" maxlength="100" data-empty-msg="이름을 입력해주세요!" data-over-msg="이름이 100자가 넘으셨습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">전화번호</label>
+                        <input id="CLPH_NO" type="text" placeholder="전화번호(숫자와 +, -만 입력 가능합니다)*" autocomplete="off" data-required-yn="Y" data-valid="phoneNumber" maxlength="20" data-empty-msg="전화번호를 입력해주세요!" data-over-msg="전화번호가 20자가 넘으셨습니다!" data-un-valid-msg="전화번호 형식이 맞지 않습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">이메일</label>
+                        <input id="EML" type="text" placeholder="이메일*" autocomplete="off" data-valid="email" maxlength="50" data-required-yn="Y" data-empty-msg="이메일을 작성해주세요!" data-over-msg="이메일이 50자가 넘으셨습니다!" data-un-valid-msg="올바른 이메일을 작성해주세요!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">회사명</label>
+                        <input id="CMNM" type="text" placeholder="회사명*" autocomplete="off" data-required-yn="Y" maxlength="100" data-empty-msg="회사명을 입력해주세요!" data-over-msg="회사명이 100자가 넘으셨습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-input" style="display: none;">직급/직책</label>
+                        <input id="POSITION" type="text" placeholder="직급/직책*" autocomplete="off" data-required-yn="Y" maxlength="100" data-empty-msg="직급/직책을 입력해주세요!" data-over-msg="직급/직책이 100자가 넘으셨습니다!">
+                    </li>
+                    <li>
+                        <label class="bullet js-select" style="display: none;">업종</label>
+                        <select id="SECTORS" data-required-yn="Y">
+                            <option value="">업종을 선택하세요*</option>
+                            <option value="Produce">제조업</option>
+                            <option value="IT">정보통신업(IT)</option>
+                            <option value="Franchise">F&amp;B, 프랜차이즈</option>
+                            <option value="Logistics">도·소매 유통 판매</option>
+                            <option value="Entertain">엔터테인먼트, 여행, 예술</option>
+                            <option value="Public">공공 행정</option>
+                            <option value="Construct">건설 및 기간 산업</option>
+                            <option value="Tax">세무, 법무, 노무</option>
+                            <option value="Transportation">운수 및 물류</option>
+                            <option value="Medical">의료 보건, 사회 복지</option>
+                            <option value="Finance">금융, 보험, 부동산</option>
+                            <option value="Association">협회 및 단체</option>
+                            <option value="Research">교육 및 연구</option>
+                            <option value="agriculture">1차 산업(농·임·수산업)</option>
+                            <option value="etc">기타</option>
+                        </select>
+                        <i class="icons-arrow-textgo"></i>
+                    </li>
+                    <li>
+                        <label class="bullet js-select" style="display: none;">예상 사용 인원</label>
+                        <select id="HOPE_CNT" data-required-yn="Y">
+                            <option value="">예상 사용 인원을 선택하세요*</option>
+                            <option value="10">10인 이하</option>
+                            <option value="11">10인 이상 ~ 30인 이하</option>
+                            <option value="31">31인 이상 ~ 50인 이하</option>
+                            <option value="51">51인 이상 ~ 100인 미만</option>
+                            <option value="100">100인 이상</option>
+                            <option value="500">500인 이상</option>
+                            <option value="1000">1000인 이상</option>
+                        </select>
+                        <i class="icons-arrow-textgo"></i>
+                    </li>
+                </ul>
+                <ul class="agreeList" style="width: 500px; padding-left:0px;">
+                    <li class="privacy-agree">
+                        <input id="privacyAgree" type="checkbox">
+                        <label for="privacyAgree">
+                            <p style="margin:0px;">
+                                <span class="agree-txt-red">[필수]</span>&nbsp;
+                                <a class="btnAgree js-privacy-agree-btn">개인정보 수집 및 이용</a>에 동의합니다.
+                            </p>
+                        </label>
+                    </li>
+                    <li class="marketing-agree" style="width:auto;">
+                        <input id="marketingAgree" type="checkbox">
+                        <label for="marketingAgree" class="clearFix">
+                            <p style="margin-top: 0px;margin-bottom: 15px;">
+                                <span id="marketingRequired" class="agree-txt-red" data-required-yn="Y">[필수]</span>&nbsp;
+                                <a class="btnAgree js-marketing-agree-btn">홍보 및 마케팅 수집・이용</a>에 동의합니다.
+                            </p>
+                        </label>
+                         </br>
+                        <em class="marketing-agree-badge"><span>✓</span> 체크시 플로우 무료 교육 / 리포트 제공</em>
+                    </li>
+                </ul>
+            </form></div>
+                    <a href="javascript:void(0);" class="product-intro-mail" display:"none;" onclick="SendMenu()"><i></i>제품 소개서 메일 발송</a>
+                </article>
+
+
+                <article id ="result" class="result-wrap" style="display: none;">
+                    <div class="result-img-wrap" style="text-align: center;">
+                        <i class="circle">
+                            <img src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/render-product-intro.png" alt="">
+                        </i>
+                    </div>
+                    <h3>지금 메일함을 열어보세요!</h3>
+                    <p class="mail-txt">taesamyung@naver.com</p>
+                    <p class="intro-txt">
+                        이메일로 제품 소개서를 보내드렸어요.<br>
+                        5분이 지나도 도착하지 않는다면 그건 바로 니 잘못!
+                    </p>
+                    <button type="button" onclick= "closePopup()">30일 무료체험하기</button>
+                </article>
+            </div>
+        </div>
+			<nav class="gnb menu">
+				<ul id="Gnb">
+					<li class="gnbList"><a title="회사소개"> 회사소개 <i
+							class="fa-solid fa-chevron-down"></i>
+					</a>
+						<ul class="gnbDepth productMenu">
+							<li><a title="회사소개" href="회사소개.html"></a> 회사소개</li>
+							<li><a title="제품" href=""></a> 제품 <i
+								class="fa-solid fa-chevron-down"></i>
+								<ul class="deepdeepth">
+									<li><br /> <i class="fa-solid fa-people-group"
+										style="color: green;"></i><a href="프로젝트협업.html" style="display:inline;">프로젝트 협업</a></li>
+									<li><i class="fa-regular fa-paste" style="color: purple;"></i>
+										<a href="업무관리.html"style="display:inline;">업무관리</a></li>
+									<li><i class="fa-regular fa-comment-dots"
+										style="color: orange;"></i><a href="메신저.html"style="display:inline;"> 메신저</a></li>
+									<li><i class="fa-solid fa-flag-checkered"
+										style="color: yellow;"></i><a href="OKR.html"style="display:inline;"> OKR</a></li>
+									<li><i class="fa-solid fa-video" style="color: skyblue;"></i>
+										<a href="화상회의.html"style="display:inline;"> 화상회의</a></li>
+									<li><i class="fa-solid fa-shield-halved"
+										style="color: orange;"></i> <a href="보안기능.html"style="display:inline;"> 보안기능</a></li>
+								</ul></li>
+						</ul></li>
+					<li class="gnbList">
+						<a title="요금" href="요금제.html"> 요금 </a>
+					</li>
+					<li class="gnbList"><a title="고객사례" href="고객.html"> 고객사례 </a></li>
+					<li class="gnbList"><a title="자료실" href="자료실.html"> 자료실 </a></li>
+					<li class="gnbList" id="gnbList">
+  						<a title="소개서 받기" href="javascript:void(0);" class="product-intro-link" onclick="openPopup()">
+   						 <i class="consult-click"></i>
+   							 <span>소개서 받기</span>
+ 						 </a></li>
+				</ul>
+				<ul class="loginList">
+					<li><a title="로그인" href="로그인.jsp"> 로그인 </a></li>
+					<li><a title="회원가입" href="회원가입.html"
+						class="js-signup-btn btn-login btn-common"> 무료 회원가입 </a></li>
+					<span class="login-tooltip"> join with WITH! </span>
+				</ul>
+			</nav>
+		</div>
+		<script>
+		function openPopup() {
+			  var popupContainer = document.getElementById('popDimmed');
+			  popupContainer.style.display = 'flex';
+			}
+
+			function closePopup() {
+			  var popupContainer = document.getElementById('popDimmed');
+			  popupContainer.style.display = 'none';
+
+			  var gnbList = document.getElementById('gnbList');
+			  gnbList.classList.remove('active');
+			}
+			
+			function SendMenu() {
+			var popupContainer1 = document.getElementById('result');
+			popupContainer1.style.display = 'block';
+			}
+		</script>
+	</header>
+			<div class="sideWrap">
+
+				<a class="btnTop"><i class="icons-arrow-textgo"></i></a>
+			</div>
+			<section id="clientStory" class="subSection clientStory-section">
+				<div class="visualWrap">
+					<div class="innerSection animation">
+						<h2 class="textTitle">고객사례</h2>
+						<p class="textSubTitle">플로우로 스마트한 협업을 하고 있는 선두 기업을 소개합니다.</p>
+					</div>
+				</div>
+					<div class="slider" >
+     					 <div class="slide"style="background:url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/clientStorySlide01.jpg); background-size: cover; border:none;">
+     					 <h2>맞춤 슈트같은 기업의 협업, 바로 협업툴 플로우입니다!</h2>
+     					 		 <p>
+                                    <span>BGF리테일</span><span>류대성 책임</span>
+                                </p>
+                                </div>
+     					 <div class="slide"style="background:url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/clientStorySlide02.jpg);background-size: cover;">
+     					<h2>사내 커뮤니케이션 코스트 절감, 플로우로 해결했습니다!</h2>
+     							 <p>
+                                    <span>SK렌터카</span><span>허준석 PL</span>
+                                </p>
+                                </div>
+     					 <div class="slide"style="background:url(https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/clientStorySlide03.jpg);background-size: cover;">
+     					<h2>플로우는 우리자산운용의 자유로운 소통 창구, 사내 SNS입니다!</h2>
+     					 		<p>
+                                    <span>우리자산운용</span><span>황진성 팀장</span>
+                                </p>
+     					 </div>
+    			</div>				
+				<article class="clientStory-partner-wrap contentsWrap"
+					style="opacity: 1; transform: translateY(0px);">
+					<div class="innerSection">
+						<ul class="partner">
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-1.svg"
+								alt="jtbc"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-2.svg"
+								alt="중앙일보"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-35.svg"
+								alt="전자신문"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-4.svg"
+								alt="대한민국 국방부"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-5.svg"
+								alt="국회예산정책처"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-6.svg"
+								alt="포스코"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-7.svg"
+								alt="kt"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-56.svg"
+								alt="현대모비스"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-68.svg"
+								alt="대우건설"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-10.svg"
+								alt="이랜드리테일"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-11.svg"
+								alt="BGF리테일"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-12.svg"
+								alt="신세계인터내셔날"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-14.svg"
+								alt="tcc"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-3.svg"
+								alt="s-oli"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-55.svg"
+								alt="교원"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-37.svg"
+								alt="seco"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-38.svg"
+								alt="대성건설"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-13.svg"
+								alt="현대엔지니어링"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-15.svg"
+								alt="KB캐피탈"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-16.svg"
+								alt="대구은행"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-40.svg"
+								alt="DB금융투자"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-17.svg"
+								alt="우리자산운용"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-41.svg"
+								alt="IBK자산운용"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-42.svg"
+								alt="웰컴저축은행"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-57.svg"
+								alt="경남은행"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-58.svg"
+								alt="부산은행"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-59.svg"
+								alt="한국거래소"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-60.svg"
+								alt="BNK자산운용"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-53.svg"
+								alt="DB하이텍"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-54.svg"
+								alt="하이투자증권"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-50.svg"
+								alt="신세계까사"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-8.svg"
+								alt="제로페이"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-51.svg"
+								alt="이디야"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-52.svg"
+								alt="서울우유"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-61.svg"
+								alt="PS&amp;Marketing"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-21.svg"
+								alt="하나벤처스"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-69.svg"
+								alt="한국원자력연구"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-70.svg"
+								alt="경기컨텐츠진흥원"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-43.svg"
+								alt="CityLabs"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-44.svg"
+								alt="CooCon"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-20.svg"
+								alt="삼성전기"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-62.svg"
+								alt="삼성"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-22.svg"
+								alt="일동후디스"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-71.svg"
+								alt="동국대학교료원"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-24.svg"
+								alt="이노엔"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-72.svg"
+								alt="한국가스공사"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-45.svg"
+								alt="ALPIION"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-46.svg"
+								alt="Hyuvision"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-26.svg"
+								alt="SM culture&amp;contents"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-27.svg"
+								alt="한화호텔&amp;리조트"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-28.svg"
+								alt="메가박스"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-47.svg"
+								alt="Carrie"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-48.svg"
+								alt="Cafe24"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-65.svg"
+								alt="Robostar"></li>
+
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-49.svg"
+								alt="Haatz"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-30.svg"
+								alt="아트박스"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-31.svg"
+								alt="죠스푸드"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-32.svg"
+								alt="생각대로"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-33.svg"
+								alt="서울대학교"></li>
+							<li><img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/company-67.svg"
+								alt="한양대학교"></li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="clientStory-story-wrap">
+					<div class="innerSection">
+						<div class="contentsWrap"
+							style="opacity: 1; transform: translateY(0px);">
+							<h3 class="textTitle">고객 스토리</h3>
+						</div>
+						<div class="clientStory-story-wrap-top contentsWrap"
+							style="opacity: 1; transform: translateY(0px);">
+							<a href="https://youtu.be/v7oyWT5S1xw" target="_blank"
+								class="clientStory-story-wrap-top-img-wrap"> <img
+								src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/client-story/client-interview-00.png"
+								alt="" width= "602px;" height="430px;"> <em>물류</em>
+							</a>
+							<div class="clientStory-story-wrap-top-cont-wrap">
+								<dl>
+									<dt>
+										<img
+											src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/fastbox.png"
+											alt="">
+										<p>
+											카페24의 자회사, 패스트박스에서 문의 데이터로 병목<br class="forMobile"> 지점을
+											파악한 법!
+										</p>
+									</dt>
+									<dd>
+										<p>물류 일괄 대행(풀필먼트) 서비스와 해외 배송 전문 기업, 패스트박스</br>는 고객 문의 데이터를
+											체계화하여 병목 지점을 파악할 수 있었다고</br> 합니다! 인터뷰 영상으로 확인해 보세요!</p>
+										<em>패스트박스</em> <span>최수안 이사</span> <a
+											href="https://youtu.be/v7oyWT5S1xw" target="_blank">자세히
+											보기 <i class="fa-solid fa-chevron-down"></i>										
+											</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+
+						<div class="clientStory-client-interview-wrap">
+							<ul class="contentsWrap"
+								style="opacity: 1; transform: translateY(0px);">
+								<li><a href="https://youtu.be/H7q6j-OgZL8" target="_blank">
+										<dl>
+											<dt>
+												<em>프랜차이즈</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/bgf-retail.png"
+														alt="BGF리테일">
+												</div>
+												<p>국내 15,000개 이상의 편의점 점포와 협업할 수 있는 이유</p>
+												<em>BGF리테일</em> <span>류대성 책임</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/FcwvLYjAJKo" target="_blank">
+										<dl>
+											<dt>
+												<em>금융</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/woori.png"
+														alt="우리자산운용">
+												</div>
+												<p>우리자산운용의 기업 문화를 위한 소통 노하우</p>
+												<em>우리자산운용</em> <span>황진선 팀장</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/ETH4Cd02sIA" target="_blank">
+										<dl>
+											<dt>
+												<em>연구 개발</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/hyvision.png"
+														alt="하이비젼시스템">
+												</div>
+												<p>세계 최정상 기업들과 협업하기 위한 보안 업무 관리법</p>
+												<em>하이비젼시스템</em> <span>황가람 대리</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/0rTt6QgJ2iI" target="_blank">
+										<dl>
+											<dt>
+												<em>블록체인</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/citylabs.png"
+														alt="시티랩스">
+												</div>
+												<p>공공기관 사업에서 공신력 있는 업무 툴은?</p>
+												<em>시티랩스</em> <span>문재호 팀장</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/-kgsRoDopaA" target="_blank">
+										<dl>
+											<dt>
+												<em>IT</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/bizplay.png"
+														alt="비즈플레이">
+												</div>
+												<p>플로우 API연동으로 고객 여정을 관리하는 노하우</p>
+												<em>비즈플레이</em> <span>정태성 이사</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/odXVin3Uxeg" target="_blank">
+										<dl>
+											<dt>
+												<em>제과/제빵</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/gentz-bakery.png"
+														alt="겐츠베이커리">
+												</div>
+												<p>단기간에 마켓*리에 입점한 프로젝트 관리 방법</p>
+												<em>겐츠베이커리</em> <span>권동인 기획부장</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/ME6CG7RBEso" target="_blank">
+										<dl>
+											<dt>
+												<em>물류</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/sangackdero.png"
+														alt="로지올">
+												</div>
+												<p>중소·스타트업에서 업무 히스토리 관리를 매끄럽게 하는 법</p>
+												<em>로지올</em> <span>최규범 부대표</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/tHl9dbwhWP4" target="_blank">
+										<dl>
+											<dt>
+												<em>핀테크</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/coocon.png"
+														alt="쿠콘">
+												</div>
+												<p>보안이 까다로운 핀테크 기업의 업무 관리 노하우</p>
+												<em>쿠콘</em> <span>김용찬 팀장</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/pwKWLC4934g" target="_blank">
+										<dl>
+											<dt>
+												<em>제조/유통</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/samak-akgi.png"
+														alt="삼익악기">
+												</div>
+												<p>60년 전통 기업 삼익악기의 디지털 혁신 방법</p>
+												<em>삼익악기</em> <span>오강록 전무</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/oPZm4JgLmG8" target="_blank">
+										<dl>
+											<dt>
+												<em>비영리단체</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/weact.png"
+														alt="위액트">
+												</div>
+												<p>비영리 동물구조단체에서 운영비를 절감한 방법</p>
+												<em>위액트</em> <span>함형선 대표</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/zjv2CtObeng" target="_blank">
+										<dl>
+											<dt>
+												<em>IT</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/elandinnople.png"
+														alt="이랜드이노플">
+												</div>
+												<p>국내 1,500개 매장과 실시간 소통하는 방법</p>
+												<em>이랜드이노플</em> <span>김지회 팀장</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/OjnS7wvwxNQ" target="_blank">
+										<dl>
+											<dt>
+												<em>수입 유통</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/ssangyong.png"
+														alt="쌍용리프트">
+												</div>
+												<p>고객 만족도와 업무 정확성을 한번에 올린 방법</p>
+												<em>쌍용리프트</em> <span>신오균 팀장</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://youtu.be/hCwrlticcXM" target="_blank">
+										<dl>
+											<dt>
+												<em>아카데미/교육</em>
+											</dt>
+											<dd>
+												<div class="img-wrap">
+													<img
+														src="https://flow.team/flow-renewal/homepage/flow/ko/assets/images/company/hanyangUniv.png"
+														alt="한양대학교">
+												</div>
+												<p>실시간 업무 공유로 회의시간 60%를 단축</p>
+												<em>한양대학교</em> <span>정지호 총학생회장</span>
+											</dd>
+										</dl>
+								</a></li>
+							</ul>
+						</div>
+
+						<div class="clientStory-client-list-wrap">
+							<ul class="contentsWrap"
+								style="opacity: 1; transform: translateY(0px);">
+								<li><a href="https://post.flow.team/interview/6444"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>프렌차이즈</em>
+											</dt>
+											<dd>
+												<div>
+													<em>BGF리테일</em>
+													<p>불필요하게 관리되던 업무 자료가 체계적으로 정리되었습니다!</p>
+													<span>정보관리팀 류대성 책임</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/3952"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>금융</em>
+											</dt>
+											<dd>
+												<div>
+													<em>우리자산운용</em>
+													<p>자유로운 커뮤니케이션 창구를 만들었습니다.</p>
+													<span>황진선 팀장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/6468"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>물류</em>
+											</dt>
+											<dd>
+												<div>
+													<em>패스트박스</em>
+													<p>고객 데이터로 물류의 병목지점을 찾았습니다!</p>
+													<span>비즈니스전략팀 최수안 이사</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/7692"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>블록체인</em>
+											</dt>
+											<dd>
+												<div>
+													<em>시티랩스</em>
+													<p>직원들의 업무 진척도와 몰입도가 완전히 증가했습니다.</p>
+													<span>인사총무팀 문재호 팀장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/7669"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>IT</em>
+											</dt>
+											<dd>
+												<div>
+													<em>비즈플레이</em>
+													<p>플로우 하나로 고객 여정 관리부터 VIP관리까지 해결했습니다!</p>
+													<span>제휴사업본부 정태성 이사</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/7262"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>제과/제빵</em>
+											</dt>
+											<dd>
+												<div>
+													<em>겐츠베이커리</em>
+													<p>다수의 미팅으로 인한 업무 병목현상이 해결되었습니다!</p>
+													<span>기획부 권동인 부장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/6487"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>물류</em>
+											</dt>
+											<dd>
+												<div>
+													<em>생각대로(로지올)</em>
+													<p>이메일 트래픽을 완전히 줄였습니다.</p>
+													<span>최규범 부대표</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/7329"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>핀테크</em>
+											</dt>
+											<dd>
+												<div>
+													<em>쿠콘</em>
+													<p>스마트워크 환경을 구축했습니다.</p>
+													<span>IR지원실 김용찬 부장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/7754"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>IT/의류생산</em>
+											</dt>
+											<dd>
+												<div>
+													<em>디케이브라더스</em>
+													<p>수평적인 업무 체계를 만들었습니다.</p>
+													<span>홍정희 이사</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/3770"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>제조</em>
+											</dt>
+											<dd>
+												<div>
+													<em>네오테크</em>
+													<p>업계 리드타임 1위를 달성했습니다.</p>
+													<span>이준명 대표</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/7513"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>IT</em>
+											</dt>
+											<dd>
+												<div>
+													<em>하이비젼시스템</em>
+													<p>불필요한 보고 체계를 플로우로 일원화 했습니다.</p>
+													<span>전략기획팀 황가람 대리</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/4149"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>디자인</em>
+											</dt>
+											<dd>
+												<div>
+													<em>아트박스</em>
+													<p>수기로 하는 일정 관리에서 탈피했습니다.</p>
+													<span>문구팀 이락연 팀장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/4057"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>서비스</em>
+											</dt>
+											<dd>
+												<div>
+													<em>SK렌터카</em>
+													<p>사내 커뮤니케이션 코스트를 절감했습니다.</p>
+													<span>마케팅전략실 허준석PL</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/3173"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>운수</em>
+											</dt>
+											<dd>
+												<div>
+													<em>통인익스프레스</em>
+													<p>기업의 한정된 자산으로 2배의 업무 효율을 올렸습니다.</p>
+													<span>이호 회장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/2903"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>언론</em>
+											</dt>
+											<dd>
+												<div>
+													<em>전자신문</em>
+													<p>보안·신속이 생명인 언론사 협업을 플로우가 해결했습니다.</p>
+													<span>구원모 회장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/4524"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>제조</em>
+											</dt>
+											<dd>
+												<div>
+													<em>MAT플러스</em>
+													<p>
+														업무용 카톡방을 전부 없앴습니다.<br>
+													</p>
+													<span>기획혁신부 김철환 파트장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a href="https://post.flow.team/interview/4334"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>세무</em>
+											</dt>
+											<dd>
+												<div>
+													<em>세무법인 청년들</em>
+													<p>세무업의 가치를 2배 이상 늘려주었습니다.</p>
+													<span>최정만 세무사</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a
+									href="https://blog.naver.com/madrascheck/222653870135"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>제조/유통</em>
+											</dt>
+											<dd>
+												<div>
+													<em>삼익악기</em>
+													<p>60년 전통 기업 삼익악기의 디지털 혁신 방법</p>
+													<span>오강록 전무</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a
+									href="https://blog.naver.com/madrascheck/222687984375"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>비영리단체</em>
+											</dt>
+											<dd>
+												<div>
+													<em>위액트</em>
+													<p>비영리 동물구조단체의 운영비를 절감했습니다.</p>
+													<span>함형선 대표</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a
+									href="https://blog.naver.com/madrascheck/222691067215"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>IT</em>
+											</dt>
+											<dd>
+												<div>
+													<em>이랜드이노플</em>
+													<p>국내 1,500개 매장과 실시간으로 소통합니다.</p>
+													<span>김지회 팀장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a
+									href="https://blog.naver.com/madrascheck/222656727950"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>금융</em>
+											</dt>
+											<dd>
+												<div>
+													<em>웰컴저축은행</em>
+													<p>보안에 민감한 금융 기업에서 디지털로 협업합니다.</p>
+													<span></span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a
+									href="https://blog.naver.com/madrascheck/222714188993"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>수입 유통</em>
+											</dt>
+											<dd>
+												<div>
+													<em>쌍용리프트</em>
+													<p>고객 만족도와 업무 정확성을 한번에 올렸습니다.</p>
+													<span>전략기획팀 신오균 팀장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+								<li><a
+									href="https://blog.naver.com/madrascheck/222721033131"
+									target="_blank">
+										<dl>
+											<dt>
+												<em>아카데미/교육</em>
+											</dt>
+											<dd>
+												<div>
+													<em>한양대학교</em>
+													<p>플로우로 회의시간의 60%를 단축했습니다.</p>
+													<span>정지호 총학생회장</span>
+												</div>
+												<span>자세히보기</span>
+											</dd>
+										</dl>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</article>
+
+				<article class="clientStory-graph">
+					<div class="innerSection">
+						<div class="clientStory-story-wrap-banner">
+							<div class="contentsWrap"
+								style="opacity: 1; transform: translateY(0px); display: block;">
+								<p>플로우 도입 후 성공적인 협업을 이룬 고객사례</p>
+								<a
+									href="https://drive.google.com/drive/u/1/folders/1272fvXnEMvJY0xWhnbJfajKKx4GU1Rt-"
+									target="_blank">고객사례집 다운로드 <i class="icons-download"></i></a>
+							</div>
+						</div>
+						<img src="Images/헤헷.png" class = "sub">
+					</div>
+				</article>
+				
+				<article class="businessBanner">
+					<div class="innerSection contentsWrap"
+						style="opacity: 1; transform: translateY(0px);">
+						<div class="textWrap">
+							<p class="textSubTitle">
+								메신저・프로젝트 소통・워크플로우<br>화상회의까지 ㅡ<br>이 모든 기능을 플로우로 체험해보세요.
+							</p>
+							<a title="무료로 시작하기" href="/signup.act"
+								class="btn-common btn-contents" target="_self">무료로 시작하기
+								<i class="fa-solid fa-chevron-down"></i></a>
+						</div>
+					</div>
+				</article>
+
+			</section> <footer class="flow-footer">
+				<div class="innerSection">
+					<div class="companyInfo">
+						<ul class="brochure">
+							<li><a title="소개 및 비교자료" href="https://flow.team/kr/consult?contact=resource">소개
+									및 비교자료<i class="icons-arrow-textgo"></i>
+							</a></li>
+							<li><a title="도입문의" href="https://flow.team/kr/project">도입문의<i
+									class="icons-arrow-textgo"></i></a></li>
+							<li class="js-go-url" data-code="blog"><a title="플로우 블로그" href="https://post.flow.team/">플로우
+									블로그<i class="icons-arrow-textgo"></i>
+							</a></li>
+						</ul>
+						<ul class="address">
+							<li>
+								<p>
+									<b>주소</b> 서울특별시 영등포구 영신로 220 KnK디지털타워 1410호
+								</p>
+							</li>
+							<li>
+								<p>
+									<b>마드라스체크㈜대표자</b> 이학준
+								</p>
+								<p>
+									<b>전화</b> 1522-9298
+								</p>
+								<p>
+									<b>이메일</b> support@flow.team
+								</p>
+							</li>
+							<li>
+								<p>
+									<b>통신판매업신고번호</b> 제2019-서울영등포-0298호
+								</p>
+								<p>
+									<b>사업자등록번호</b> 189-87-00172
+								</p>
+							</li>
+						</ul>
+						<ul class="social">
+							<li><a
+								href="https://www.youtube.com/channel/UCmnzKvpQMl8uyT1PUMdPsXQ"
+								title="유튜브" class="yt" target="_blank"></a></li>
+							<li><a href="https://www.facebook.com/flow.team/"
+								title="페이스북" class="fb" target="_blank"></a></li>
+							<li><a href="https://www.instagram.com/flow.tool/"
+								title="인스타그램" class="ins" target="_blank"></a></li>
+							<li><a href="https://www.instagram.com/flow.designlab/"
+								title="디자인랩" class="flw" target="_blank"></a></li>
+
+
+
+						</ul>
+
+						<ul class="terms">
+							<li><a title="이용약관" href="https://flow.team/kr/terms">이용약관</a></li>
+							<li><a title="개인정보 처리방침" href="https://flow.team/kr/privacy"><b>개인정보
+										처리방침</b></a></li>
+							<li class="copyright">ⓒ 2021 Madras check All rights
+								Reserved.</li>
+						</ul>
+					</div>
+					<div class="companySide">
+						<ul class="siteMap menu">
+							<li>
+								<ol>
+									<li><b>회사소개</b></li>
+									<li><a title="스토리" href="https://flow.team/kr/company">스토리</a></li>
+									<li><a title="문화복지" href="https://flow.team/kr/culture">문화복지</a></li>
+									<li><a title="멤버소개" href="https://flow.team/kr/members">멤버소개</a></li>
+									<li><a title="채용" href="https://flow.team/kr/recruit">채용</a></li>
+								</ol>
+							</li>
+							<li>
+								<ol>
+									<li><b>제품</b></li>
+									<li><a title="프로젝트 협업" href="https://flow.team/kr/project">프로젝트 협업</a></li>
+									<li><a title="업무관리" href="https://flow.team/kr/task">업무관리</a></li>
+									<li><a title="메신저" href="https://flow.team/kr/chatting">메신저</a></li>
+									<li><a title="OKR" href="https://flow.team/kr/okr-introduction" class="">OKR</a></li>
+									<li><a title="화상회의" href="https://flow.team/kr/video">화상회의</a></li>
+									<li><a title="보안기능" href="https://flow.team/kr/security">보안기능</a></li>
+									<li><a title="시스템 연동" href="https://flow.team/kr/system">시스템 연동</a></li>
+									<li><a title="다운로드" href="https://flow.team/kr/download">다운로드</a></li>
+								</ol>
+							</li>
+							<li>
+								<ol>
+									<li><b>요금</b></li>
+									<li><a title="요금제" href="https://flow.team/kr/price">요금제</a></li>
+									<li><a title="구축형 문의" href="https://flow.team/kr/build">구축형 문의</a></li>
+									<li><a title="유료 VS 무료" href="https://flow.team/kr/guest-vs-business">유료
+											VS 무료</a></li>
+								</ol>
+							</li>
+							<li>
+								<ol>
+									<li><b>교육</b></li>
+									<li><a title="온라인 강의실"
+										href="https://edu.flow.team/classes" target="_blank">온라인
+											강의실</a></li>
+									<li><a title="동영상 매뉴얼" href="https://flow.team/kr/manual">동영상 매뉴얼</a></li>
+									<li class="js-go-url" data-code="faq"><a title="자주묻는 질문">자주묻는
+											질문</a></li>
+								</ol>
+							</li>
+							<li>
+								<ol>
+									<li><b>자료실</b></li>
+									<li><a title="재택근무 활용" href="https://flow.team/kr/untact_use">재택근무 활용</a></li>
+									<li class="js-go-url" data-code="tip"><a title="활용방법">활용방법</a></li>
+									<li class="js-go-url" data-code="insight"><a title="인사이트">인사이트</a></li>
+									<li class="js-go-url" data-code="video"><a title="웨비나">웨비나</a></li>
+									<li class="js-go-url" data-code="interview"><a
+										title="성공사례">성공사례</a></li>
+									<li class="js-go-url" data-code="news"><a title="보도자료">보도자료</a></li>
+								</ol>
+							</li>
+							<li>
+								<ol>
+									<li><b>파트너</b></li>
+									<li><a title="파트너 소개" href="https://flow.team/kr/partner/info">파트너 소개</a></li>
+									<li><a title="파트너 모집" href="https://flow.team/kr/partner/pt-recruit">파트너
+											모집</a></li>
+								</ol>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</footer> 
+</body>
+</html>

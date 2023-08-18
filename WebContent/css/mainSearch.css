@@ -1,0 +1,120 @@
+.recently-search-helper{
+  .tit-wrap{
+    position: relative;
+    margin: 20px 20px 10px 20px;
+    button{
+      position: absolute;
+      right: 0;
+      color: #999;
+      &:hover{
+        color: #FF6B6B;
+      }
+    }
+  }
+  .result-wrap{
+    ul li.search-helper-item{
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 20px;
+      cursor: pointer;
+      span{
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: calc(100% - 50px);
+        text-overflow: ellipsis;
+        margin-left: 10px;
+      }
+      .button-remove{
+        display: none;
+        position: absolute;
+        top: 6px;
+        right: 20px;
+        width: 18px;
+        height: 18px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        i{
+          margin-bottom: 2px;
+          line-height: 10px;
+          &:before{
+            color: #555;
+            font-size: 10px;
+          }
+        }
+        &:hover{
+          background-color: #D3CDE8;
+        }
+      }
+      &:hover{
+        background-color: #F6F3FF;
+        .button-remove{
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .icons-vote{
+    margin-right: -1px;
+    background: url("/flow-renewal/assets/images/icons/icon-search-pop-vote.svg") no-repeat;
+    background-size: 16px;
+  }
+  .icons-todo:before{
+    color: #00B2FF;
+  }
+  .icons-task:before{
+    color: #6449FC;
+  }
+  .icons-write:before{
+    color: #FD7900;
+  }
+  .icons-schedule:before{
+    color: #00B19C;
+  }
+  .icons-comment2:before{
+    font-size: 15px;
+  }
+  .icons-project-1:before{
+    color: #ff5caa;
+  }
+}
+.all-search-content{
+  .all-seach-list-type-1 li{
+    position: relative;
+    height: auto;
+    padding: 12px 10px;
+    align-items: flex-start;
+
+    &.project-search-item{
+      align-items: center;
+    }
+
+    &:last-child{
+      border-bottom: 1px solid #eee;
+    }
+  }
+  .contents-tit{
+    display: flex;
+    align-items: center;
+  }
+  .search-tit{
+    display: flex;
+  }
+}
+.search-result-group{
+  i.icon-post-type{
+    margin-right: 24px;
+  }
+  .search-result-cont{
+    white-space: normal;
+    word-break: keep-all;
+    margin: 5px 0;
+    max-width: 800px;
+  }
+  .contents-project{
+    //margin-top:4px;
+  }
+}

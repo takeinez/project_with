@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*
+** font
+*/
+/* 영어,숫자 - 모든언어 공통 */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto-Regular'), url(/flow-renewal/assets/font/Roboto-Regular.woff2) format('woff2'), url(/flow-renewal/assets/font/Roboto-Regular.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+00A0;
+}
+/* unicode-range: 대문자 U+0041-005A, 소문자 U+0061-007A, 0-9 U+0030-0039, SP/NBSP U+0020,U+00A0; */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Roboto-Medium'), url(/flow-renewal/assets/font/Roboto-Medium.woff2) format('woff2'), url(/flow-renewal/assets/font/Roboto-Medium.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+00A0;
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Roboto-Bold'), url(/flow-renewal/assets/font/Roboto-Bold.woff2) format('woff2'), url(/flow-renewal/assets/font/Roboto-Bold.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+00A0;
+}
+
+/* 한국어 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(/flow-renewal/assets/font/NotoSansKR-Regular.woff2) format('woff2'), url(/flow-renewal/assets/font/NotoSansKR-Regular.woff) format('woff');
+    unicode-range: U+3131-3164, U+AC00-D7A3, U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+/* unicode-range: 한글 U+3131-3164,U+AC00-D7A3, !"#$%&'()*+,-. U+0021-002F, :;<=>?@ U+003A-0040, [원]^_` U+005B-0060, {|}~ U+007B-007E; */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'), url(/flow-renewal/assets/font/NotoSansKR-Medium.woff2) format('woff2'), url(/flow-renewal/assets/font/NotoSansKR-Medium.woff) format('woff');
+    unicode-range: U+3131-3164, U+AC00-D7A3, U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(/flow-renewal/assets/font/NotoSansKR-Bold.woff2) format('woff2'), url(/flow-renewal/assets/font/NotoSansKR-Bold.woff) format('woff');
+    unicode-range: U+3131-3164, U+AC00-D7A3, U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+
+/* 일본어 */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Noto Sans JP Regular'), local('NotoSansJP-Regular'), url(/flow-renewal/assets/font/NotoSansJP-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Noto Sans JP Medium'), local('NotoSansJP-Medium'), url(/flow-renewal/assets/font/NotoSansJP-Medium.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Noto Sans JP Bold'), local('NotoSansJP-Bold'), url(/flow-renewal/assets/font/NotoSansJP-Bold.woff2) format('woff2');
+}
+
+/* 베트남어 */
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Be Vietnam Pro Regular'), url(/flow-renewal/assets/font/BeVietnamPro-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Be Vietnam Pro Medium'), url(/flow-renewal/assets/font/BeVietnamPro-Medium.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Be Vietnam Pro Bold'), url(/flow-renewal/assets/font/BeVietnamPro-Bold.woff2) format('woff2');
+}
+
+/* 홈페이지-운영 중첩페이지 임포트용 */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Poppins Regular'),
+    url(/flow-renewal/assets/font/Poppins/Poppins-Regular.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Poppins Medium'),
+    url(/flow-renewal/assets/font/Poppins/Poppins-Medium.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Poppins SemiBold'),
+    url(/flow-renewal/assets/font/Poppins/Poppins-SemiBold.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Poppins Bold'),
+    url(/flow-renewal/assets/font/Poppins/Poppins-Bold.woff) format('woff');
+    unicode-range: U+0041-005A, U+0061-007A;
+}
+
+/* 이모지 - 국기 */
+@font-face {
+    font-family: "Twemoji Country Flags";
+    font-display: swap;
+    unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+    src: local('TwemojiCountryFlags'), url(/flow-renewal/assets/font/TwemojiCountryFlags.woff2) format('woff2');
+}
+
+/*
+** body set - 운영기준
+*/
+body {
+    font-size: 14px;
+    font-family: 'Roboto', 'Noto Sans KR', 'Noto Sans JP', 'Be Vietnam Pro', Arial, Helvetica, sans-serif, 'Twemoji Country Flags';
+}
+
+/*
+** reset - 운영전용
+*/
+html{line-height: normal;-webkit-text-size-adjust: 100%;-ms-overflow-style:-ms-autohiding-scrollbar;}
+::-webkit-scrollbar{width:7px;height:7px;padding-right:10px;}
+::-webkit-scrollbar-button{width:7px;height:7px;}
+::-webkit-scrollbar-thumb{background:#999;border:1px solid #999;border-radius:50px;}
+::-webkit-scrollbar-thumb:hover{background:#666;}
+::-webkit-scrollbar-thumb:active{background:#999;}
+::-webkit-scrollbar-track{background:transparent;border:0 none transparent;border-radius:53px;}
+::-webkit-scrollbar-track:hover{background:transparent;}
+::-webkit-scrollbar-track:active{background:transparent;}
+::-webkit-scrollbar-corner{background:transparent;}
+body, pre, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul{margin:0;padding:0}
+button, input, select, table, textarea{font-family:inherit;font-size:100%;line-height:normal;margin:0;color:#333;}
+input{line-height:1.4em; /* safari 한글+영어 병기시 폰트별 높이값 차이로 잘림현상 제거용 */}
+h1, h2, h3, h4, h5, h6{font-size:inherit;line-height:normal;}
+textarea{-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:transparent;border:0;word-break:keep-all;word-wrap:break-word}
+table{border:none;border-collapse:collapse;border-spacing:0}
+button, input{-webkit-border-radius:0;border-radius:0;border:0}
+button{background-color:transparent}
+fieldset, img{border:0}
+img{vertical-align:top}
+ol, ul{list-style:none;}
+address, em{font-style:normal;}
+a{color:inherit;text-decoration:none}
+iframe{overflow:hidden;margin:0;border:0;padding:0;vertical-align:top}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none;-ms-appearance:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;background:none;border:none;}
+select::-ms-expand{display:none;}
+.blind{position:absolute;clip:rect(0 0 0 0);width:0px;height:0px;margin:-1px;overflow:hidden}
+#u_skip{position:relative;z-index:3000}
+#u_skip a{position:absolute;top:-30px;left:0;width:138px;border:1px solid #4ec53d;background:#333;text-align:center}
+#u_skip a:active, #u_skip a:focus{top:0;text-decoration:none;z-index:1000}
+#u_skip span{display:inline-block;padding:2px 6px 0 0;font-size:13px;color:#fff;letter-spacing:-1px;white-space:nowrap}
+
+/*
+** 로고영역 플로우/모닝메이트 서비스별 노출 코드 - 홈페이지
+*/
+.logo-display-wrap img {
+    display: none;
+    width: 100%;
+}
+[data-product="flow"] .logo-display-wrap .logo-flow,
+[data-product="MORNINGMATE"] .logo-display-wrap .logo-morning {
+    display: block;
+}
+/* 로고 위치 조정 - 홈페이지 */
+.welcome-step .logo-display-wrap {
+    position:absolute;
+    top:26px;
+    left:50px;
+    width:128px;
+}
+
+/* 첫가입 > 앱다운로드 페이지 */
+.flow-download-page {
+    font-family: 'Poppins', 'Roboto', 'Noto Sans KR', 'Noto Sans JP', 'Be Vietnam Pro', Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>사용자 매뉴얼</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css">
+	<script src="https://kit.fontawesome.com/42669b0565.js" crossorigin="anonymous"></script>
+	<style>
+		::-webkit-scrollbar {
+	    width: 7px;
+	    height: 7px;
+	    padding-right: 10px;
+		}
+		::-webkit-scrollbar-button {
+	    width: 7px;
+	    height: 7px;
+		}
+		::-webkit-scrollbar-corner {
+	    background: 0 0;
+		}
+		::-webkit-scrollbar-thumb {
+	    background: #999;
+	    border: 1px solid #999;
+	    -webkit-border-radius: 50px;
+	    border-radius: 50px;
+		}
+		::-webkit-scrollbar-track {
+	    background: 0 0;
+	    border: 0 none transparent;
+	    -webkit-border-radius: 53px;
+	    border-radius: 53px;
+		}
+		html {
+	    -webkit-text-size-adjust: 100%;
+		}
+		body {
+	    color: #333333;
+	    font-family: 'Noto Sans KR', sans-serif;
+	    font-size: 15px;
+	    font-weight: 400;
+	    line-height: 1.5;
+	    -webkit-font-smoothing: antialiased;
+	    letter-spacing: -0.2px;
+		}
+		article, aside, figcaption, figure, footer, header, nav, section {
+    	display: block;
+		}
+		div.border { border:1px solid red;}
+		* {
+		box-sizing: border-box;
+		}
+		
+		.header {
+	    max-width: 1160px;
+	    margin: 0 auto;
+	    position: relative;
+	    align-items: center;
+	    display: flex;
+	    height: 71px;
+	    justify-content: space-between;
+		}
+		@media (min-width: 1160px)
+		.header {
+	    padding: 0;
+	    width: 90%;
+		}
+		a {
+	    color: rgba(111, 1, 198, 1);
+	    text-decoration: none;
+        background-color: transparent;
+		}
+		img {
+	    border: 0;
+		}
+		.nav-wrapper {
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+		}
+		@media (min-width: 768px)
+		.nav-wrapper .icon-menu {
+	    display: none;
+		}
+		.nav-wrapper .icon-menu {
+	    border: 0;
+	    color: rgba(111, 1, 198, 1);
+	    cursor: pointer;
+	    margin-right: 10px;
+	    padding: 0;
+	    width: auto;
+		}
+		.button, [role="button"] {
+	    border: 1px solid rgba(111, 1, 198, 1);
+	    border-radius: 4px;
+	    color: rgba(111, 1, 198, 1);
+	    cursor: pointer;
+	    display: inline-block;
+	    font-size: 12px;
+	    line-height: 2.34;
+	    margin: 0;
+	    padding: 0 20px;
+	    text-align: center;
+	    transition: background-color .12s ease-in-out, border-color .12s ease-in-out, color .15s ease-in-out;
+	    user-select: none;
+	    white-space: nowrap;
+	    width: 100%;
+	    -webkit-touch-callout: none;
+		}
+		.user-nav {
+    	position: relative;
+        display: inline-block;
+	    white-space: nowrap;
+		 }
+		.nav-wrapper a {
+	    border: 0;
+	    color: #00A3FF;
+	    font-weight:500;
+	    display: none;
+	    font-family: 'Noto Sans KR';
+	    font-size: 14px;
+	    padding: 0 20px 0 0;
+	    width: auto;
+        display: inline-block;
+		}
+		.nav-wrapper a:hover{
+		text-decoration: underline;
+		}
+		.sub-nav {
+	    width: 100%;
+	    height: 90px;
+	    margin-bottom: 30px;
+	    background: #00A3FF;
+		}
+		.sub-nav .inner {
+	    position: relative;
+	    max-width: 1160px;
+	    padding: 0 20px;
+	    height: 100%;
+	    margin: 0 auto;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+		}
+		.breadcrumbs {
+	    margin: 0;
+	    padding: 0;
+	    display: flex;
+		}
+		.breadcrumbs li {
+	    color: #fff;
+	    display: inline-block;
+	    font-size: 14px;
+	    font-weight: 400;
+	    max-width: 450px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		}
+		.breadcrumbs li a {
+	    display: inline-block;
+	    color: inherit !important;
+		}
+		.search {
+	    position: relative;
+		}
+		form {
+	    display: block;
+	    margin-top: 0em;
+		}
+		input {
+	    font-weight: 300;
+	    max-width: 100%;
+	    box-sizing: border-box;
+	    outline: none;
+	    transition: border .12s ease-in-out;
+	    color: #000;
+	    font-size: 14px;
+        line-height: normal;
+        font: inherit;
+    	margin: 0;
+		}
+		input[type="hidden" i] {
+	    appearance: none;
+	    background-color: initial;
+	    cursor: default;
+	    display: none !important;
+	    padding: initial;
+	    border: initial;
+		}
+		.sub-nav input[type="search"] {
+	    min-width: 300px;
+		}
+		.search input[type="search"] {
+	    border: 1px solid transparent;
+	    border-radius: 30px;
+	    box-sizing: border-box;
+	    font-family: 'Noto Sans KR';
+	    color: #6F01C6;
+	    height: 40px;
+	    padding-left: 40px;
+	    padding-right: 20px;
+	    -webkit-appearance: none;
+	    width: 100%;
+		}
+		.search::before {
+	    position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    background-color: #fff;
+	    color: #6F01C6;
+	    content: "\1F50D";
+	    font-size: 18px;
+	    position: absolute;
+	    left: 15px;
+	    
+	    font-family: "copenhagen-icons";
+	    font-style: normal;
+	    font-weight: normal;
+	    speak: none;
+	    line-height: 1em;
+	    vertical-align: middle;
+	    -webkit-font-smoothing: antialiased;
+		}
+		.category-content {
+	    flex: 0 0 80%;
+		}
+		.page-header {
+	    align-items: baseline;
+	    flex-direction: row;
+	    margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+   		justify-content: space-between;
+		}
+		.page-header h1 {
+		margin-top:0;
+		display:block;
+	    flex-grow: 1;
+	    color: #00A3FF;
+	    font-family: 'Noto Sans KR';
+	    font-weight: 700;
+	    margin-bottom: 10px;
+		}
+		h1 {
+    	font-size: 32px;
+        margin-top: 0;
+        margin: 0.67em 0;
+		}
+		
+		.page-header-description {
+		    flex-basis: 100%;
+		}
+		.page-header-description {
+	    color: #00A3FF;
+	    font-style: normal;
+	    font-weight: 500;
+	    margin: 0 0 50px 0;
+	    word-break: break-word;
+		}
+		ul {
+	    list-style: none;
+		}
+		.container {
+	    padding: 0;
+	    width: 90%;
+	    max-width: 1160px;
+	    margin: 0 auto;
+		}
+		.category-container {
+	    display: flex;
+	    justify-content: center;
+		}
+		.section-tree {
+	    flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+   		justify-content: space-between;
+		}
+		section {
+	    display: block;
+        margin-bottom: 60px;
+		}
+		.section a {
+	    color: #00A3FF;
+	    text-decoration: none;
+	    background-color: transparent;
+		}
+		.section>a{
+		color:#FF7A00;
+		font-weight:500;
+		text-decoration:underline;
+		}
+		.section>ul>li a {
+		color:#555555;
+		}
+		.section>ul>li a:hover {
+		color:#00A3FF;
+		text-decoration:underline;
+		font-weight:500;
+		}
+		.section-tree .section {
+	    flex: 0 0 45%;
+	    
+		}
+		.section-tree-title {
+	    margin-bottom: 10px;
+	    font-family: 'Noto Sans KR';
+		}
+		h3 {
+	    font-size: 18px;
+	    font-weight: 600;
+		}
+		.section ul{
+		padding:inherit;
+		}
+		.article-list-item:before {
+	    content: "";
+	    margin-top: -2px;
+	    margin-right: 5px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 4px;
+	    height: 4px;
+	    background: #555;
+	    border-radius: 100%;
+	    font-size: 16px;
+		}
+		.article-list-item {
+	    margin: 0 0 10px 0;
+	    font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">
+			<a title="홈" href="메인.html">
+				<img src="Images/with_logo.png" alt="위드 매뉴얼  | 업무용 올인원 협업툴 위드(WITH) 헬프 센터 홈 페이지">
+			</a>
+		</div>
+		<div class="nav-wrapper">
+			<span class="icon-menu" tabindex="0" role="button" aria-controls="user-nav" 
+			aria-expanded="false" aria-label="탐색 메뉴 토글"></span>
+			<nav class="user-nav" id="user-nav">
+<!-- 				<a class="submit-a-request" href="">문의 등록</a> -->
+			</nav>
+			<a class="login" data-auth-action="signin" role="button" rel="nofollow" title="대화 상자를 엽니다." 
+			href="로그인.jsp">로그인</a>
+		</div>
+	</header>
+	<nav class="sub-nav">
+		<div class="inner">
+			<ol class="breadcrumbs">
+				<li title="위드 매뉴얼 | 업무용 올인원 협업툴 위드(with)">
+			        <a href="">위드 매뉴얼 | 업무용 올인원 협업툴 위드(with) &nbsp;</a>
+			    </li>
+			    <li title="위드 사용 매뉴얼">
+			    <i class="fa-solid fa-angle-right"></i>
+			   	   	  &nbsp;위드 사용 매뉴얼
+			    </li>
+			</ol>
+			<form role="search" class="search" data-search="" action="/hc/ko/search" accept-charset="UTF-8" method="get">
+			<input name="utf8" type="hidden" value="✓" autocomplete="off">
+			<input type="search" name="query" id="query"  placeholder="검색" aria-label="검색" onclick="alert('미구현')";>
+			</form>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="category-container">
+			<div class="category-content">
+				<header class="page-header">
+					<h1>위드 사용 매뉴얼</h1>
+		          	<p class="page-header-description">위드 사용법 (2023.06 ~)</p>
+				</header>
+				<div class="section-tree">
+					<div class="section-tree">
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a >회원가입</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">신규 회사 만들기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">회사 직원으로 가입하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a class="article-list-link">게스트(무료) 계정으로 가입하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">게스트 계정에서 비즈니스 계정으로 업그레이드하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a class="article-list-link">게스트 계정에서 회사 소속 구성원(유료)으로 참여하는 법</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a >계정</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">게스트 계정 VS 비즈니스 계정 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">전체 관리자 VS 프로젝트 관리자</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">프로필 정보 및 비밀번호 변경하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">아이디와 비밀번호 찾기</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="/hc/ko/sections/4403605369741-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0">프로젝트 이해하기</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a  class="article-list-link">프로젝트 '홈 탭' 설정하기 (5/24 오픈🎉)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 활용 방법 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 3종 이해하기 (일반 vs 공개 vs 회사 프로젝트)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">일반 프로젝트 만들기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">회사 공개 프로젝트 만들기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">회사 프로젝트 만들기</a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 11개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">프로젝트 템플릿 </a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 템플릿 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 템플릿으로 저장하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 템플릿 카테고리 관리 방법 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 템플릿 활용 방법 </a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">프로젝트 관리하는 방법</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 정렬/보기 설정</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 수정/삭제하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 즐겨찾기 설정하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 숨기기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트를 폴더로 관리하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로젝트 색상 변경하기 </a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 7개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">게시글 공통 기능</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">중요한 게시물 상단고정 하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">게시물 링크 복사하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">다른 프로젝트에 복사</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">게시물 임시저장 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">북마크 (중요한 글은 따로 모아두고 싶어요)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">다른 사람의 게시물에 감정 표현하기</a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 9개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">글</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">글 작성하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">해시태그 기능 및 모아보기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">투표 기능 사용 방법</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">업무</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">업무 등록하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">업무 게시글 활용 방법</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">하위업무 작성하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">전체 업무 모아보기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">업무, 그룹으로 묶어서 관리하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">(New) 간트차트로 업무 일정 관리하기</a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 8개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">일정 &amp; 할 일</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">일정 등록 및 확인하는 방법 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">캘린더로 일정 모아보기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">할 일 작성 및 활용법</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">일정, 업무 구글 캘린더로 등록하기</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">파일함</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">파일함에서 파일 첨부하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">파일함 활용 방법 </a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">채팅</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">일반 채팅 VS 프로젝트 채팅</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">채팅 새로 만들기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">채팅 참여자 초대 방법</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">채팅 관리자 (New)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">채팅 - 이미지, 파일 첨부하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">채팅 - 이미지/파일/링크 모아보기</a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 16개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">알림</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">플로우 알림 2종 구분하기 (알림리스트 Vs 푸시)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">푸시 알림 설정 방법</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">알림리스트 설정 방법</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">방해금지모드 설정 방법 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">채팅 알림 설정하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">(New) 중요한 업무 알림 이메일로 받기 </a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 7개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">위드 추가 꿀 Tip</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">플로우 만의 단축키 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">읽음 확인 (누가 내 글을 읽지 않았는지 확인하고 싶어요)</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">PC설치형</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">PC설치형 다운로드 받기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">PC설치형 창모드 변경하기(전체창/미니창)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">PC설치형 미니창 모드 구성 알아보기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">PC설치형 미니창 모드 구성 알아보기 - 즐겨찾기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">PC설치형 앱의 특별한 기능</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">환경설정</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">프로필 정보 및 비밀번호 변경하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">디스플레이 설정 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">화상 회의 기능 활용하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">zoom 화상회의 연동하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">MS Teams 화상회의 연동하기 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">화상회의 엑세스 사전승인하기</a>
+                  </li>
+                
+              </ul>
+              
+                <a href="" class="see-all-articles">
+                  문서 8개 모두 보기
+                </a>
+              
+            
+          </section>
+        
+          <section class="section">
+            <h3 class="section-tree-title">
+              <a href="">기타</a>
+              
+            </h3>
+            
+              <ul class="article-list">
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">OKR 주간 리포트 작성하기 (비즈니스 프로)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">OKR 시작 방법 (비즈니스 프로)</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">플로우 업무 포털에서 전자결재 서비스 시작하기</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">플로우 고객을 위한 Zoom 할인 혜택 확인 방법</a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">업무 포털 앱 구독 취소 방법 </a>
+                  </li>
+                
+                  <li class="article-list-item">
+                    
+                    <a href="" class="article-list-link">모아보기 - 업무, 일정, 파일</a>
+                  </li>
+                
+              </ul>
+              
+            
+          </section>
+        
+      </div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

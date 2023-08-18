@@ -1,0 +1,1947 @@
+.width-100p-fix {
+  width: 100%;
+}
+.plan-banner {
+  /*position: relative;*/
+  position: absolute;
+  width: 100vw;
+  min-width: 1204px;
+  height: 50px;
+  font-size: 16px;
+}
+.plan-banner > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.plan-banner.step1 {
+  background: #623AD6;
+  color: #EAE3FF;
+}
+.plan-banner.step1 .tit {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.plan-banner.step1 span {
+  color: #FFEC40;
+}
+.plan-banner .close {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #fff;
+}
+.plan-banner .close i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  background: url("/flow-renewal/assets/images/icons/sb-close-w.svg") no-repeat center center / cover;
+}
+.plan-banner.step2 {
+  z-index: 1;
+  background: #FDE5A6;
+  border-bottom: 1px solid #E8C66E;
+  font-weight: 500;
+  color: #483810;
+}
+.plan-banner.step2 a {
+  padding: 6px 16px;
+  margin-left: 20px;
+  border: 1px solid #E8C66E;
+  border-radius: 18px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+.upgrade-singup-header {
+  position: relative;
+  height: 80px;
+  padding: 30px 50px;
+  /*box-shadow: 0px 1px 10px 0px #0003;*/
+}
+.upgrade-singup-header h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #333;
+}
+.upgrade-singup-header .btn-close {
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: block;
+  width: 21px;
+  height: 21px;
+  background: url("/flow-renewal/assets/images/icons/icon_close_black.png") no-repeat;
+}
+.upgrade-version-wrap {
+  text-align: center;
+  overflow: auto;
+  height: calc(100vh - 150px);
+  padding: 0 0 50px 0;
+}
+#flowUpgradeStep .upgrade-version-wrap {
+  height: calc(100vh - 80px);
+}
+.pro-pay-wrap.step1 .upgrade-version-section-2 {
+  overflow: visible;
+  /*padding: 100px 0  180px;*/
+  padding: 100px 0 0 0;
+}
+.pro-pay-wrap.step2 .upgrade-version-section-2 {
+  padding-top: 50px;
+  /*padding-top: 80px;*/
+}
+.upgrade-version-wrap .link {
+  text-decoration: underline;
+  color: #623AD6;
+}
+.upgrade-version-section-1 {
+  position: relative;
+}
+
+.upgrade-version-flow-logo {
+  width: 140px;
+  height: 40px;
+  margin: 70px auto 0;
+  background: url("/flow-renewal/assets/images/upgrade-sprite-1.png") no-repeat 0 -1px;
+  background-size: 324px 41px;
+}
+.upgrade-version-text-1{
+  padding-top: 80px;
+  font-size: 36px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+.upgrade-version-text-2{
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 550;
+  color: #333;
+  text-align: center;
+}
+.upgrade-version-text-2 .payment-method-link{
+  text-decoration: underline;
+}
+.upgrade-version-text-3{
+  margin-top: 15px;
+  font-size: 14px;
+  color: #999;
+}
+.upgrade-version-text-3 + .upgrade-version-section-2 {
+  margin-top: 40px;
+}
+.upgrade-version-button-1 {
+  width: 200px;
+  height: 50px;
+  border-radius: 160px;
+  border: 1px solid #6449fc;
+  margin: 30px auto 38px auto;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  color: #6449fc;
+}
+
+.upgrade-version-button-1:hover {
+  background: #6449fc;
+  color: #fff;
+}
+
+.upgrade-version-section-2 {
+  width: 1204px;
+  background: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: left;
+}
+.upgrade-version-section-3 {
+  width: 100%;
+  max-width: 587px;
+  height: 694px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  padding: 105px 0 92px 70px;
+}
+.upgrade-version-section-4 {
+  width: 100%;
+  max-width: 587px;
+  min-height: 665px;
+  padding: 40px;
+  float: right;
+  position: relative;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+.upgrade-version-section-4.txt-upgrade{
+  min-height: 694px;
+}
+
+/*  결제화면 정부바우처 버튼 */
+.gov-voucher-banner.pay-btn  {
+  width: 100%;
+  height: auto;
+  margin: 10px 0 0;
+  padding: 15px 0;
+  border: 1px solid #6FBDDF;
+  border-radius: 6px;
+  background: #D6F8FF;
+  text-align: center;
+  color: #003668;
+}
+.gov-voucher-banner.pay-btn a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.gov-voucher-banner.pay-btn img {
+  height: 20px;
+}
+.gov-voucher-banner.pay-plan {
+  position: relative;
+  width: 1204px;
+  height: 86px;
+  margin: 45px auto 0;
+  border-radius: 10px;
+  background: #422594;
+  overflow: hidden;
+}
+.gov-voucher-banner.pay-plan a:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #5B3BB7;
+}
+.gov-voucher-banner.pay-plan a {
+  font-size: 28px;
+  color: #fff;
+}
+.gov-voucher-banner.pay-plan img {
+  height: 68px;
+  margin-right: 32px;
+  z-index: 2;
+}
+.gov-voucher-banner.pay-plan span {
+  color: #FFDF39;
+}
+
+
+.upgrade-version-section-4 .gov-voucher-banner {
+  height: 100%;
+  padding: 22px 0;
+  border: 1px solid #6FBDDF;
+  border-radius: 6px;
+  background: #D6F8FF;
+  font-size: 16px;
+  text-align: center;
+  color: #003668;
+}
+.upgrade-version-section-4 .gov-voucher-banner.top {
+  margin-bottom: 10px;
+}
+.upgrade-version-section-4 .gov-voucher-banner.bot {
+  margin-top: 10px;
+}
+.upgrade-version-section-4 .gov-voucher-banner img {
+  height: 24px;
+  margin-right: 6px;
+}
+.upgrade-version-section-5 {
+  width: 1152px;
+  margin: 0 auto;
+  position: relative;
+}
+.upgrade-version-left-1 {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #514474;
+  border-radius: 30px;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+.upgrade-version-left-2 {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #00b19c;
+  border-radius: 30px;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+.upgrade-version-left-3 {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f96464;
+  border-radius: 30px;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+.upgrade-version-left-4 {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #2d8cff;
+  border-radius: 30px;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+.upgrade-version-right-1 {
+  width: 320px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.upgrade-version-right-1 p {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+}
+.upgrade-version-right-1 span {
+  display: block;
+  line-height: 24px;
+  color: #555;
+  font-size: 14px;
+}
+.upgrade-version-right-1 em {
+  display: block;
+  width: 600px;
+  color: #555;
+  font-size: 12px;
+}
+.upgrade-version-section-3-1 {
+  margin-bottom: 40px;
+}
+.upgrade-version-section-3-2 {
+  margin-bottom: 40px;
+}
+.upgrade-version-section-3-3 {
+  margin-bottom: 40px;
+}
+/* .upgrade-version-section-3-4 {
+  height: 121px;
+} */
+.upgrade-version-icon-1 {
+  background: url("/flow-renewal//assets/images/icons/upgrade-hands.png") no-repeat;
+  width: 47px;
+  height: 39px;
+  margin: 26px auto;
+}
+.upgrade-version-icon-2 {
+  background: url("/flow-renewal//assets/images/icons/upgrade-message.png") no-repeat;
+  width: 41px;
+  height: 37px;
+  margin: 27px auto;
+}
+.upgrade-version-icon-3 {
+  background: url("/flow-renewal//assets/images/icons/upgrade-set.png") no-repeat;
+  width: 41px;
+  height: 37px;
+  margin: 27px auto;
+}
+.upgrade-version-icon-4 {
+  background: url("/flow-renewal//assets/images/icons/upgrade-gard.png") no-repeat;
+  width: 33px;
+  height: 39px;
+  margin: 26px auto;
+}
+
+.upgrade-coperation-button-1 {
+  text-align: center;
+  color: #fff;
+  display: block;
+  width: 506px;
+  padding: 23px 0;
+  background: #623ad6;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.upgrade-coperation-button-1 strong {
+  display: block;
+}
+.upgrade-coperation-button-1 em {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #ddd;
+}
+.upgrade-coperation-button-1:hover,
+.upgrade-coperation-button-1:focus {
+  background: #7163c4;
+}
+.upgrade-coperation-section-1 {
+  color: #333;
+  margin-bottom: 20px;
+  min-height: 330px;
+}
+.upgrade-coperation-section-1 > ul {
+
+}
+.alert-sns {
+  margin: 6px 0 0 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.upgrade-coperation-section-1 ul li + li {
+  margin-top: 20px;
+}
+.upgrade-coperation-section-1 ul li span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+.upgrade-version-bottomline-1 {
+  display: inline-block;
+  position: relative;
+}
+.upgrade-version-bottomline-1.d-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.upgrade-version-bottomline-1 input,
+.upgrade-version-input-1 {
+  display: inline-block;
+  width: 506px;
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 16px;
+}
+.upgrade-version-bottomline-1 input::placeholder {
+  color: #999;
+}
+.upgrade-select-type-1 {
+  position: relative;
+  width: 506px;
+  padding: 19px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  background: url(/flow-renewal/assets/images/section-ar-1.png) 95% 50% no-repeat;
+}
+.upgrade-select-type-1 + .upgrade-version-input-1 {
+  margin-top: 10px;
+}
+.upgrade-version-input-1 {
+  color: #333;
+  font-size: 14px;
+}
+.upgrade-version-bottomline-1 input.upgrade-version-input-2 {
+  width: 350px;
+  margin: 0 8px;
+}
+/* .upgrade-version-input-1:focus,
+.upgrade-version-input-2:focus  {
+  color: #6449fc;
+} */
+.upgrade-version-bottomline-1 em {
+  color: #333;
+  font-size: 16px;
+}
+
+.upgrade-version-input-1::placholder {
+  color: #999;
+}
+.upgrade-version-input-2::placholder {
+  color: #999;
+}
+.upgrade-version-join {
+  display: block;
+  padding: 16px;
+  margin: 27px auto 0;
+  background: #ffffff;
+  border: 1px solid #623ad6;
+  box-sizing: border-box;
+  border-radius: 900px;
+  color: #623ad6;
+  font-size: 16px;
+  font-weight: 500;
+}
+.text-version-type-1 {
+  margin-top: 60px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+.upgrade-free-img {
+  display: block;
+  width: 157px;
+  margin: 102px auto 0;
+}
+.upgrade-version-bottomline-1 input.input-error {
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+/* 결제 */
+/* 결제 팝업 */
+
+.label-discount {
+  height: 22px;
+  padding: 0 10px;
+  margin: 0 0 0 10px;
+  line-height: 22px;
+  display: inline-block;
+  border: 1px solid #fa6c3f;
+  border-radius: 900px;
+  color: #fa6c3f;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.popup-wr .alert-txt {
+  margin: 20px 0 45px 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.btn-qna {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 13px;
+  color: #555;
+}
+
+.btn-qna i {
+  width: 13px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  background: url(/flow-renewal/assets/images/payment-sprite.png) no-repeat -161px 0;
+  background-size: 299px;
+}
+
+.btn-qna:hover,
+.btn-qna:focus {
+  color: #6449fc;
+}
+
+.btn-qna:hover i,
+.btn-qna:focus i {
+  background-position: -177px 0;
+}
+
+.agreement-section {
+  height: 377px;
+  padding: 15px 30px;
+  line-height: 20px;
+  overflow-y: auto;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  color: #555;
+}
+
+.agreement-section li {
+  margin: 10px 0;
+}
+
+.popup-wr.popup-3 {
+  width: 600px;
+  height: auto;
+}
+
+.popup-wr.popup-3 .btn-wr {
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.btn-type-1 {
+  width: 182px;
+  height: 36px;
+  margin: 0 5px;
+  line-height: 36px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  color: #555;
+  font-size: 13px;
+}
+
+.btn-type-2 {
+  width: 182px;
+  height: 36px;
+  margin: 0 5px;
+  line-height: 36px;
+  background: #6449fc;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.icon-mail {
+  width: 19px;
+  height: 14px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  background: url(/flow-renewal/assets/images/payment-sprite.png) no-repeat -187px -2px;
+  background-size: 294px;
+}
+
+.account-contents li {
+  height: 61px;
+  line-height: 61px;
+  padding: 0 20px;
+  position: relative;
+  color: #555;
+  background: #eee;
+  border-radius: 6px;
+  margin: 0 0 10px 0;
+}
+
+.account-contents li:first-child {
+  background: #f8f7ff;
+  color: #6449fc;
+  font-weight: 500;
+}
+
+.account-contents li:nth-child(2) {
+  padding: 0;
+  background: #fff;
+}
+
+.account-contents .btn-qna {
+  right: 0;
+  bottom: 24px;
+}
+
+.dot:before {
+  width: 4px;
+  height: 4px;
+  margin: 0 7px 0 0;
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  background: #999;
+  border-radius: 50%;
+}
+
+.account-contents li:nth-child(4) {
+  height: 93px;
+  line-height: 55px;
+}
+
+.account-contents .dot:nth-child(2) {
+  margin: 0 0 0 30px;
+}
+
+.account-contents .dot:nth-child(3) {
+  display: block;
+  margin: 0 0 0 85px;
+  line-height: 10px;
+}
+
+.btn-download {
+  width: 82px;
+  height: 24px;
+  margin: 0 0 0 5px;
+  line-height: 24px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #555;
+}
+
+.btn-download:hover,
+.btn-download:focus {
+  color: #6449fc;
+  background-color: #f8f7ff;
+}
+
+.btn-download:hover .icons-download::before,
+.btn-download:focus .icons-download::before {
+  color: #6449fc;
+}
+
+.popup-wr {
+  width: 600px;
+  height: auto;
+  padding: 20px 30px;
+  margin: 0 auto;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 20px 20px 30px rgb(0 0 0 / 20%);
+  box-shadow: 20px 20px 30px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+}
+.payment-popup .popup-wr{
+  max-width: 600px;
+  width: 90%;
+}
+.popup-wr .popup-tit {
+  height: 24px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*right: -10px;*/
+}
+
+.popup-wr .btn-close {
+  top: 20px;
+  right: 20px;
+}
+
+.side-wr .btn-close {
+  top: 17px;
+  right: 20px;
+}
+
+.popup-wr .payment-cycle-group {
+  top: 44px;
+}
+
+.payment-section {
+  position: relative;
+}
+
+.payment-section .section-tit {
+  height: 43px;
+  line-height: 43px;
+  display: block;
+  color: #555;
+}
+
+.payment-bill {
+  width: 100%;
+  padding: 12px 0;
+  table-layout: fixed;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.payment-bill tr:nth-child(1) input {
+  width: 120px;
+  height: 30px;
+  padding: 5px 14px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.payment-bill td:nth-child(1) {
+  width: 40%;
+  padding: 13px 0 13px 30px;
+  font-size: 15px;
+}
+
+.payment-bill td:nth-child(2) {
+  padding: 13px 30px 13px 0;
+  text-align: right;
+}
+
+.payment-bill td input {
+  width: 139px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.payment-bill tr:nth-child(3) {
+  color: #fa6c3f;
+}
+
+.payment-bill tr:nth-child(3) input {
+  color: #fa6c3f;
+}
+
+.vat-text {
+  margin-left: 3px;
+}
+
+.payment-date {
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(/flow-renewal/assets/images/section-ar-1.png) 95% 50% no-repeat;
+}
+
+.payment-date li {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+  display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.payment-date li p {
+  display: inline-block;
+}
+
+.payment-contents {
+  overflow: hidden;
+  text-align: center;
+}
+.payment-contents fieldset {
+  display: flex;
+  justify-content: space-between;
+}
+.form-tit {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.payment-info > li {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+}
+.payment-info > li + li{
+  margin: 20px 0 0 0;
+}
+.payment-left {
+  display: inline-block;
+  min-width: 587px;
+  padding: 40px;
+  text-align: left;
+}
+.payment-left.payment-change{
+  max-width: 506px;
+}
+.payment-right {
+  display: block;
+  height: fit-content;
+  overflow: hidden;
+  text-align: left;
+  min-width: 587px;
+  background: #fff;
+}
+.payment-amount-wrap {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.payment-input {
+  width: 100%;
+  height: 52px;
+  padding: 15px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.payment-input.disabled {
+  background: #eee;
+  color: #999;
+}
+.payment-info-title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+.calculator-button{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: #777;
+}
+.calculator-button:hover {
+  color: #623AD6;
+}
+.payment-input.input-type2 {
+  max-width: 119px;
+}
+.payment-input.input-type2 + .payment-input.input-type2 {
+  margin-left: 6px;
+}
+.payment-select {
+  min-width: 119px;
+  height: 52px;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: url(/flow-renewal/assets/images/icons/icon_select_arrow.png) no-repeat;
+  background-position: 85px center;
+}
+.payment-select + .payment-select {
+  margin-left: 6px;
+}
+.icon-password {
+  display: inline-block;
+  margin-left: 10px;
+}
+.payment-amount-header {
+  padding: 26px 40px;
+  background: #FAF9F9;
+  border-top: 10px solid #623AD6;
+  border-bottom: 1px solid #DDDDDD;
+}
+.payment-amount-header h2 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+.payment-amount-header > div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.payment-amount-content {
+  padding: 28px 40px 50px;
+}
+.payment-cycle {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+}
+#paymentPopupLayer .payment-cycle {
+  padding: 12px 20px;
+  height: 52px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background: #fff url(/flow-renewal/assets/images/icons/icon_select_arrow.png) no-repeat 95% center;
+  cursor: pointer;
+  line-height: normal;
+}
+.payment-cycle:hover,
+.payment-cycle.active {
+  color: #623AD6;
+}
+.payment-cycle.no-bg {
+  background: none !important;
+}
+.payment-cycle svg {
+  stroke: #555;
+  margin-left: 8px;
+}
+.payment-cycle:hover svg {
+  stroke: #623AD6;
+}
+.payment-sale {
+  display: inline-block;
+  padding: 1px 10px;
+  margin-left: 10px;
+  border: 1px solid #fa6c3f;
+  box-sizing: border-box;
+  border-radius: 12px;
+  color: #fa6c3f;
+  font-size: 12px;
+  font-weight: 500;
+}
+.payment-sale em {
+  margin: 0 2px;
+  font-size: 13px;
+}
+.payment-cycle-group {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 0;
+  z-index: 1;
+  width: 217px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  color: #555;
+}
+.payment-cycle-group li{
+  font-size: 13px;
+  cursor: pointer;
+}
+.payment-cycle-group li + li{
+  margin-top: 6px;
+}
+.payment-cycle-group li:hover{
+  color: #6449FC;
+}
+/*.estimated-amount{*/
+/*  padding: 23px 30px 28px 30px ;*/
+/*  background: #fff;*/
+/*  border: 1px solid #ddd;*/
+/*  box-sizing: border-box;*/
+/*  border-radius: 6px;*/
+/*}*/
+.estimated-amount li{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+.estimated-amount li:last-child {
+  text-align: right;
+  align-items: flex-start;
+}
+.estimated-amount li + li {
+  margin-top: 22px;
+}
+.estimate-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 28px;
+  color: #333;
+}
+.estimate-price strong {
+  margin: 0 3px 0 5px;
+  font-weight: bold;
+}
+.estimate-price em {
+  font-size: 15px;
+  font-weight: normal;
+}
+.estimated-amount .orange {
+  margin-top: 7px;
+  font-weight: normal;
+  color: #FA6C3F;
+  text-align: right;
+}
+.estimated-amount .tooltip-square {
+    display: none;
+    position: absolute;
+    width: 285px;
+    bottom: 39px;
+    right: -62px;
+    letter-spacing: -0.03em;
+    z-index: 1;
+    white-space: normal;
+}
+
+.estimated-amount .tooltip-square em {
+  color: #FA6C3F;
+}
+
+.estimated-amount .tooltip-square:before {
+  top: initial;
+  bottom: -6px;
+  transform: translateX(-49.9%) rotate(180deg);
+}
+
+.users-number {
+  width: 120px;
+  height: 35px;
+  padding: 8px 14px;
+  margin-right: 6px;
+  background: #eee;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: right;
+  color: #555;
+  font-weight: 500;
+}
+
+.users-number:hover + .tooltip-square {
+  display: block;
+}
+
+.payment-button {
+  display: block;
+  width: 506px;
+  height: 52px;
+  margin-top: 60px;
+  background: #623AD6;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+}
+
+.payment-button:disabled {
+  background: #dcdedf;
+  border-color: #dcdedf;
+  cursor: default;
+}
+.payment-left .payment-button:disabled {
+  background: #eee;
+  color: #999;
+  font-weight: 500;
+  font-size: 16px;
+}
+.payment-agree {
+  display: block;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+.payment-agree a{
+  color: #623AD6;
+}
+.payment-agree-text{
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+}
+.payment-left .payment-agree-text{
+  margin: 0;
+}
+.payment-left .payment-agree-text a{
+  font-weight: 400;
+}
+
+.ico-security {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 6px;
+  background: url(https://flow.team/flow-renewal/assets/images/icons/icon_security.png?v=5c084f56f4dd4cab228f5c976ce97c3e2dd44a3f) center center / contain;
+}
+.payment-description.txt-upgrade{
+  margin-top: 50px;
+}
+.payment-description.txt-upgrade::before{
+  display: none;
+}
+.payment-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+}
+.payment-popup-link {
+    color: #623AD6;
+}
+.payment-popup-link:hover {
+    text-decoration: underline;
+}
+.pro-pay-wrap {
+  width: 1204px;
+  margin: 0 auto;
+}
+/*  컬러세팅  */
+.pro-ver .bg-pp {
+  background: #623AD6;
+}
+.pro-ver .bg-rd {
+  background: #F96464;
+}
+.pro-ver .bg-bl{
+ background: #195AD8;
+}
+.pro-ver .pp {
+  color: #623AD6;
+}
+.pro-ver .rd {
+  color: #F96464;
+}
+.pro-ver .bl{
+  color: #195AD8;
+}
+
+/* 프로버전 step1 플랜선택 */
+.upgrade-version-wrap.pro-ver {
+  height: calc(100vh - 80px);
+}
+.step1 .plans-wrap {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: flex-end;  비지니스 프로 항목 늘어남에 따라 정렬 구두확인후 수정  */
+  align-items: center;
+}
+.step1 .plans-wrap > div {
+  width: 33%;
+  padding: 40px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 20px 20px 50px rgb(0 0 0 / 10%);
+}
+.step1 h4 {
+  font-weight: 700;
+  font-size: 22px;
+}
+.step1 .plans-wrap > div + div {
+  margin-left: 20px;
+}
+.step1 .plans-wrap button {
+  width: 100%;
+  margin: 34px 0;
+  padding: 14px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.step1 .busi-basic button {
+  background: #623AD6;
+  border: 1px solid #623AD6;
+}
+.step1 .busi-pro button {
+  background: #F96464;
+  border: 1px solid #F96464;
+}
+.step1 .enter button {
+  background: #195AD8;
+  border: 1px solid #195AD8;
+}
+.step1 button.disable {
+  background: #eee;
+  border: none;
+  color: #999;
+}
+.step1 .banner {
+  margin: -40px -40px 40px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+}
+.step1 .top .price-wrap,
+.step1 .top .price-wrap > .price {
+  margin: 20px 0 8px;
+  font-weight: 700;
+  font-size: 38px;
+  color: #111;
+}
+.step1 .top p:nth-of-type(2) {
+  min-height: 40px;
+  font-size: 13px;
+  line-height: 19px;
+  color: #777;
+}
+.step1 .top p:nth-of-type(2) > .price {
+  font-size: 13px;
+  color: #777;
+}
+.step1 .top p:nth-of-type(3) {
+  margin: 28px 0 34px;
+  font-size: 15px;
+  color: #333;
+  letter-spacing: -0.02em;
+}
+
+.step1 .bottom > ul > li + li {
+  margin-top: 25px;
+}
+.step1 .tit2 {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.step1 .txt2 li {
+  font-size: 14px;
+  color: #555;
+}
+.step1 .txt2 li + li {
+  margin-top: 10px;
+}
+.step1 .txt2 li:before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 16px;
+  margin-right: 8px;
+  background: url('https://flow.team/flow-renewal/assets/images/icons/ico-check-pp.svg?v=ac48e46f6f8cbbb77df195e858f2da5cdbe7d4be') no-repeat center center / contain;
+}
+.busi-pro .txt2 li:before {
+  background-image: url('https://flow.team/flow-renewal/assets/images/icons/ico-check-rd.svg?v=81193d31c9247211286c349149c3b94c3fadd4e9');
+}
+.enter .txt2 li:before {
+  background-image: url('https://flow.team/flow-renewal/assets/images/icons/ico-check-bl.svg?v=b3d54c1c02fb841999bd00319e8f616500f51892');
+}
+.step3 img {
+  padding: 130px 0 70px;
+}
+.step3 p {
+  color: #333;
+}
+.step3 .txt p:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.step3 .txt p:last-child {
+  margin-top: 6px;
+  font-size: 16px;
+}
+.step3 .url-area {
+  max-width: 586px;
+  margin: 0 auto;
+}
+.step3 .invite-url {
+  /*width: 456px; */
+  width: 430px;
+  margin-top: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+.step3 .copy-url-button {
+  background: #FFFFFF;
+  border: 1px solid #623AD6;
+  border-radius: 8px;
+  color: #623AD6;
+}
+.step3 .url-area button:last-child {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 0;
+  background: #623AD6;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.step3 .caution {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .payment-popup .popup-wr{
+    padding: 20px 10px;
+
+  }
+}
+
+
+/* ---- payment consult popup ---- */
+/*
+  @우성호 : 빌링 시스템이 만들어지기 전까지, 베이직 -> 프로 업그레이드는 문의하기를 통해 인바운드방으로 문의를 보내도록 임시적으로 만들어졌습니다.
+  빌링 시스템이 만들어져 필요 없어지면 삭제해도 좋습니다.
+
+  아래 코드는 "flow-renewal/assets/css/portal.css" 에서 참조하여 필요한 부분만 가져왔습니다.
+
+  - 이 CSS 코드는 아래 jsp에서 사용됩니다.
+      - flow-renewal/view/mainview/top/payment/paymentMain.jsp
+      -> id="paymentConsult"
+*/
+.flow-apps-payment.popup.banner-notice-wrap{
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  z-index: 10;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup{
+  width: 434px;
+  height: 650px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #777;
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup .payment-popup-header{
+  position: relative;
+  padding: 15px 30px;
+  text-align: left;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup .payment-popup-header > b{
+  color: #333;
+  font-size: 16px;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup .payment-popup-header .payment-back{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup button.agree-use{
+  display: block;
+  width: 182px;
+  height: 36px;
+  margin: 30px auto 15px;
+  background-color: #999;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup button.agree-use.on,
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup button.agree-use.bg-pp {
+  background-color: #6449FC;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .payment-popup.qna{
+  height: auto;
+  min-width: 434px;
+  width: 450px;
+}
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna{
+  padding: 0 30px 15px 30px;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna p{
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 13px;
+  text-align: left;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea{
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  resize: none;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea::placeholder{
+  color: #999;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea:hover,
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea:active{
+  border: 1px solid #999;
+  color: #555;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea + .flow-pop-button-type-1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea + .flow-pop-button-type-1 .flow-pop-sub-button-1,
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna textarea + .flow-pop-button-type-1 .agree-use.bg-pp{
+  max-width: 190px;
+  width: 49%;
+  margin: 0;
+}
+
+.flow-apps-payment.popup.banner-notice-wrap .popup-qna button{
+  width: 48.4%;
+}
+
+/* ---- payment consult popup 끝 ---- */
+
+
+/*
+** stripe 결제연결 - 20230327 기준 최신코드
+*/
+.stripe-pay-table {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 500;
+  overflow-y: scroll;
+  background: #fff;
+  color: #333;
+}
+.stripe-pay-table .sub-tit,
+.stripe-pay-table .txt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.stripe-pay-table .title .txt {
+  margin-top: 0;
+  font-size: 16px;
+  color: #555;
+  text-decoration: underline;
+}
+.stripe-pay-table > div > div {
+  width: 1208px;
+  margin: 0 auto;
+}
+.stripe-pay-table .compare-wrap {
+  margin-top: 150px;
+}
+.stripe-pay-table .pay-header {
+  position: fixed;
+  top: 0;
+  height: 90px;
+  z-index: 1;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 80px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+.stripe-pay-table .pay-header img {
+  width: 128px;
+}
+.stripe-pay-table .pay-header h1 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.stripe-pay-table .pay-header .close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  background: url("/flow-renewal/homepage/flow/ko/assets/images/icon-x.svg") no-repeat center center / 20px;
+}
+.stripe-pay-table .cont {
+  width: 1206px;
+  margin: 0 auto;
+}
+/*  컬러 및 폰트세팅  */
+.stripe-pay-table i.icon-check {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(/flow-renewal/homepage/flow/ko/assets/images/icon-circle.svg) no-repeat center center / contain;
+}
+.stripe-pay-table .price-type {
+  font-weight: bold;
+}
+.stripe-pay-table .pp {
+  color: #623AD6;
+}
+.stripe-pay-table h2 {
+  font-size: 36px;
+}
+.stripe-pay-table h3 {
+  font-size: 30px;
+}
+.stripe-pay-table h2,
+.stripe-pay-table h3 {
+  font-weight: bold;
+  text-align: center;
+}
+.stripe-pay-table .title p {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.stripe-pay-table .title .underline {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.stripe-pay-table .toggle-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 25px;/* 퍼블단 임의수치 */
+}
+.stripe-pay-table .toggle-wrap span {
+  font-weight: 500;
+  font-size: 16px;
+  color: #aaa;
+}
+.stripe-pay-table .toggle-wrap span:last-child {
+  color: #623AD6;
+}
+.stripe-pay-table .toggle-wrap button {
+  margin: 0 16px;
+}
+.stripe-pay-table .toggle-wrap.move button .handle {
+  transform: translateX(0);
+}
+.stripe-pay-table .toggle-wrap.move span:first-child {
+  color: #623AD6;
+}
+.stripe-pay-table .toggle-wrap.move span:last-child {
+  color: #aaa;
+}
+.stripe-pay-table .paymentList {
+  border: none;
+}
+.stripe-pay-table .paymentList thead {
+  position: sticky;
+  z-index: 1;
+  top: 90px;
+  /*top: 0;*/
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.stripe-pay-table .paymentList thead:before,
+.stripe-pay-table .paymentList thead:after {
+  content: "";
+  display: none;
+  position: absolute;
+}
+.stripe-pay-table .paymentList thead.on:before,
+.stripe-pay-table .paymentList thead.on:after {
+  display: block;
+}
+.stripe-pay-table .paymentList thead:before {
+  top: 0;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: 100px;
+  background: #fff;
+  z-index: -1;
+}
+.stripe-pay-table .paymentList thead:after {
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+.stripe-pay-table .paymentList thead td > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.stripe-pay-table .paymentList thead.on td > div {
+  justify-content: flex-start;
+}
+.stripe-pay-table .paymentList thead button {
+  display: none;
+  width: 105px;
+  padding: 8px 0;
+  margin: 8px auto 0;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #555;
+}
+.stripe-pay-table .paymentList thead.on button {
+  display: block;
+}
+.stripe-pay-table .paymentList .pp button {
+  background: #623AD6;
+}
+.stripe-pay-table .paymentList tbody th {
+  padding: 0 30px;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 500;
+  background: #FAF9F9;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.stripe-pay-table .paymentList tbody td {
+  height: 56px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+}
+.stripe-pay-table .paymentList .none th,
+.stripe-pay-table .paymentList .none td {
+  height: 60px;
+  border: none;
+  background: #E2E2E2;
+  font-size: 16px;
+  font-weight: bold;
+}
+.stripe-pay-table .plans-wrap {
+  margin: 0 auto;
+}
+.stripe-pay-table .plans-wrap .tit {
+  position: relative;
+  left: 50%;
+  width: 25%;
+  padding: 14px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: #623AD6;
+}
+.stripe-pay-table .plans-wrap .sub-tit {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+.stripe-pay-table .plans-wrap ul + .sub-tit {
+  margin-top: 25px;
+}
+.stripe-pay-table .plans-wrap .plan-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 16px;
+}
+.stripe-pay-table .plan-desc ul {
+  min-height: 40px;
+}
+.stripe-pay-table .plan-desc li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+.stripe-pay-table .plan-desc li:before {
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 16px;
+  margin-right: 8px;
+  background: url('/flow-renewal/assets/images/icons/ico-check-55.svg') no-repeat center center / contain;
+}
+.stripe-pay-table .plan-business-plus li:before {
+  background-image: url('/flow-renewal/assets/images/icons/ico-check-pp.svg');
+}
+.stripe-pay-table .plan-business-plus li i {
+  margin-top: 4px;
+}
+.stripe-pay-table .plan-business-plus .depth2 li {
+  margin-top: 6px;
+}
+.stripe-pay-table .plan-business-plus .depth2 li:before {
+  content: "-";
+  background: none;
+}
+.stripe-pay-table .plans-wrap h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+.stripe-pay-table .plans-wrap .txt {
+  margin: 12px 0 20px;
+  height: 72px;
+  font-size: 15px;
+  line-height: 18px;
+  color: #777;
+}
+.stripe-pay-table .plans-wrap .count {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #111;
+}
+.plan-enterprise .plan-tit img {
+  width: 46px;
+  margin-bottom: 13px;
+}
+.stripe-pay-table .plans-wrap span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #777;
+}
+.stripe-pay-table .plans-wrap button {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px 0;
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+  background: #fff;
+}
+.stripe-pay-table .plans-wrap .bg-pp {
+  background: #623AD6;
+  color: #fff;
+}
+.stripe-pay-table .plan-tit .txt2 {
+  margin-top: 10px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+}
+.stripe-pay-table .plans-wrap .disable {
+  border: none;
+  background: #eee;
+  color: #999;
+  cursor: unset;
+}
+.stripe-pay-table .plans-wrap .plan-sec {
+  border-radius: 10px;
+}
+.stripe-pay-table .plan-sec > ul {
+  display: flex;
+  flex: 1 1 0;
+  height: 100%;
+}
+.stripe-pay-table .plan-sec > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 25%;
+  padding: 30px 24px;
+  border: 1px solid #999;
+}
+.stripe-pay-table .plan-sec > ul > li + li {
+  border-left: none;
+}
+.stripe-pay-table .plan-sec > ul > li:nth-child(2) {
+  border-right: none;
+}
+.stripe-pay-table .plan-sec > ul > li:nth-child(3) {
+  background: #F9F8FF;
+  border: 1px solid #623AD6;
+}
+.stripe-pay-table .plan-tit {
+  height: 265px;
+  margin-bottom: 60px;
+}
+.stripe-pay-table .table-top-head td {
+  height: auto;
+  padding: 15px 0;
+  height: 90px;
+  font-size: 17px;
+  text-align: center;
+}
+.stripe-pay-table .compare-wrap tbody {
+  border: 1px solid #ddd;
+}
+.stripe-pay-table .pay-success-wrap {
+  margin-top: 90px;
+  padding-top: 80px;
+  align-items: center;
+}
+.stripe-pay-table .pay-success-wrap p {
+  margin-top: 15px;
+  font-weight: 500;
+}
+.stripe-pay-table .pay-success-wrap img {
+  display: block;
+  margin: 90px auto 60px;
+}
+.stripe-pay-table .pay-success-wrap a {
+  display: inline-block;
+  padding: 14px 36px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  background: #623AD6;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/*  자주 묻는 질문 - faq (한국,stripe 결제 공통)  */
+.pro-pay-wrap.step1 {
+  width: 100%;
+}
+.pro-pay-wrap.step1 .faq-wrap .textWrap,
+.pro-pay-wrap.step1 .faq-wrap .faqList {
+  width: 1204px;
+  margin: 0 auto;
+}
+.payment-layer-wrap .faq-wrap {
+  background: #FAF9F9;
+  margin-top: 150px;
+  padding-bottom: 150px;
+}
+.payment-layer-wrap .faq-wrap .upgrade-version-text-1 {
+  padding-bottom: 70px;
+  text-align: left;
+}
+.payment-layer-wrap .faqList .ico-arrow-99 {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url('https://flow.team/flow-renewal/assets/images/icons/icon-arrow-dwn-99.svg?v=febff1740245f349a3bf4fc724f3d28ec419913a') no-repeat center center/ contain;
+}
+.payment-layer-wrap .faqList .active .ico-arrow-99 {
+  transform: rotate(180deg);
+}
+.payment-layer-wrap .faqList li {
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+}
+.payment-layer-wrap .faqList a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+.payment-layer-wrap .faqAnswer {
+  display: none;
+  margin-top: 25px;
+  color: #555;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+.payment-layer-wrap .active .faqAnswer {
+  display: block;
+}
+.payment-layer-wrap .faqAnswer a {
+  display: inline-block;
+  color: #623AD6;
+  font-size: inherit;
+  font-weight: normal;
+  text-decoration: underline;
+}
